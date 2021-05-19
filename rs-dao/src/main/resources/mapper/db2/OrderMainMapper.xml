@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.OrderMainMapper">
+  <resultMap id="BaseResultMap" type="com.linjr.entity.db2.OrderMain">
+    <id column="OrderNO" jdbcType="NVARCHAR" property="orderno" />
+    <result column="ClientCode" jdbcType="NVARCHAR" property="clientcode" />
+    <result column="OrderType" jdbcType="TINYINT" property="ordertype" />
+    <result column="OrderState" jdbcType="TINYINT" property="orderstate" />
+    <result column="IsInvalid" jdbcType="BIT" property="isinvalid" />
+    <result column="PDACode" jdbcType="NVARCHAR" property="pdacode" />
+    <result column="OrderRemark" jdbcType="NVARCHAR" property="orderremark" />
+    <result column="ConfirmMan" jdbcType="NVARCHAR" property="confirmman" />
+    <result column="ConfirmDate" jdbcType="TIMESTAMP" property="confirmdate" />
+    <result column="CheckMan" jdbcType="NVARCHAR" property="checkman" />
+    <result column="CheckDate" jdbcType="TIMESTAMP" property="checkdate" />
+    <result column="OrderMan" jdbcType="NVARCHAR" property="orderman" />
+    <result column="OrderDate" jdbcType="TIMESTAMP" property="orderdate" />
+    <result column="WNo" jdbcType="TIMESTAMP" property="wno" />
+    <result column="Reserve1" jdbcType="NVARCHAR" property="reserve1" />
+    <result column="Reserve2" jdbcType="NVARCHAR" property="reserve2" />
+    <result column="Reserve3" jdbcType="NVARCHAR" property="reserve3" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    [OrderNO], [ClientCode], [OrderType], [OrderState], [IsInvalid], [PDACode], [OrderRemark], [ConfirmMan],
+    [ConfirmDate], [CheckMan], [CheckDate], [OrderMan], [OrderDate], [WNo], [Reserve1], [Reserve2], [Reserve3]
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from OrderMain
+    where OrderNO = #{orderno,jdbcType=NVARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from OrderMain
+    where OrderNO = #{orderno,jdbcType=NVARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.linjr.entity.db2.OrderMain">
+    insert into OrderMain ([OrderNO], [ClientCode], [OrderType],
+      [OrderState], [IsInvalid], [PDACode],
+      [OrderRemark], [ConfirmMan], [ConfirmDate],
+      [CheckMan], [CheckDate], [OrderMan],
+      [OrderDate], [WNo], [Reserve1],
+      [Reserve2], [Reserve3])
+    values (#{orderno,jdbcType=NVARCHAR}, #{clientcode,jdbcType=NVARCHAR}, #{ordertype,jdbcType=TINYINT}, 
+      #{orderstate,jdbcType=TINYINT}, #{isinvalid,jdbcType=BIT}, #{pdacode,jdbcType=NVARCHAR}, 
+      #{orderremark,jdbcType=NVARCHAR}, #{confirmman,jdbcType=NVARCHAR}, #{confirmdate,jdbcType=TIMESTAMP}, 
+      #{checkman,jdbcType=NVARCHAR}, #{checkdate,jdbcType=TIMESTAMP}, #{orderman,jdbcType=NVARCHAR}, 
+      #{orderdate,jdbcType=TIMESTAMP}, #{wno,jdbcType=TIMESTAMP}, #{reserve1,jdbcType=NVARCHAR}, 
+      #{reserve2,jdbcType=NVARCHAR}, #{reserve3,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.linjr.entity.db2.OrderMain">
+    insert into OrderMain
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="orderno != null">
+        [OrderNO],
+      </if>
+      <if test="clientcode != null">
+        [ClientCode],
+      </if>
+      <if test="ordertype != null">
+        [OrderType],
+      </if>
+      <if test="orderstate != null">
+        [OrderState],
+      </if>
+      <if test="isinvalid != null">
+        [IsInvalid],
+      </if>
+      <if test="pdacode != null">
+        [PDACode],
+      </if>
+      <if test="orderremark != null">
+        [OrderRemark],
+      </if>
+      <if test="confirmman != null">
+        [ConfirmMan],
+      </if>
+      <if test="confirmdate != null">
+        [ConfirmDate],
+      </if>
+      <if test="checkman != null">
+        [CheckMan],
+      </if>
+      <if test="checkdate != null">
+        [CheckDate],
+      </if>
+      <if test="orderman != null">
+        [OrderMan],
+      </if>
+      <if test="orderdate != null">
+        [OrderDate],
+      </if>
+      <if test="wno != null">
+        [WNo],
+      </if>
+      <if test="reserve1 != null">
+        [Reserve1],
+      </if>
+      <if test="reserve2 != null">
+        [Reserve2],
+      </if>
+      <if test="reserve3 != null">
+        [Reserve3],
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="orderno != null">
+        #{orderno,jdbcType=NVARCHAR},
+      </if>
+      <if test="clientcode != null">
+        #{clientcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="ordertype != null">
+        #{ordertype,jdbcType=TINYINT},
+      </if>
+      <if test="orderstate != null">
+        #{orderstate,jdbcType=TINYINT},
+      </if>
+      <if test="isinvalid != null">
+        #{isinvalid,jdbcType=BIT},
+      </if>
+      <if test="pdacode != null">
+        #{pdacode,jdbcType=NVARCHAR},
+      </if>
+      <if test="orderremark != null">
+        #{orderremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="confirmman != null">
+        #{confirmman,jdbcType=NVARCHAR},
+      </if>
+      <if test="confirmdate != null">
+        #{confirmdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkman != null">
+        #{checkman,jdbcType=NVARCHAR},
+      </if>
+      <if test="checkdate != null">
+        #{checkdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderman != null">
+        #{orderman,jdbcType=NVARCHAR},
+      </if>
+      <if test="orderdate != null">
+        #{orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wno != null">
+        #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reserve1 != null">
+        #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        #{reserve3,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.linjr.entity.db2.OrderMain">
+    update OrderMain
+    <set>
+      <if test="clientcode != null">
+        ClientCode = #{clientcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="ordertype != null">
+        OrderType = #{ordertype,jdbcType=TINYINT},
+      </if>
+      <if test="orderstate != null">
+        OrderState = #{orderstate,jdbcType=TINYINT},
+      </if>
+      <if test="isinvalid != null">
+        IsInvalid = #{isinvalid,jdbcType=BIT},
+      </if>
+      <if test="pdacode != null">
+        PDACode = #{pdacode,jdbcType=NVARCHAR},
+      </if>
+      <if test="orderremark != null">
+        OrderRemark = #{orderremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="confirmman != null">
+        ConfirmMan = #{confirmman,jdbcType=NVARCHAR},
+      </if>
+      <if test="confirmdate != null">
+        ConfirmDate = #{confirmdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkman != null">
+        CheckMan = #{checkman,jdbcType=NVARCHAR},
+      </if>
+      <if test="checkdate != null">
+        CheckDate = #{checkdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderman != null">
+        OrderMan = #{orderman,jdbcType=NVARCHAR},
+      </if>
+      <if test="orderdate != null">
+        OrderDate = #{orderdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wno != null">
+        WNo = #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reserve1 != null">
+        Reserve1 = #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        Reserve2 = #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        Reserve3 = #{reserve3,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where OrderNO = #{orderno,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.linjr.entity.db2.OrderMain">
+    update OrderMain
+    set ClientCode = #{clientcode,jdbcType=NVARCHAR},
+      OrderType = #{ordertype,jdbcType=TINYINT},
+      OrderState = #{orderstate,jdbcType=TINYINT},
+      IsInvalid = #{isinvalid,jdbcType=BIT},
+      PDACode = #{pdacode,jdbcType=NVARCHAR},
+      OrderRemark = #{orderremark,jdbcType=NVARCHAR},
+      ConfirmMan = #{confirmman,jdbcType=NVARCHAR},
+      ConfirmDate = #{confirmdate,jdbcType=TIMESTAMP},
+      CheckMan = #{checkman,jdbcType=NVARCHAR},
+      CheckDate = #{checkdate,jdbcType=TIMESTAMP},
+      OrderMan = #{orderman,jdbcType=NVARCHAR},
+      OrderDate = #{orderdate,jdbcType=TIMESTAMP},
+      WNo = #{wno,jdbcType=TIMESTAMP},
+      Reserve1 = #{reserve1,jdbcType=NVARCHAR},
+      Reserve2 = #{reserve2,jdbcType=NVARCHAR},
+      Reserve3 = #{reserve3,jdbcType=NVARCHAR}
+    where OrderNO = #{orderno,jdbcType=NVARCHAR}
+  </update>
+
+<!-- 通过店铺编号查找订单号 -->
+  <select id="selectByClientCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from OrderMain
+    where ClientCode = #{clientcode,jdbcType=NVARCHAR}
+  </select>
+</mapper>

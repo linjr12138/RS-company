@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db1.RegionMapper">
+    <resultMap id="BaseResultMap" type="com.linjr.entity.db1.Region">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="regionname" jdbcType="VARCHAR" property="regionname"/>
+        <result column="manager" jdbcType="VARCHAR" property="manager"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column=" identification" jdbcType="VARCHAR" property="identification"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="deleted" jdbcType="TINYINT" property="deleted"/>
+        <result column="planipadsum" jdbcType="INTEGER" property="planipadsum"/>
+        <result column="pid" jdbcType="VARCHAR" property="pid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, regionname, manager, phone, ` identification`, create_time, update_time, deleted,
+        planipadsum, pid
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from region
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from region
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="com.linjr.entity.db1.Region">
+        insert into region (id, regionname, manager,
+        phone, ` identification`, create_time,
+        update_time, deleted, planipadsum,
+        pid)
+        values (#{id,jdbcType=VARCHAR}, #{regionname,jdbcType=VARCHAR}, #{manager,jdbcType=VARCHAR},
+        #{phone,jdbcType=VARCHAR}, #{identification,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
+        #{updateTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=TINYINT}, #{planipadsum,jdbcType=INTEGER},
+        #{pid,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.linjr.entity.db1.Region">
+        insert into region
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="regionname != null">
+                regionname,
+            </if>
+            <if test="manager != null">
+                manager,
+            </if>
+            <if test="phone != null">
+                phone,
+            </if>
+            <if test="identification != null">
+                ` identification`,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="deleted != null">
+                deleted,
+            </if>
+            <if test="planipadsum != null">
+                planipadsum,
+            </if>
+            <if test="pid != null">
+                pid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="regionname != null">
+                #{regionname,jdbcType=VARCHAR},
+            </if>
+            <if test="manager != null">
+                #{manager,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="identification != null">
+                #{identification,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleted != null">
+                #{deleted,jdbcType=TINYINT},
+            </if>
+            <if test="planipadsum != null">
+                #{planipadsum,jdbcType=INTEGER},
+            </if>
+            <if test="pid != null">
+                #{pid,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.linjr.entity.db1.Region">
+        update region
+        <set>
+            <if test="regionname != null">
+                regionname = #{regionname,jdbcType=VARCHAR},
+            </if>
+            <if test="manager != null">
+                manager = #{manager,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="identification != null">
+                ` identification` = #{identification,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleted != null">
+                deleted = #{deleted,jdbcType=TINYINT},
+            </if>
+            <if test="planipadsum != null">
+                planipadsum = #{planipadsum,jdbcType=INTEGER},
+            </if>
+            <if test="pid != null">
+                pid = #{pid,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.linjr.entity.db1.Region">
+        update region
+        set regionname = #{regionname,jdbcType=VARCHAR},
+        manager = #{manager,jdbcType=VARCHAR},
+        phone = #{phone,jdbcType=VARCHAR},
+        ` identification` = #{identification,jdbcType=VARCHAR},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+        deleted = #{deleted,jdbcType=TINYINT},
+        planipadsum = #{planipadsum,jdbcType=INTEGER},
+        pid = #{pid,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <!--查询所有-->
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from region
+        where deleted=1
+    </select>
+
+</mapper>

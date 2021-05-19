@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.BaseProductSizeMapper">
+  <resultMap id="BaseResultMap" type="com.linjr.entity.db2.BaseProductSize">
+    <id column="SizeClass" jdbcType="NVARCHAR" property="sizeclass" />
+    <result column="SizeDesc" jdbcType="NVARCHAR" property="sizedesc" />
+    <result column="SizeNumber" jdbcType="INTEGER" property="sizenumber" />
+    <result column="RealSizeNumber" jdbcType="INTEGER" property="realsizenumber" />
+    <result column="SizeClassRemark" jdbcType="NVARCHAR" property="sizeclassremark" />
+    <result column="Size1" jdbcType="NVARCHAR" property="size1" />
+    <result column="Size2" jdbcType="NVARCHAR" property="size2" />
+    <result column="Size3" jdbcType="NVARCHAR" property="size3" />
+    <result column="Size4" jdbcType="NVARCHAR" property="size4" />
+    <result column="Size5" jdbcType="NVARCHAR" property="size5" />
+    <result column="Size6" jdbcType="NVARCHAR" property="size6" />
+    <result column="Size7" jdbcType="NVARCHAR" property="size7" />
+    <result column="Size8" jdbcType="NVARCHAR" property="size8" />
+    <result column="Size9" jdbcType="NVARCHAR" property="size9" />
+    <result column="Size10" jdbcType="NVARCHAR" property="size10" />
+    <result column="Size11" jdbcType="NVARCHAR" property="size11" />
+    <result column="Size12" jdbcType="NVARCHAR" property="size12" />
+    <result column="Size13" jdbcType="NVARCHAR" property="size13" />
+    <result column="Size14" jdbcType="NVARCHAR" property="size14" />
+    <result column="Size15" jdbcType="NVARCHAR" property="size15" />
+    <result column="Size16" jdbcType="NVARCHAR" property="size16" />
+    <result column="Size17" jdbcType="NVARCHAR" property="size17" />
+    <result column="Size18" jdbcType="NVARCHAR" property="size18" />
+    <result column="Size19" jdbcType="NVARCHAR" property="size19" />
+    <result column="Size20" jdbcType="NVARCHAR" property="size20" />
+    <result column="Size21" jdbcType="NVARCHAR" property="size21" />
+    <result column="Size22" jdbcType="NVARCHAR" property="size22" />
+    <result column="Size23" jdbcType="NVARCHAR" property="size23" />
+    <result column="Size24" jdbcType="NVARCHAR" property="size24" />
+    <result column="Size25" jdbcType="NVARCHAR" property="size25" />
+    <result column="Size26" jdbcType="NVARCHAR" property="size26" />
+    <result column="Size27" jdbcType="NVARCHAR" property="size27" />
+    <result column="Size28" jdbcType="NVARCHAR" property="size28" />
+    <result column="Size29" jdbcType="NVARCHAR" property="size29" />
+    <result column="Size30" jdbcType="NVARCHAR" property="size30" />
+    <result column="WNo" jdbcType="TIMESTAMP" property="wno" />
+    <result column="Version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.linjr.entity.db2.BaseProductSize">
+    <result column="Timestamp" jdbcType="BINARY" property="timestamp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    [SizeClass], [SizeDesc], [SizeNumber], [RealSizeNumber], [SizeClassRemark], [Size1], [Size2], [Size3],
+    [Size4], [Size5], [Size6], [Size7], [Size8], [Size9], [Size10], [Size11], [Size12], [Size13], [Size14],
+    [Size15], [Size16], [Size17], [Size18], [Size19], [Size20], [Size21], [Size22], [Size23], [Size24], [Size25],
+    [Size26], [Size27], [Size28], [Size29], [Size30], [WNo], [Version]
+  </sql>
+  <sql id="Blob_Column_List">
+    [Timestamp]
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from BaseProductSize
+    where [SizeClass] = #{sizeclass,jdbcType=NVARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from BaseProductSize
+    where [SizeClass] = #{sizeclass,jdbcType=NVARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.linjr.entity.db2.BaseProductSize">
+    insert into BaseProductSize ([SizeClass], [SizeDesc], [SizeNumber],
+      [RealSizeNumber], [SizeClassRemark], [Size1],
+      [Size2], [Size3], [Size4],
+      [Size5], [Size6], [Size7],
+      [Size8], [Size9], [Size10],
+      [Size11], [Size12], [Size13],
+      [Size14], [Size15], [Size16],
+      [Size17], [Size18], [Size19],
+      [Size20], [Size21], [Size22],
+      [Size23], [Size24], [Size25],
+      [Size26], [Size27], [Size28],
+      [Size29], [Size30], [WNo],
+      [Version])
+    values (#{sizeclass,jdbcType=NVARCHAR}, #{sizedesc,jdbcType=NVARCHAR}, #{sizenumber,jdbcType=INTEGER}, 
+      #{realsizenumber,jdbcType=INTEGER}, #{sizeclassremark,jdbcType=NVARCHAR}, #{size1,jdbcType=NVARCHAR}, 
+      #{size2,jdbcType=NVARCHAR}, #{size3,jdbcType=NVARCHAR}, #{size4,jdbcType=NVARCHAR}, 
+      #{size5,jdbcType=NVARCHAR}, #{size6,jdbcType=NVARCHAR}, #{size7,jdbcType=NVARCHAR}, 
+      #{size8,jdbcType=NVARCHAR}, #{size9,jdbcType=NVARCHAR}, #{size10,jdbcType=NVARCHAR}, 
+      #{size11,jdbcType=NVARCHAR}, #{size12,jdbcType=NVARCHAR}, #{size13,jdbcType=NVARCHAR}, 
+      #{size14,jdbcType=NVARCHAR}, #{size15,jdbcType=NVARCHAR}, #{size16,jdbcType=NVARCHAR}, 
+      #{size17,jdbcType=NVARCHAR}, #{size18,jdbcType=NVARCHAR}, #{size19,jdbcType=NVARCHAR}, 
+      #{size20,jdbcType=NVARCHAR}, #{size21,jdbcType=NVARCHAR}, #{size22,jdbcType=NVARCHAR}, 
+      #{size23,jdbcType=NVARCHAR}, #{size24,jdbcType=NVARCHAR}, #{size25,jdbcType=NVARCHAR}, 
+      #{size26,jdbcType=NVARCHAR}, #{size27,jdbcType=NVARCHAR}, #{size28,jdbcType=NVARCHAR}, 
+      #{size29,jdbcType=NVARCHAR}, #{size30,jdbcType=NVARCHAR}, #{wno,jdbcType=TIMESTAMP}, 
+      #{version,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.linjr.entity.db2.BaseProductSize">
+    insert into BaseProductSize
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sizeclass != null">
+        [SizeClass],
+      </if>
+      <if test="sizedesc != null">
+        [SizeDesc],
+      </if>
+      <if test="sizenumber != null">
+        [SizeNumber],
+      </if>
+      <if test="realsizenumber != null">
+        [RealSizeNumber],
+      </if>
+      <if test="sizeclassremark != null">
+        [SizeClassRemark],
+      </if>
+      <if test="size1 != null">
+        [Size1],
+      </if>
+      <if test="size2 != null">
+        [Size2],
+      </if>
+      <if test="size3 != null">
+        [Size3],
+      </if>
+      <if test="size4 != null">
+        [Size4],
+      </if>
+      <if test="size5 != null">
+        [Size5],
+      </if>
+      <if test="size6 != null">
+        [Size6],
+      </if>
+      <if test="size7 != null">
+        [Size7],
+      </if>
+      <if test="size8 != null">
+        [Size8],
+      </if>
+      <if test="size9 != null">
+        [Size9],
+      </if>
+      <if test="size10 != null">
+        [Size10],
+      </if>
+      <if test="size11 != null">
+        [Size11],
+      </if>
+      <if test="size12 != null">
+        [Size12],
+      </if>
+      <if test="size13 != null">
+        [Size13],
+      </if>
+      <if test="size14 != null">
+        [Size14],
+      </if>
+      <if test="size15 != null">
+        [Size15],
+      </if>
+      <if test="size16 != null">
+        [Size16],
+      </if>
+      <if test="size17 != null">
+        [Size17],
+      </if>
+      <if test="size18 != null">
+        [Size18],
+      </if>
+      <if test="size19 != null">
+        [Size19],
+      </if>
+      <if test="size20 != null">
+        [Size20],
+      </if>
+      <if test="size21 != null">
+        [Size21],
+      </if>
+      <if test="size22 != null">
+        [Size22],
+      </if>
+      <if test="size23 != null">
+        [Size23],
+      </if>
+      <if test="size24 != null">
+        [Size24],
+      </if>
+      <if test="size25 != null">
+        [Size25],
+      </if>
+      <if test="size26 != null">
+        [Size26],
+      </if>
+      <if test="size27 != null">
+        [Size27],
+      </if>
+      <if test="size28 != null">
+        [Size28],
+      </if>
+      <if test="size29 != null">
+        [Size29],
+      </if>
+      <if test="size30 != null">
+        [Size30],
+      </if>
+      <if test="wno != null">
+        [WNo],
+      </if>
+      <if test="version != null">
+        [Version],
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sizeclass != null">
+        #{sizeclass,jdbcType=NVARCHAR},
+      </if>
+      <if test="sizedesc != null">
+        #{sizedesc,jdbcType=NVARCHAR},
+      </if>
+      <if test="sizenumber != null">
+        #{sizenumber,jdbcType=INTEGER},
+      </if>
+      <if test="realsizenumber != null">
+        #{realsizenumber,jdbcType=INTEGER},
+      </if>
+      <if test="sizeclassremark != null">
+        #{sizeclassremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="size1 != null">
+        #{size1,jdbcType=NVARCHAR},
+      </if>
+      <if test="size2 != null">
+        #{size2,jdbcType=NVARCHAR},
+      </if>
+      <if test="size3 != null">
+        #{size3,jdbcType=NVARCHAR},
+      </if>
+      <if test="size4 != null">
+        #{size4,jdbcType=NVARCHAR},
+      </if>
+      <if test="size5 != null">
+        #{size5,jdbcType=NVARCHAR},
+      </if>
+      <if test="size6 != null">
+        #{size6,jdbcType=NVARCHAR},
+      </if>
+      <if test="size7 != null">
+        #{size7,jdbcType=NVARCHAR},
+      </if>
+      <if test="size8 != null">
+        #{size8,jdbcType=NVARCHAR},
+      </if>
+      <if test="size9 != null">
+        #{size9,jdbcType=NVARCHAR},
+      </if>
+      <if test="size10 != null">
+        #{size10,jdbcType=NVARCHAR},
+      </if>
+      <if test="size11 != null">
+        #{size11,jdbcType=NVARCHAR},
+      </if>
+      <if test="size12 != null">
+        #{size12,jdbcType=NVARCHAR},
+      </if>
+      <if test="size13 != null">
+        #{size13,jdbcType=NVARCHAR},
+      </if>
+      <if test="size14 != null">
+        #{size14,jdbcType=NVARCHAR},
+      </if>
+      <if test="size15 != null">
+        #{size15,jdbcType=NVARCHAR},
+      </if>
+      <if test="size16 != null">
+        #{size16,jdbcType=NVARCHAR},
+      </if>
+      <if test="size17 != null">
+        #{size17,jdbcType=NVARCHAR},
+      </if>
+      <if test="size18 != null">
+        #{size18,jdbcType=NVARCHAR},
+      </if>
+      <if test="size19 != null">
+        #{size19,jdbcType=NVARCHAR},
+      </if>
+      <if test="size20 != null">
+        #{size20,jdbcType=NVARCHAR},
+      </if>
+      <if test="size21 != null">
+        #{size21,jdbcType=NVARCHAR},
+      </if>
+      <if test="size22 != null">
+        #{size22,jdbcType=NVARCHAR},
+      </if>
+      <if test="size23 != null">
+        #{size23,jdbcType=NVARCHAR},
+      </if>
+      <if test="size24 != null">
+        #{size24,jdbcType=NVARCHAR},
+      </if>
+      <if test="size25 != null">
+        #{size25,jdbcType=NVARCHAR},
+      </if>
+      <if test="size26 != null">
+        #{size26,jdbcType=NVARCHAR},
+      </if>
+      <if test="size27 != null">
+        #{size27,jdbcType=NVARCHAR},
+      </if>
+      <if test="size28 != null">
+        #{size28,jdbcType=NVARCHAR},
+      </if>
+      <if test="size29 != null">
+        #{size29,jdbcType=NVARCHAR},
+      </if>
+      <if test="size30 != null">
+        #{size30,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.linjr.entity.db2.BaseProductSize">
+    update BaseProductSize
+    <set>
+      <if test="sizedesc != null">
+        [SizeDesc] = #{sizedesc,jdbcType=NVARCHAR},
+      </if>
+      <if test="sizenumber != null">
+        [SizeNumber] = #{sizenumber,jdbcType=INTEGER},
+      </if>
+      <if test="realsizenumber != null">
+        [RealSizeNumber] = #{realsizenumber,jdbcType=INTEGER},
+      </if>
+      <if test="sizeclassremark != null">
+        [SizeClassRemark] = #{sizeclassremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="size1 != null">
+        [Size1] = #{size1,jdbcType=NVARCHAR},
+      </if>
+      <if test="size2 != null">
+        [Size2] = #{size2,jdbcType=NVARCHAR},
+      </if>
+      <if test="size3 != null">
+        [Size3] = #{size3,jdbcType=NVARCHAR},
+      </if>
+      <if test="size4 != null">
+        [Size4] = #{size4,jdbcType=NVARCHAR},
+      </if>
+      <if test="size5 != null">
+        [Size5] = #{size5,jdbcType=NVARCHAR},
+      </if>
+      <if test="size6 != null">
+        [Size6] = #{size6,jdbcType=NVARCHAR},
+      </if>
+      <if test="size7 != null">
+        [Size7] = #{size7,jdbcType=NVARCHAR},
+      </if>
+      <if test="size8 != null">
+        [Size8] = #{size8,jdbcType=NVARCHAR},
+      </if>
+      <if test="size9 != null">
+        [Size9] = #{size9,jdbcType=NVARCHAR},
+      </if>
+      <if test="size10 != null">
+        [Size10] = #{size10,jdbcType=NVARCHAR},
+      </if>
+      <if test="size11 != null">
+        [Size11] = #{size11,jdbcType=NVARCHAR},
+      </if>
+      <if test="size12 != null">
+        [Size12] = #{size12,jdbcType=NVARCHAR},
+      </if>
+      <if test="size13 != null">
+        [Size13] = #{size13,jdbcType=NVARCHAR},
+      </if>
+      <if test="size14 != null">
+        [Size14] = #{size14,jdbcType=NVARCHAR},
+      </if>
+      <if test="size15 != null">
+        [Size15] = #{size15,jdbcType=NVARCHAR},
+      </if>
+      <if test="size16 != null">
+        [Size16] = #{size16,jdbcType=NVARCHAR},
+      </if>
+      <if test="size17 != null">
+        [Size17] = #{size17,jdbcType=NVARCHAR},
+      </if>
+      <if test="size18 != null">
+        [Size18] = #{size18,jdbcType=NVARCHAR},
+      </if>
+      <if test="size19 != null">
+        [Size19] = #{size19,jdbcType=NVARCHAR},
+      </if>
+      <if test="size20 != null">
+        [Size20] = #{size20,jdbcType=NVARCHAR},
+      </if>
+      <if test="size21 != null">
+        [Size21] = #{size21,jdbcType=NVARCHAR},
+      </if>
+      <if test="size22 != null">
+        [Size22] = #{size22,jdbcType=NVARCHAR},
+      </if>
+      <if test="size23 != null">
+        [Size23] = #{size23,jdbcType=NVARCHAR},
+      </if>
+      <if test="size24 != null">
+        [Size24] = #{size24,jdbcType=NVARCHAR},
+      </if>
+      <if test="size25 != null">
+        [Size25] = #{size25,jdbcType=NVARCHAR},
+      </if>
+      <if test="size26 != null">
+        [Size26] = #{size26,jdbcType=NVARCHAR},
+      </if>
+      <if test="size27 != null">
+        [Size27] = #{size27,jdbcType=NVARCHAR},
+      </if>
+      <if test="size28 != null">
+        [Size28] = #{size28,jdbcType=NVARCHAR},
+      </if>
+      <if test="size29 != null">
+        [Size29] = #{size29,jdbcType=NVARCHAR},
+      </if>
+      <if test="size30 != null">
+        [Size30] = #{size30,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        [WNo] = #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        [Version] = #{version,jdbcType=INTEGER},
+      </if>
+    </set>
+    where [SizeClass] = #{sizeclass,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.linjr.entity.db2.BaseProductSize">
+    update BaseProductSize
+    set [SizeDesc] = #{sizedesc,jdbcType=NVARCHAR},
+      [SizeNumber] = #{sizenumber,jdbcType=INTEGER},
+      [RealSizeNumber] = #{realsizenumber,jdbcType=INTEGER},
+      [SizeClassRemark] = #{sizeclassremark,jdbcType=NVARCHAR},
+      [Size1] = #{size1,jdbcType=NVARCHAR},
+      [Size2] = #{size2,jdbcType=NVARCHAR},
+      [Size3] = #{size3,jdbcType=NVARCHAR},
+      [Size4] = #{size4,jdbcType=NVARCHAR},
+      [Size5] = #{size5,jdbcType=NVARCHAR},
+      [Size6] = #{size6,jdbcType=NVARCHAR},
+      [Size7] = #{size7,jdbcType=NVARCHAR},
+      [Size8] = #{size8,jdbcType=NVARCHAR},
+      [Size9] = #{size9,jdbcType=NVARCHAR},
+      [Size10] = #{size10,jdbcType=NVARCHAR},
+      [Size11] = #{size11,jdbcType=NVARCHAR},
+      [Size12] = #{size12,jdbcType=NVARCHAR},
+      [Size13] = #{size13,jdbcType=NVARCHAR},
+      [Size14] = #{size14,jdbcType=NVARCHAR},
+      [Size15] = #{size15,jdbcType=NVARCHAR},
+      [Size16] = #{size16,jdbcType=NVARCHAR},
+      [Size17] = #{size17,jdbcType=NVARCHAR},
+      [Size18] = #{size18,jdbcType=NVARCHAR},
+      [Size19] = #{size19,jdbcType=NVARCHAR},
+      [Size20] = #{size20,jdbcType=NVARCHAR},
+      [Size21] = #{size21,jdbcType=NVARCHAR},
+      [Size22] = #{size22,jdbcType=NVARCHAR},
+      [Size23] = #{size23,jdbcType=NVARCHAR},
+      [Size24] = #{size24,jdbcType=NVARCHAR},
+      [Size25] = #{size25,jdbcType=NVARCHAR},
+      [Size26] = #{size26,jdbcType=NVARCHAR},
+      [Size27] = #{size27,jdbcType=NVARCHAR},
+      [Size28] = #{size28,jdbcType=NVARCHAR},
+      [Size29] = #{size29,jdbcType=NVARCHAR},
+      [Size30] = #{size30,jdbcType=NVARCHAR},
+      [WNo] = #{wno,jdbcType=TIMESTAMP},
+      [Version] = #{version,jdbcType=INTEGER}
+    where [SizeClass] = #{sizeclass,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.linjr.entity.db2.BaseProductSize">
+    update BaseProductSize
+    set [SizeDesc] = #{sizedesc,jdbcType=NVARCHAR},
+      [SizeNumber] = #{sizenumber,jdbcType=INTEGER},
+      [RealSizeNumber] = #{realsizenumber,jdbcType=INTEGER},
+      [SizeClassRemark] = #{sizeclassremark,jdbcType=NVARCHAR},
+      [Size1] = #{size1,jdbcType=NVARCHAR},
+      [Size2] = #{size2,jdbcType=NVARCHAR},
+      [Size3] = #{size3,jdbcType=NVARCHAR},
+      [Size4] = #{size4,jdbcType=NVARCHAR},
+      [Size5] = #{size5,jdbcType=NVARCHAR},
+      [Size6] = #{size6,jdbcType=NVARCHAR},
+      [Size7] = #{size7,jdbcType=NVARCHAR},
+      [Size8] = #{size8,jdbcType=NVARCHAR},
+      [Size9] = #{size9,jdbcType=NVARCHAR},
+      [Size10] = #{size10,jdbcType=NVARCHAR},
+      [Size11] = #{size11,jdbcType=NVARCHAR},
+      [Size12] = #{size12,jdbcType=NVARCHAR},
+      [Size13] = #{size13,jdbcType=NVARCHAR},
+      [Size14] = #{size14,jdbcType=NVARCHAR},
+      [Size15] = #{size15,jdbcType=NVARCHAR},
+      [Size16] = #{size16,jdbcType=NVARCHAR},
+      [Size17] = #{size17,jdbcType=NVARCHAR},
+      [Size18] = #{size18,jdbcType=NVARCHAR},
+      [Size19] = #{size19,jdbcType=NVARCHAR},
+      [Size20] = #{size20,jdbcType=NVARCHAR},
+      [Size21] = #{size21,jdbcType=NVARCHAR},
+      [Size22] = #{size22,jdbcType=NVARCHAR},
+      [Size23] = #{size23,jdbcType=NVARCHAR},
+      [Size24] = #{size24,jdbcType=NVARCHAR},
+      [Size25] = #{size25,jdbcType=NVARCHAR},
+      [Size26] = #{size26,jdbcType=NVARCHAR},
+      [Size27] = #{size27,jdbcType=NVARCHAR},
+      [Size28] = #{size28,jdbcType=NVARCHAR},
+      [Size29] = #{size29,jdbcType=NVARCHAR},
+      [Size30] = #{size30,jdbcType=NVARCHAR},
+      [WNo] = #{wno,jdbcType=TIMESTAMP},
+      [Version] = #{version,jdbcType=INTEGER}
+    where [SizeClass] = #{sizeclass,jdbcType=NVARCHAR}
+  </update>
+
+<!-- 组合Size -->
+  <select id="selectAssociationSize" resultMap="BaseResultMap">
+select
+ *,
+ (case when size1 IS NULL then ',' else Size1+',' end)+
+ (case when size2 IS NULL then ',' else Size2+',' end)+
+ (case when size3 IS NULL then ',' else Size3+',' end)+
+ (case when size4 IS NULL then ',' else Size4+',' end)+
+ (case when size5 IS NULL then ',' else Size5+',' end)+
+ (case when size6 IS NULL then ',' else Size6+',' end)+
+ (case when size7 IS NULL then ',' else Size7+',' end)+
+ (case when size8 IS NULL then ',' else Size8+',' end)+
+ (case when size9 IS NULL then ',' else Size9+',' end)+
+ (case when size10 IS NULL then ',' else Size10+',' end)+
+ (case when size11 IS NULL then ',' else Size11+',' end)+
+ (case when size12 IS NULL then ',' else Size12+',' end)+
+ (case when size13 IS NULL then ',' else Size13+',' end)+
+ (case when size14 IS NULL then ',' else Size14+',' end)+
+ (case when size15 IS NULL then ',' else Size15+',' end)+
+ (case when size16 IS NULL then ',' else Size16+',' end)+
+ (case when size17 IS NULL then ',' else Size17+',' end)+
+ (case when size18 IS NULL then ',' else Size18+',' end)+
+ (case when size19 IS NULL then ',' else Size19+',' end)+
+ (case when size20 IS NULL then ',' else Size20+',' end)+
+ (case when size21 IS NULL then ',' else Size21+',' end)+
+ (case when size22 IS NULL then ',' else Size22+',' end)+
+ (case when size23 IS NULL then ',' else Size23+',' end)+
+ (case when size24 IS NULL then ',' else Size24+',' end)+
+ (case when size25 IS NULL then ',' else Size25+',' end)+
+ (case when size26 IS NULL then ',' else Size26+',' end)+
+ (case when size27 IS NULL then ',' else Size27+',' end)+
+ (case when size28 IS NULL then ',' else Size28+',' end)+
+ (case when size29 IS NULL then ',' else Size29+',' end)+
+ (case when size30 IS NULL then ',' else Size30+',' end)
+ as size
+ from BaseProductSize(nolock)
+
+  </select>
+</mapper>

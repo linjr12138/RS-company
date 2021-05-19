@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" xml:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/css/custom.form.css">
+</head>
+<body>
+<div class="panel panel-default operation_user" hidden>
+    <div class="panel-heading title"></div>
+    <div class="layui-card-body">
+        <form class="layui-form " action="" lay-filter="deptInfo" style="width: 700px;margin-top: 10px">
+            <input name="id" hidden/>
+            <input name="regionId" hidden/>
+
+            <div class="layui-form-item">
+                <div class="layui-form-label ">所属区域</div>
+                <div class="layui-input-block">
+                    <input type="regionName" name="regionName" placeholder="请选择所属区域" autocomplete="off"
+                           class="layui-input" readonly="readonly" style="background:#eeeeee!important">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="name" name="name" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-form-label ">手机号</div>
+                <div class="layui-input-block">
+                    <input type="phone" name="phone" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">借还</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="borrowReturn" lay-skin="switch" lay-filter="switch" lay-text="借|还"
+                           checked>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-form-label ">IPAD台数</div>
+                <div class="layui-input-block">
+                    <input type="ipadsum" name="ipadsum" placeholder="请输入IPAD数量" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-form-label ">充电头</div>
+                <div class="layui-input-block">
+                    <input type="charger" name="charger" placeholder="请输入IPAD数量" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-form-label ">充电线</div>
+                <div class="layui-input-block">
+                    <input type="chargingLine" name="chargingLine" placeholder="请输入IPAD数量" autocomplete="off"
+                           class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="submit">保存</button>
+                    <button class="layui-btn layui-btn-primary" id="btn_cancel">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="user_table_div">
+    <div id="searchParam">
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <input type="text" id="id" class="layui-input" autocomplete="off" placeholder="请输入用户ID">
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" id="name" class="layui-input" autocomplete="off" placeholder="请输入姓名">
+            </div>
+            <div class="layui-input-inline">
+                <input type="text" id="regionId" class="layui-input" autocomplete="off" placeholder="请输区域ID">
+            </div>
+            <div class="layui-input-inline layui-form">
+                <select id="borrowReturn">
+                    <option value="">请选择借还状态</option>
+                    <option value="1">已借</option>
+                    <option value="2">已还</option>
+                </select>
+            </div>
+            <div class="layui-input-inline ">
+                <button class="layui-btn" id="search">查询</button>
+            </div>
+        </div>
+
+    </div>
+    <table class="layui-hide" id="user_table" lay-filter="user_table"></table>
+    <div id="laypage" class="layui-laypage-btn"></div>
+</div>
+<div id="regionTree" style="display: none"></div>
+</body>
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-group">
+        <button type="button" class="layui-btn" lay-event="addNewUser">
+            <i class="layui-icon">&#xe608;</i> 新增
+        </button>
+    </div>
+    <div class="layui-btn-group">
+        <button type="button" class="layui-btn" lay-event="batchDeleted">
+            <i class="layui-icon">&#xe608;</i> 批量删除
+        </button>
+    </div>
+</script>
+<script type="text/html" id="tool">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script src="/layui/layui.js"></script>
+<script src="/js/core.util.js"></script>
+<script>
+    layui.use(['jquery', 'form', 'table', 'laypage', 'layer', 'laydate', 'tree'], function () {
+        var table = layui.table;
+        var laypage = layui.laypage
+        var form = layui.form;
+        var layer = layui.layer;
+        var $ = layui.jquery;
+        var tree = layui.tree;
+        var laydate = layui.laydate;
+        var searchParam = {
+            pageNum: 1,
+            pageSize: 10
+        }
+        //记录区域数选中的节点
+        var selectNode = null;
+        /*动态获取数据*/
+        CoreUtil.sendAjax("/api/ipads", JSON.stringify(searchParam), function (res) {
+            //初始化分页器
+            laypageTable(res.data.totalRows, searchParam.pageNum);
+            //初始化渲染数据
+            if (res.data.list != null) {
+                loadTable(res.data.list);
+            }
+        }, "POST", false);
+        //渲染分页插件
+        var laypageTable = function (count, currentPage) {
+            laypage.render({
+                elem: 'laypage'
+                , count: count
+                , limit: searchParam.pageSize
+                , layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
+                , curr: location.hash.replace('#!currentPage=', '') //获取起始页
+                , hash: 'currentPage' //自定义hash值
+                , jump: function (obj, first) {
+                    if (!first) {
+                        searchParam.pageNum = obj.curr;
+                        searchParam.pageSize = obj.limit;
+                        CoreUtil.sendAjax("/api/ipads", JSON.stringify(searchParam), function (res) {
+                            if (res.data.list != null) {
+                                loadTable(res.data.list);
+                                laypageTable(res.data.totalRows, searchParam.pageNum);
+                            }
+                        }, "POST", false);
+                    }
+                }
+            });
+        };
+        //渲染table
+        var loadTable = function (data) {
+            //展示已知数据
+            table.render({
+                elem: '#user_table'
+                , cols: [
+                    [
+                        {type: 'checkbox', fixed: 'left'},
+                        {field: 'id', title: 'ID', width: 300, sort: true},
+                        {field: 'name', title: '姓名', width: 130},
+                        {field: 'regionName', title: '大区名称', width: 130},
+                        {field: 'phone', title: '手机号', width: 130},
+                        {
+                            field: 'borrowReturn', title: '借还', width: 100, templet: function (item) {
+                                if (item.borrowReturn === 1) {
+                                    return ' <input type="checkbox" lay-skin="switch" lay-text="借|还" checked disabled>';
+                                }
+                                if (item.borrowReturn === 2) {
+                                    return ' <input type="checkbox" lay-skin="switch" lay-text="借|还" disabled>';
+                                }
+                            }
+                        },
+                        {field: 'ipadsum', title: 'IPAD数量', width: 130},
+                        {field: 'charger', title: '充电头', width: 130},
+                        {field: 'chargingLine', title: '充电线', width: 130},
+                        {
+                            field: 'createTime',
+                            title: '创建时间',
+                            minWidth: 120,
+                            templet: function (item) {
+                                return CoreUtil.formattime(item.createTime);
+                            }
+                        },
+                        {
+                            field: 'updateTime',
+                            title: '更新时间',
+                            minWidth: 120,
+                            templet: function (item) {
+                                return CoreUtil.formattime(item.updateTime);
+                            }
+                        },
+                        {width: 300, title: '操作', toolbar: '#tool'}
+                    ]
+                ]
+                , data: data
+                , even: true
+                , limit: data.length
+                , limits: [10, 20, 30, 40, 50]
+                , toolbar: '#toolbar'
+            });
+        };
+        //表头工具栏事件
+        table.on('toolbar(user_table)', function (obj) {
+            switch (obj.event) {
+                case 'addNewUser':
+                    $(".title").html("新增用户");
+                    $(".user_table_div").hide();
+                    $(".operation_user").show();
+                    $(".operation_user input[name=id]").val("");
+                    $(".operation_user input[name=regionId]").val("");
+                    $(".operation_user input[name=name]").val("");
+                    $(".operation_user input[name=phone]").val("");
+                    $(".operation_user input[name=regionName]").val("");
+                    $(".operation_user input[name=ipadsum]").val("");
+                    $(".operation_user input[name=charger]").val("");
+                    $(".operation_user input[name=chargingLine]").val("");
+                    $(".operation_user input[name=borrowReturn]").attr('checked', 'checked');
+                    $(".operation_user input[name=borrowReturn]").attr('type', 'hidden').val(1);
+                    var x = document.getElementsByClassName("layui-unselect layui-form-switch");
+                    x[0].setAttribute("class", "layui-unselect layui-form-switch layui-form-onswitch");
+                    var d = document.getElementsByTagName('em')[0];
+                    d.firstChild.nodeValue = '借';
+                    form.render(); //更新全部
+                    initTree();
+                    break;
+                case 'batchDeleted':
+                    var checkStatus = table.checkStatus(obj.config.id);
+                    var data = checkStatus.data;
+                    if (data.length == 0) {
+                        layer.msg("请选择要批量删除的用户");
+                    } else {
+                        var ids = [];
+                        $(data).each(function (index, item) {
+                            ids.push(item.id);
+                        });
+                        tipDialog(ids, "选中的");
+                    }
+                    break;
+            }
+            ;
+        });
+
+        //操作工具栏事件
+        table.on('tool(user_table)', function (obj) {
+            var data = obj.data;
+            switch (obj.event) {
+                case 'edit':
+                    $(".user_table_div").hide();
+                    $(".operation_user").show();
+                    $(".title").html("编辑IPAD");
+                    $(".operation_user input[name=id]").val(data.id);
+                    $(".operation_user input[name=regionId]").val(data.regionId);
+                    $(".operation_user input[name=name]").val(data.name);
+                    $(".operation_user input[name=ipadsum]").val(data.ipadsum);
+                    $(".operation_user input[name=charger]").val(data.charger);
+                    $(".operation_user input[name=chargingLine]").val(data.chargingLine);
+                    $(".operation_user input[name=phone]").val(data.phone);
+                    $(".operation_user input[name=regionName]").val(data.regionName);
+                    if (data.borrowReturn == 1) {
+                        $(".operation_user input[name=borrowReturn]").attr('checked', 'checked');
+                        $(".operation_user input[name=borrowReturn]").attr('type', 'hidden').val(1);
+                        var x = document.getElementsByClassName("layui-unselect layui-form-switch");
+                        x[0].setAttribute("class", "layui-unselect layui-form-switch layui-form-onswitch");
+                        var d = document.getElementsByTagName('em')[0];
+                        d.firstChild.nodeValue = '借';
+                    } else {
+                        $(".operation_user input[name=borrowReturn]").attr('type', 'hidden').removeAttr("checked").val(2);
+                        var x = document.getElementsByClassName("layui-unselect layui-form-switch");
+                        x[0].setAttribute("class", "layui-unselect layui-form-switch");
+                        var d = document.getElementsByTagName('em')[0];
+                        d.firstChild.nodeValue = '还';
+                    }
+                    form.render(); //更新全部
+                    initTree();
+                    break;
+                case 'del':
+                    var ids = [];
+                    ids.push(data.id);
+                    tipDialog(ids, data.name);
+                    break;
+            }
+        });
+        //监听指定开关
+        form.on('switch(switch)', function () {
+            $(".operation_user input[name=borrowReturn]").attr('type', 'hidden').val(this.checked ? 1 : 2);
+        });
+
+        var initTree = function () {
+            CoreUtil.sendAjax("/api/region/tree", null, function (res) {
+                loadDeptTree(res.data);
+            }, "GET", false, function (res) {
+                //部门树列表无权限提示
+                layer.msg("抱歉！您暂无获取部门树的权限");
+                var noAuthorityData = [];
+                loadDeptTree(noAuthorityData);
+            });
+        };
+
+        //加载部门树数据
+        var loadDeptTree = function (data) {
+            //仅节点左侧图标控制收缩
+            tree.render({
+                elem: '#regionTree'
+                , data: data
+                , onlyIconControl: true  //是否仅允许节点左侧图标控制展开收缩
+                , click: function (obj) {
+                    selectNode = obj;
+                    layer.msg(JSON.stringify(selectNode.data.title));
+                }
+            });
+        };
+
+        //执行查询
+        $("#search").click(function () {
+            searchParam.id = $("#id").val();
+            searchParam.borrowReturn = $("#borrowReturn").val();
+            searchParam.name = $("#name").val();
+            searchParam.regionId = $("#regionId").val();
+            searchParam.pageNum = 1;
+            CoreUtil.sendAjax("/api/ipads", JSON.stringify(searchParam), function (res) {
+                //初始化分页器
+                laypageTable(res.data.totalRows, searchParam.pageNum);
+                //初始化渲染数据
+                if (res.data.list != null) {
+                    loadTable(res.data.list);
+                }
+            }, "POST", false, function (res) {
+                //用户列表接口无权限回调
+                layer.msg("抱歉！您暂无获取用户列表的权限");
+                var noAuthorityData = [];
+                loadTable(noAuthorityData);
+            });
+        });
+
+        //打开部门树对话框
+        $(".operation_user input[name=regionName]").click(function () {
+            layer.open({
+                type: 1,
+                offset: '50px',
+                skin: 'layui-layer-molv',
+                title: "选择区域",
+                area: ['400px', '550px'],
+                shade: 0,
+                shadeClose: false,
+                content: $("#regionTree"),
+                btn: ['确定', '取消'],
+                yes: function (index) {
+                    if (selectNode.data != null) {
+                        //选中回显
+                        $(".operation_user input[name=regionId]").val(selectNode.data.id);
+                        $(".operation_user input[name=regionName]").val(selectNode.data.title);
+                    }
+
+                    layer.close(index);
+                }
+            });
+        });
+
+        //监听提交
+        form.on('submit(submit)', function (data) {
+            //新增
+            if (data.field.id === undefined || data.field.id === null || data.field.id === "") {
+                CoreUtil.sendAjax("/api/ipad", JSON.stringify(data.field), function (res) {
+                    //显示表格
+                    $(".user_table_div").show();
+                    //隐藏编辑窗口
+                    $(".operation_user").hide();
+                    $(".layui-laypage-btn").click();
+                }, "POST", false, function (res) {
+                    //新增用户无权限提示
+                    layer.msg("抱歉！您暂无新增用户的权限");
+                });
+            } else {
+                CoreUtil.sendAjax("/api/ipad", JSON.stringify(data.field), function (res) {
+                    //显示表格
+                    $(".user_table_div").show();
+                    //隐藏编辑窗口
+                    $(".operation_user").hide();
+                    $(".layui-laypage-btn").click();
+                }, "PUT", false, function (res) {
+                    //更新用户无权限提示
+                    layer.msg("抱歉！您暂无编辑用户的权限");
+                });
+            }
+            return false;
+        });
+
+        //删除前确认对话框
+        var tipDialog = function (ids, name) {
+            layer.open({
+                content: '确定要删除' + name + "用户么?",
+                yes: function (index, layero) {
+                    layer.close(index); //如果设定了yes回调，需进行手工关闭
+                    CoreUtil.sendAjax("/api/ipad", JSON.stringify(ids), function (res) {
+                        layer.msg(res.msg);
+                        $(".layui-laypage-btn").click();
+                    }, "DELETE", false, function (res) {
+                        //删除用户无权限
+                        layer.msg("抱歉！您暂无删除用户的权限");
+                    });
+                }
+            });
+        };
+
+    });
+</script>
+</html>

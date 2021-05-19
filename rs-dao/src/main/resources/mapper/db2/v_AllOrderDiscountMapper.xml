@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.vAllOrderDiscountMapper">
+  <resultMap id="BaseResultMap" type="com.linjr.entity.db2.VAllOrderDiscount">
+    <result column="HEAD" jdbcType="NVARCHAR" property="head" />
+    <result column="HEADNAME" jdbcType="NVARCHAR" property="headname" />
+    <result column="REGION" jdbcType="NVARCHAR" property="region" />
+    <result column="REGIONNAME" jdbcType="NVARCHAR" property="regionname" />
+    <result column="AGENT" jdbcType="NVARCHAR" property="agent" />
+    <result column="AGENTNAME" jdbcType="NVARCHAR" property="agentname" />
+    <result column="DEALER" jdbcType="NVARCHAR" property="dealer" />
+    <result column="DEALERName" jdbcType="NVARCHAR" property="dealername" />
+    <result column="SHOP" jdbcType="NVARCHAR" property="shop" />
+    <result column="SHOPName" jdbcType="NVARCHAR" property="shopname" />
+    <result column="ClientSort" jdbcType="VARCHAR" property="clientsort" />
+    <result column="District" jdbcType="NVARCHAR" property="district" />
+    <result column="Province" jdbcType="NVARCHAR" property="province" />
+    <result column="City" jdbcType="NVARCHAR" property="city" />
+    <result column="OrderType" jdbcType="INTEGER" property="ordertype" />
+    <result column="Address" jdbcType="NVARCHAR" property="address" />
+    <result column="PostCode" jdbcType="NVARCHAR" property="postcode" />
+    <result column="Phone" jdbcType="NVARCHAR" property="phone" />
+    <result column="BossName" jdbcType="NVARCHAR" property="bossname" />
+    <result column="Area" jdbcType="NVARCHAR" property="area" />
+    <result column="Mode" jdbcType="NVARCHAR" property="mode" />
+    <result column="PayRate" jdbcType="NUMERIC" property="payrate" />
+    <result column="OrderNO" jdbcType="NVARCHAR" property="orderno" />
+    <result column="OrderState" jdbcType="TINYINT" property="orderstate" />
+    <result column="OrderDate" jdbcType="TIMESTAMP" property="orderdate" />
+    <result column="ProdCode" jdbcType="NVARCHAR" property="prodcode" />
+    <result column="ColorCode" jdbcType="NVARCHAR" property="colorcode" />
+    <result column="Color" jdbcType="NVARCHAR" property="color" />
+    <result column="Pattern" jdbcType="NVARCHAR" property="pattern" />
+    <result column="QtySum" jdbcType="NUMERIC" property="qtysum" />
+    <result column="UnitPrice" jdbcType="NUMERIC" property="unitprice" />
+    <result column="AmountSum" jdbcType="NUMERIC" property="amountsum" />
+    <result column="MatchContent" jdbcType="NVARCHAR" property="matchcontent" />
+    <result column="QtyCase" jdbcType="NUMERIC" property="qtycase" />
+    <result column="UnitPrice2" jdbcType="NUMERIC" property="unitprice2" />
+    <result column="UnitPrice3" jdbcType="NUMERIC" property="unitprice3" />
+    <result column="UnitPrice4" jdbcType="NUMERIC" property="unitprice4" />
+    <result column="Discount" jdbcType="NUMERIC" property="discount" />
+    <result column="DiscountPrice" jdbcType="NUMERIC" property="discountprice" />
+    <result column="DiscountMoney" jdbcType="NUMERIC" property="discountmoney" />
+    <result column="Size1" jdbcType="NUMERIC" property="size1" />
+    <result column="Size2" jdbcType="NUMERIC" property="size2" />
+    <result column="Size3" jdbcType="NUMERIC" property="size3" />
+    <result column="Size4" jdbcType="NUMERIC" property="size4" />
+    <result column="Size5" jdbcType="NUMERIC" property="size5" />
+    <result column="Size6" jdbcType="NUMERIC" property="size6" />
+    <result column="Size7" jdbcType="NUMERIC" property="size7" />
+    <result column="Size8" jdbcType="NUMERIC" property="size8" />
+    <result column="Size9" jdbcType="NUMERIC" property="size9" />
+    <result column="Size10" jdbcType="NUMERIC" property="size10" />
+    <result column="Size11" jdbcType="NUMERIC" property="size11" />
+    <result column="Size12" jdbcType="NUMERIC" property="size12" />
+    <result column="Size13" jdbcType="NUMERIC" property="size13" />
+    <result column="Size14" jdbcType="NUMERIC" property="size14" />
+    <result column="Size15" jdbcType="NUMERIC" property="size15" />
+    <result column="Size16" jdbcType="NUMERIC" property="size16" />
+    <result column="Size17" jdbcType="NUMERIC" property="size17" />
+    <result column="Size18" jdbcType="NUMERIC" property="size18" />
+    <result column="Size19" jdbcType="NUMERIC" property="size19" />
+    <result column="Size20" jdbcType="NUMERIC" property="size20" />
+    <result column="Size21" jdbcType="NUMERIC" property="size21" />
+    <result column="Size22" jdbcType="NUMERIC" property="size22" />
+    <result column="Size23" jdbcType="NUMERIC" property="size23" />
+    <result column="Size24" jdbcType="NUMERIC" property="size24" />
+    <result column="Size25" jdbcType="NUMERIC" property="size25" />
+    <result column="Size26" jdbcType="NUMERIC" property="size26" />
+    <result column="Size27" jdbcType="NUMERIC" property="size27" />
+    <result column="Size28" jdbcType="NUMERIC" property="size28" />
+    <result column="Size29" jdbcType="NUMERIC" property="size29" />
+    <result column="Size30" jdbcType="NUMERIC" property="size30" />
+    <result column="ProdID" jdbcType="INTEGER" property="prodid" />
+    <result column="Barcode" jdbcType="NVARCHAR" property="barcode" />
+    <result column="ProdName" jdbcType="NVARCHAR" property="prodname" />
+    <result column="Brand" jdbcType="NVARCHAR" property="brand" />
+    <result column="Category" jdbcType="NVARCHAR" property="category" />
+    <result column="Class" jdbcType="NVARCHAR" property="clazz" />
+    <result column="Series" jdbcType="NVARCHAR" property="series" />
+    <result column="Sex" jdbcType="NVARCHAR" property="sex" />
+    <result column="MarketBand" jdbcType="NVARCHAR" property="marketband" />
+    <result column="ProdYear" jdbcType="NVARCHAR" property="prodyear" />
+    <result column="Season" jdbcType="NVARCHAR" property="season" />
+    <result column="SizeClass" jdbcType="NVARCHAR" property="sizeclass" />
+    <result column="Part" jdbcType="NVARCHAR" property="part" />
+    <result column="PriceBand" jdbcType="NVARCHAR" property="priceband" />
+    <result column="AgeBand" jdbcType="NVARCHAR" property="ageband" />
+    <result column="RecommendType" jdbcType="NVARCHAR" property="recommendtype" />
+    <result column="Position" jdbcType="NVARCHAR" property="position" />
+    <result column="ColorSeries" jdbcType="NVARCHAR" property="colorseries" />
+    <result column="Material" jdbcType="NVARCHAR" property="material" />
+    <result column="Designer" jdbcType="NVARCHAR" property="designer" />
+    <result column="MustOrder" jdbcType="BIT" property="mustorder" />
+    <result column="MinimumOrder" jdbcType="INTEGER" property="minimumorder" />
+    <result column="BasicUnit" jdbcType="NVARCHAR" property="basicunit" />
+    <result column="BusinessUnit" jdbcType="NVARCHAR" property="businessunit" />
+    <result column="PackingSpec" jdbcType="NVARCHAR" property="packingspec" />
+    <result column="ProdRemark" jdbcType="NVARCHAR" property="prodremark" />
+    <result column="TargetSort" jdbcType="NVARCHAR" property="targetsort" />
+    <result column="DiscountSort" jdbcType="NVARCHAR" property="discountsort" />
+    <result column="IsOldProduct" jdbcType="BIT" property="isoldproduct" />
+    <result column="IsMainOrder" jdbcType="BIT" property="ismainorder" />
+    <result column="PictureCode" jdbcType="NVARCHAR" property="picturecode" />
+    <result column="AssortPictureCode" jdbcType="NVARCHAR" property="assortpicturecode" />
+    <result column="ProdGUID" jdbcType="INTEGER" property="prodguid" />
+    <result column="IsAdvertisement" jdbcType="BIT" property="isadvertisement" />
+    <result column="IsDisplayWindow" jdbcType="BIT" property="isdisplaywindow" />
+    <result column="IsBasic" jdbcType="BIT" property="isbasic" />
+    <result column="GroupCode" jdbcType="NVARCHAR" property="groupcode" />
+    <result column="OrderLCM" jdbcType="NVARCHAR" property="orderlcm" />
+    <result column="Remark" jdbcType="NVARCHAR" property="remark" />
+    <result column="Reserve1" jdbcType="NVARCHAR" property="reserve1" />
+    <result column="Reserve2" jdbcType="NVARCHAR" property="reserve2" />
+    <result column="Reserve3" jdbcType="NVARCHAR" property="reserve3" />
+    <result column="Reserve4" jdbcType="NVARCHAR" property="reserve4" />
+    <result column="Reserve5" jdbcType="NVARCHAR" property="reserve5" />
+    <result column="Reserve6" jdbcType="NVARCHAR" property="reserve6" />
+    <result column="Reserve7" jdbcType="NVARCHAR" property="reserve7" />
+    <result column="Reserve8" jdbcType="NVARCHAR" property="reserve8" />
+    <result column="Reserve9" jdbcType="NVARCHAR" property="reserve9" />
+    <result column="Reserve10" jdbcType="NVARCHAR" property="reserve10" />
+    <result column="IsActive" jdbcType="BIT" property="isactive" />
+    <result column="SizeDesc" jdbcType="INTEGER" property="sizedesc" />
+    <result column="RealSizeNumber" jdbcType="INTEGER" property="realsizenumber" />
+  </resultMap>
+
+  <select id="getAllOrder" resultMap="BaseResultMap">
+select
+v.SHOP,
+v.SHOPName,
+SUM(v.QtySum) as QtySum,
+SUM(v.DiscountMoney) as DiscountMoney
+from (SELECT     e.HEAD, e.HEADNAME, e.REGION, e.REGIONNAME, e.AGENT, e.AGENTNAME, e.DEALER, e.DEALERName, e.SHOP, e.SHOPName, e.ClientSort, e.District, e.Province, e.City, e.OrderType, e.Address,
+                      e.PostCode, e.Phone, e.BossName, e.Area, e.Mode, e.PayRate, a.OrderNO, a.OrderState, a.OrderDate, c.ProdCode, c.ColorCode, c.Color, b.Pattern, b.QtySum, b.UnitPrice, b.AmountSum,
+                      b.MatchContent, b.QtyCase, c.UnitPrice2, c.UnitPrice3, c.UnitPrice4, (CASE WHEN ISNULL(g.FixPrice, 0) > 0 THEN NULL WHEN ISNULL(g.Discount, 0) > 0 THEN g.Discount WHEN ISNULL(f.Discount,
+                      0) > 0 THEN f.Discount ELSE 1 END) AS Discount, (CASE WHEN ISNULL(g.FixPrice, 0) > 0 THEN g.FixPrice WHEN ISNULL(g.Discount, 0) > 0 THEN g.Discount * c.UnitPrice WHEN ISNULL(f.Discount,
+                      0) > 0 THEN f.Discount * c.UnitPrice ELSE c.UnitPrice END) AS DiscountPrice, (CASE WHEN ISNULL(g.FixPrice, 0) > 0 THEN g.FixPrice * b.QtySum WHEN ISNULL(g.Discount, 0)
+                      > 0 THEN g.Discount * c.UnitPrice * b.QtySum WHEN ISNULL(f.Discount, 0) > 0 THEN f.Discount * c.UnitPrice * b.QtySum ELSE b.AmountSum END) AS DiscountMoney,
+                      (CASE WHEN c.DisableSize LIKE '%Size1,%' THEN 0 ELSE b.Size1 END) AS Size1, (CASE WHEN c.DisableSize LIKE '%Size2,%' THEN 0 ELSE b.Size2 END) AS Size2,
+                      (CASE WHEN c.DisableSize LIKE '%Size3,%' THEN 0 ELSE b.Size3 END) AS Size3, (CASE WHEN c.DisableSize LIKE '%Size4,%' THEN 0 ELSE b.Size4 END) AS Size4,
+                      (CASE WHEN c.DisableSize LIKE '%Size5,%' THEN 0 ELSE b.Size5 END) AS Size5, (CASE WHEN c.DisableSize LIKE '%Size6,%' THEN 0 ELSE b.Size6 END) AS Size6,
+                      (CASE WHEN c.DisableSize LIKE '%Size7,%' THEN 0 ELSE b.Size7 END) AS Size7, (CASE WHEN c.DisableSize LIKE '%Size8,%' THEN 0 ELSE b.Size8 END) AS Size8,
+                      (CASE WHEN c.DisableSize LIKE '%Size9,%' THEN 0 ELSE b.Size9 END) AS Size9, (CASE WHEN c.DisableSize LIKE '%Size10,%' THEN 0 ELSE b.Size10 END) AS Size10,
+                      (CASE WHEN c.DisableSize LIKE '%Size11,%' THEN 0 ELSE b.Size11 END) AS Size11, (CASE WHEN c.DisableSize LIKE '%Size12,%' THEN 0 ELSE b.Size12 END) AS Size12,
+                      (CASE WHEN c.DisableSize LIKE '%Size13,%' THEN 0 ELSE b.Size13 END) AS Size13, (CASE WHEN c.DisableSize LIKE '%Size14,%' THEN 0 ELSE b.Size14 END) AS Size14,
+                      (CASE WHEN c.DisableSize LIKE '%Size15,%' THEN 0 ELSE b.Size15 END) AS Size15, (CASE WHEN c.DisableSize LIKE '%Size16,%' THEN 0 ELSE b.Size16 END) AS Size16,
+                      (CASE WHEN c.DisableSize LIKE '%Size17,%' THEN 0 ELSE b.Size17 END) AS Size17, (CASE WHEN c.DisableSize LIKE '%Size18,%' THEN 0 ELSE b.Size18 END) AS Size18,
+                      (CASE WHEN c.DisableSize LIKE '%Size19,%' THEN 0 ELSE b.Size19 END) AS Size19, (CASE WHEN c.DisableSize LIKE '%Size20,%' THEN 0 ELSE b.Size20 END) AS Size20,
+                      (CASE WHEN c.DisableSize LIKE '%Size21,%' THEN 0 ELSE b.Size21 END) AS Size21, (CASE WHEN c.DisableSize LIKE '%Size22,%' THEN 0 ELSE b.Size22 END) AS Size22,
+                      (CASE WHEN c.DisableSize LIKE '%Size23,%' THEN 0 ELSE b.Size23 END) AS Size23, (CASE WHEN c.DisableSize LIKE '%Size24,%' THEN 0 ELSE b.Size24 END) AS Size24,
+                      (CASE WHEN c.DisableSize LIKE '%Size25,%' THEN 0 ELSE b.Size25 END) AS Size25, (CASE WHEN c.DisableSize LIKE '%Size26,%' THEN 0 ELSE b.Size26 END) AS Size26,
+                      (CASE WHEN c.DisableSize LIKE '%Size27,%' THEN 0 ELSE b.Size27 END) AS Size27, (CASE WHEN c.DisableSize LIKE '%Size28,%' THEN 0 ELSE b.Size28 END) AS Size28,
+                      (CASE WHEN c.DisableSize LIKE '%Size29,%' THEN 0 ELSE b.Size29 END) AS Size29, (CASE WHEN c.DisableSize LIKE '%Size30,%' THEN 0 ELSE b.Size30 END) AS Size30, c.ProdID, c.Barcode,
+                      c.ProdName, c.Brand, c.Category, c.Class, c.Series, c.Sex, c.MarketBand, c.ProdYear, c.Season, c.SizeClass, c.Part, c.PriceBand, c.AgeBand, c.RecommendType, c.Position, c.ColorSeries,
+                      c.Material, c.Designer, c.MustOrder, c.MinimumOrder, c.BasicUnit, c.BusinessUnit, c.PackingSpec, c.ProdRemark, c.TargetSort, c.DiscountSort, c.IsOldProduct, c.IsMainOrder, c.PictureCode,
+                      c.AssortPictureCode, c.ProdGUID, c.IsAdvertisement, c.IsDisplayWindow, c.IsBasic, c.GroupCode, c.OrderLCM, b.Remark, c.Reserve1, c.Reserve2, c.Reserve3, c.Reserve4, c.Reserve5, c.Reserve6,
+                      c.Reserve7, c.Reserve8, c.Reserve9, c.Reserve10, c.IsActive, NULL AS SizeDesc, NULL AS RealSizeNumber
+FROM         dbo.OrderMain AS a WITH (NOLOCK) INNER JOIN
+                      dbo.BaseClientShop AS e WITH (NOLOCK) ON a.ClientCode = e.SHOP AND e.IsEnable = 1 INNER JOIN
+                      dbo.OrderDetail AS b WITH (NOLOCK) ON a.OrderNO = b.OrderNO AND b.IsDeleted = 0 AND b.QtySum > 0 INNER JOIN
+                      dbo.BaseProduct AS c WITH (NOLOCK) ON b.ProdGUID = c.ProdGUID AND c.IsDeleted = 0 LEFT OUTER JOIN
+                      dbo.BaseDiscount AS f WITH (NOLOCK) ON a.ClientCode = f.ClientCode AND c.DiscountSort = f.ProdClass AND f.IsDeleted = 0 LEFT OUTER JOIN
+                      dbo.BaseFixPrice AS g WITH (NOLOCK) ON a.ClientCode = g.ClientCode AND b.ProdCode = g.ProdCode AND g.IsDeleted = 0
+WHERE     (a.IsInvalid = 0)) v
+group by v.SHOP,v.SHOPName
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.linjr.vo.req.OrderPageReqVO">
+select
+SHOP,
+SHOPName,
+SUM(QtySum) as QtySum,
+SUM(DiscountMoney) as DiscountMoney
+from v_AllOrderDiscount
+group by SHOP,SHOPName
+  </select>
+
+</mapper>

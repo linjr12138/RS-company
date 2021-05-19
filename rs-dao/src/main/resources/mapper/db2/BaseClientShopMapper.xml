@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.BaseClientShopMapper">
+  <resultMap id="BaseResultMap" type="com.linjr.entity.db2.BaseClientShop">
+    <id column="SHOP" jdbcType="NVARCHAR" property="shop" />
+    <result column="SHOPName" jdbcType="NVARCHAR" property="shopname" />
+    <result column="DEALER" jdbcType="NVARCHAR" property="dealer" />
+    <result column="DEALERName" jdbcType="NVARCHAR" property="dealername" />
+    <result column="AGENT" jdbcType="NVARCHAR" property="agent" />
+    <result column="AGENTNAME" jdbcType="NVARCHAR" property="agentname" />
+    <result column="REGION" jdbcType="NVARCHAR" property="region" />
+    <result column="REGIONNAME" jdbcType="NVARCHAR" property="regionname" />
+    <result column="HEAD" jdbcType="NVARCHAR" property="head" />
+    <result column="HEADNAME" jdbcType="NVARCHAR" property="headname" />
+    <result column="Manager" jdbcType="NVARCHAR" property="manager" />
+    <result column="ClientSort" jdbcType="VARCHAR" property="clientsort" />
+    <result column="IsEnable" jdbcType="BIT" property="isenable" />
+    <result column="Discount" jdbcType="NUMERIC" property="discount" />
+    <result column="DiscountGroup" jdbcType="NVARCHAR" property="discountgroup" />
+    <result column="FixedGroup" jdbcType="NVARCHAR" property="fixedgroup" />
+    <result column="District" jdbcType="NVARCHAR" property="district" />
+    <result column="Province" jdbcType="NVARCHAR" property="province" />
+    <result column="City" jdbcType="NVARCHAR" property="city" />
+    <result column="Address" jdbcType="NVARCHAR" property="address" />
+    <result column="PostCode" jdbcType="NVARCHAR" property="postcode" />
+    <result column="Phone" jdbcType="NVARCHAR" property="phone" />
+    <result column="BossName" jdbcType="NVARCHAR" property="bossname" />
+    <result column="Area" jdbcType="NVARCHAR" property="area" />
+    <result column="Mode" jdbcType="NVARCHAR" property="mode" />
+    <result column="PayRate" jdbcType="NUMERIC" property="payrate" />
+    <result column="OrderType" jdbcType="INTEGER" property="ordertype" />
+    <result column="ShopRemark" jdbcType="NVARCHAR" property="shopremark" />
+    <result column="ShopReserve1" jdbcType="NVARCHAR" property="shopreserve1" />
+    <result column="ShopReserve2" jdbcType="NVARCHAR" property="shopreserve2" />
+    <result column="ShopReserve3" jdbcType="NVARCHAR" property="shopreserve3" />
+    <result column="PADUserCode" jdbcType="NVARCHAR" property="padusercode" />
+    <result column="PADUserPWD" jdbcType="NVARCHAR" property="paduserpwd" />
+    <result column="salt" jdbcType="NVARCHAR" property="salt" />
+    <result column="PADUserType" jdbcType="INTEGER" property="padusertype" />
+    <result column="PreOrderType" jdbcType="NVARCHAR" property="preordertype" />
+    <result column="IsSurvey" jdbcType="BIT" property="issurvey" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    SHOP, SHOPName, DEALER, DEALERName, AGENT, AGENTNAME, REGION, REGIONNAME, HEAD, HEADNAME, 
+    Manager, ClientSort, IsEnable, Discount, DiscountGroup, FixedGroup, District, Province, 
+    City, Address, PostCode, Phone, BossName, Area, `Mode`, PayRate, OrderType, ShopRemark, 
+    ShopReserve1, ShopReserve2, ShopReserve3, PADUserCode, PADUserPWD, salt, PADUserType, PreOrderType,
+    IsSurvey
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from BaseClientShop
+    where SHOP = #{shop,jdbcType=NVARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from BaseClientShop
+    where SHOP = #{shop,jdbcType=NVARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.linjr.entity.db2.BaseClientShop">
+    insert into BaseClientShop (SHOP, SHOPName, DEALER, 
+      DEALERName, AGENT, AGENTNAME, 
+      REGION, REGIONNAME, HEAD, 
+      HEADNAME, Manager, ClientSort, 
+      IsEnable, Discount, DiscountGroup, 
+      FixedGroup, District, Province, 
+      City, Address, PostCode, 
+      Phone, BossName, Area, 
+      `Mode`, PayRate, OrderType, 
+      ShopRemark, ShopReserve1, ShopReserve2, 
+      ShopReserve3, PADUserCode, PADUserPWD, salt,
+      PADUserType, PreOrderType, IsSurvey
+      )
+    values (#{shop,jdbcType=NVARCHAR}, #{shopname,jdbcType=NVARCHAR}, #{dealer,jdbcType=NVARCHAR}, 
+      #{dealername,jdbcType=NVARCHAR}, #{agent,jdbcType=NVARCHAR}, #{agentname,jdbcType=NVARCHAR}, 
+      #{region,jdbcType=NVARCHAR}, #{regionname,jdbcType=NVARCHAR}, #{head,jdbcType=NVARCHAR}, 
+      #{headname,jdbcType=NVARCHAR}, #{manager,jdbcType=NVARCHAR}, #{clientsort,jdbcType=VARCHAR}, 
+      #{isenable,jdbcType=BIT}, #{discount,jdbcType=NUMERIC}, #{discountgroup,jdbcType=NVARCHAR}, 
+      #{fixedgroup,jdbcType=NVARCHAR}, #{district,jdbcType=NVARCHAR}, #{province,jdbcType=NVARCHAR}, 
+      #{city,jdbcType=NVARCHAR}, #{address,jdbcType=NVARCHAR}, #{postcode,jdbcType=NVARCHAR}, 
+      #{phone,jdbcType=NVARCHAR}, #{bossname,jdbcType=NVARCHAR}, #{area,jdbcType=NVARCHAR}, 
+      #{mode,jdbcType=NVARCHAR}, #{payrate,jdbcType=NUMERIC}, #{ordertype,jdbcType=INTEGER}, 
+      #{shopremark,jdbcType=NVARCHAR}, #{shopreserve1,jdbcType=NVARCHAR}, #{shopreserve2,jdbcType=NVARCHAR}, 
+      #{shopreserve3,jdbcType=NVARCHAR}, #{padusercode,jdbcType=NVARCHAR}, #{paduserpwd,jdbcType=NVARCHAR}, #{salt,jdbcType=NVARCHAR},
+      #{padusertype,jdbcType=INTEGER}, #{preordertype,jdbcType=NVARCHAR}, #{issurvey,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.linjr.entity.db2.BaseClientShop">
+    insert into BaseClientShop
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="shop != null">
+        SHOP,
+      </if>
+      <if test="shopname != null">
+        SHOPName,
+      </if>
+      <if test="dealer != null">
+        DEALER,
+      </if>
+      <if test="dealername != null">
+        DEALERName,
+      </if>
+      <if test="agent != null">
+        AGENT,
+      </if>
+      <if test="agentname != null">
+        AGENTNAME,
+      </if>
+      <if test="region != null">
+        REGION,
+      </if>
+      <if test="regionname != null">
+        REGIONNAME,
+      </if>
+      <if test="head != null">
+        HEAD,
+      </if>
+      <if test="headname != null">
+        HEADNAME,
+      </if>
+      <if test="manager != null">
+        Manager,
+      </if>
+      <if test="clientsort != null">
+        ClientSort,
+      </if>
+      <if test="isenable != null">
+        IsEnable,
+      </if>
+      <if test="discount != null">
+        Discount,
+      </if>
+      <if test="discountgroup != null">
+        DiscountGroup,
+      </if>
+      <if test="fixedgroup != null">
+        FixedGroup,
+      </if>
+      <if test="district != null">
+        District,
+      </if>
+      <if test="province != null">
+        Province,
+      </if>
+      <if test="city != null">
+        City,
+      </if>
+      <if test="address != null">
+        Address,
+      </if>
+      <if test="postcode != null">
+        PostCode,
+      </if>
+      <if test="phone != null">
+        Phone,
+      </if>
+      <if test="bossname != null">
+        BossName,
+      </if>
+      <if test="area != null">
+        Area,
+      </if>
+      <if test="mode != null">
+        `Mode`,
+      </if>
+      <if test="payrate != null">
+        PayRate,
+      </if>
+      <if test="ordertype != null">
+        OrderType,
+      </if>
+      <if test="shopremark != null">
+        ShopRemark,
+      </if>
+      <if test="shopreserve1 != null">
+        ShopReserve1,
+      </if>
+      <if test="shopreserve2 != null">
+        ShopReserve2,
+      </if>
+      <if test="shopreserve3 != null">
+        ShopReserve3,
+      </if>
+      <if test="padusercode != null">
+        PADUserCode,
+      </if>
+      <if test="paduserpwd != null">
+        PADUserPWD,
+      </if>
+      <if test="salt != null">
+        salt,
+      </if>
+      <if test="padusertype != null">
+        PADUserType,
+      </if>
+      <if test="preordertype != null">
+        PreOrderType,
+      </if>
+      <if test="issurvey != null">
+        IsSurvey,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="shop != null">
+        #{shop,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopname != null">
+        #{shopname,jdbcType=NVARCHAR},
+      </if>
+      <if test="dealer != null">
+        #{dealer,jdbcType=NVARCHAR},
+      </if>
+      <if test="dealername != null">
+        #{dealername,jdbcType=NVARCHAR},
+      </if>
+      <if test="agent != null">
+        #{agent,jdbcType=NVARCHAR},
+      </if>
+      <if test="agentname != null">
+        #{agentname,jdbcType=NVARCHAR},
+      </if>
+      <if test="region != null">
+        #{region,jdbcType=NVARCHAR},
+      </if>
+      <if test="regionname != null">
+        #{regionname,jdbcType=NVARCHAR},
+      </if>
+      <if test="head != null">
+        #{head,jdbcType=NVARCHAR},
+      </if>
+      <if test="headname != null">
+        #{headname,jdbcType=NVARCHAR},
+      </if>
+      <if test="manager != null">
+        #{manager,jdbcType=NVARCHAR},
+      </if>
+      <if test="clientsort != null">
+        #{clientsort,jdbcType=VARCHAR},
+      </if>
+      <if test="isenable != null">
+        #{isenable,jdbcType=BIT},
+      </if>
+      <if test="discount != null">
+        #{discount,jdbcType=NUMERIC},
+      </if>
+      <if test="discountgroup != null">
+        #{discountgroup,jdbcType=NVARCHAR},
+      </if>
+      <if test="fixedgroup != null">
+        #{fixedgroup,jdbcType=NVARCHAR},
+      </if>
+      <if test="district != null">
+        #{district,jdbcType=NVARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=NVARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=NVARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=NVARCHAR},
+      </if>
+      <if test="postcode != null">
+        #{postcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="bossname != null">
+        #{bossname,jdbcType=NVARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=NVARCHAR},
+      </if>
+      <if test="mode != null">
+        #{mode,jdbcType=NVARCHAR},
+      </if>
+      <if test="payrate != null">
+        #{payrate,jdbcType=NUMERIC},
+      </if>
+      <if test="ordertype != null">
+        #{ordertype,jdbcType=INTEGER},
+      </if>
+      <if test="shopremark != null">
+        #{shopremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopreserve1 != null">
+        #{shopreserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopreserve2 != null">
+        #{shopreserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopreserve3 != null">
+        #{shopreserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="padusercode != null">
+        #{padusercode,jdbcType=NVARCHAR},
+      </if>
+      <if test="paduserpwd != null">
+        #{paduserpwd,jdbcType=NVARCHAR},
+      </if>
+      <if test="salt != null">
+        #{salt,jdbcType=NVARCHAR},
+      </if>
+      <if test="padusertype != null">
+        #{padusertype,jdbcType=INTEGER},
+      </if>
+      <if test="preordertype != null">
+        #{preordertype,jdbcType=NVARCHAR},
+      </if>
+      <if test="issurvey != null">
+        #{issurvey,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.linjr.entity.db2.BaseClientShop">
+    update BaseClientShop
+    <set>
+      <if test="shopname != null">
+        SHOPName = #{shopname,jdbcType=NVARCHAR},
+      </if>
+      <if test="dealer != null">
+        DEALER = #{dealer,jdbcType=NVARCHAR},
+      </if>
+      <if test="dealername != null">
+        DEALERName = #{dealername,jdbcType=NVARCHAR},
+      </if>
+      <if test="agent != null">
+        AGENT = #{agent,jdbcType=NVARCHAR},
+      </if>
+      <if test="agentname != null">
+        AGENTNAME = #{agentname,jdbcType=NVARCHAR},
+      </if>
+      <if test="region != null">
+        REGION = #{region,jdbcType=NVARCHAR},
+      </if>
+      <if test="regionname != null">
+        REGIONNAME = #{regionname,jdbcType=NVARCHAR},
+      </if>
+      <if test="head != null">
+        HEAD = #{head,jdbcType=NVARCHAR},
+      </if>
+      <if test="headname != null">
+        HEADNAME = #{headname,jdbcType=NVARCHAR},
+      </if>
+      <if test="manager != null">
+        Manager = #{manager,jdbcType=NVARCHAR},
+      </if>
+      <if test="clientsort != null">
+        ClientSort = #{clientsort,jdbcType=VARCHAR},
+      </if>
+      <if test="isenable != null">
+        IsEnable = #{isenable,jdbcType=BIT},
+      </if>
+      <if test="discount != null">
+        Discount = #{discount,jdbcType=NUMERIC},
+      </if>
+      <if test="discountgroup != null">
+        DiscountGroup = #{discountgroup,jdbcType=NVARCHAR},
+      </if>
+      <if test="fixedgroup != null">
+        FixedGroup = #{fixedgroup,jdbcType=NVARCHAR},
+      </if>
+      <if test="district != null">
+        District = #{district,jdbcType=NVARCHAR},
+      </if>
+      <if test="province != null">
+        Province = #{province,jdbcType=NVARCHAR},
+      </if>
+      <if test="city != null">
+        City = #{city,jdbcType=NVARCHAR},
+      </if>
+      <if test="address != null">
+        Address = #{address,jdbcType=NVARCHAR},
+      </if>
+      <if test="postcode != null">
+        PostCode = #{postcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="phone != null">
+        Phone = #{phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="bossname != null">
+        BossName = #{bossname,jdbcType=NVARCHAR},
+      </if>
+      <if test="area != null">
+        Area = #{area,jdbcType=NVARCHAR},
+      </if>
+      <if test="mode != null">
+        `Mode` = #{mode,jdbcType=NVARCHAR},
+      </if>
+      <if test="payrate != null">
+        PayRate = #{payrate,jdbcType=NUMERIC},
+      </if>
+      <if test="ordertype != null">
+        OrderType = #{ordertype,jdbcType=INTEGER},
+      </if>
+      <if test="shopremark != null">
+        ShopRemark = #{shopremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopreserve1 != null">
+        ShopReserve1 = #{shopreserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopreserve2 != null">
+        ShopReserve2 = #{shopreserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="shopreserve3 != null">
+        ShopReserve3 = #{shopreserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="padusercode != null">
+        PADUserCode = #{padusercode,jdbcType=NVARCHAR},
+      </if>
+      <if test="paduserpwd != null">
+        PADUserPWD = #{paduserpwd,jdbcType=NVARCHAR},
+      </if>
+      <if test="salt != null">
+        salt = #{salt,jdbcType=NVARCHAR},
+      </if>
+      <if test="padusertype != null">
+        PADUserType = #{padusertype,jdbcType=INTEGER},
+      </if>
+      <if test="preordertype != null">
+        PreOrderType = #{preordertype,jdbcType=NVARCHAR},
+      </if>
+      <if test="issurvey != null">
+        IsSurvey = #{issurvey,jdbcType=BIT},
+      </if>
+    </set>
+    where SHOP = #{shop,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.linjr.entity.db2.BaseClientShop">
+    update BaseClientShop
+    set SHOPName = #{shopname,jdbcType=NVARCHAR},
+      DEALER = #{dealer,jdbcType=NVARCHAR},
+      DEALERName = #{dealername,jdbcType=NVARCHAR},
+      AGENT = #{agent,jdbcType=NVARCHAR},
+      AGENTNAME = #{agentname,jdbcType=NVARCHAR},
+      REGION = #{region,jdbcType=NVARCHAR},
+      REGIONNAME = #{regionname,jdbcType=NVARCHAR},
+      HEAD = #{head,jdbcType=NVARCHAR},
+      HEADNAME = #{headname,jdbcType=NVARCHAR},
+      Manager = #{manager,jdbcType=NVARCHAR},
+      ClientSort = #{clientsort,jdbcType=VARCHAR},
+      IsEnable = #{isenable,jdbcType=BIT},
+      Discount = #{discount,jdbcType=NUMERIC},
+      DiscountGroup = #{discountgroup,jdbcType=NVARCHAR},
+      FixedGroup = #{fixedgroup,jdbcType=NVARCHAR},
+      District = #{district,jdbcType=NVARCHAR},
+      Province = #{province,jdbcType=NVARCHAR},
+      City = #{city,jdbcType=NVARCHAR},
+      Address = #{address,jdbcType=NVARCHAR},
+      PostCode = #{postcode,jdbcType=NVARCHAR},
+      Phone = #{phone,jdbcType=NVARCHAR},
+      BossName = #{bossname,jdbcType=NVARCHAR},
+      Area = #{area,jdbcType=NVARCHAR},
+      `Mode` = #{mode,jdbcType=NVARCHAR},
+      PayRate = #{payrate,jdbcType=NUMERIC},
+      OrderType = #{ordertype,jdbcType=INTEGER},
+      ShopRemark = #{shopremark,jdbcType=NVARCHAR},
+      ShopReserve1 = #{shopreserve1,jdbcType=NVARCHAR},
+      ShopReserve2 = #{shopreserve2,jdbcType=NVARCHAR},
+      ShopReserve3 = #{shopreserve3,jdbcType=NVARCHAR},
+      PADUserCode = #{padusercode,jdbcType=NVARCHAR},
+      PADUserPWD = #{paduserpwd,jdbcType=NVARCHAR},
+      salt = #{salt,jdbcType=NVARCHAR},
+      PADUserType = #{padusertype,jdbcType=INTEGER},
+      PreOrderType = #{preordertype,jdbcType=NVARCHAR},
+      IsSurvey = #{issurvey,jdbcType=BIT}
+    where SHOP = #{shop,jdbcType=NVARCHAR}
+  </update>
+
+<!-- 查询所有 -->
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    *
+    from BaseClientShop
+  </select>
+
+  <!-- @Description:     通过用户名查询用户信息-->
+  <!-- @Author:          小霍-->
+  <select id="selectByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    *
+    from BaseClientShop
+    where PADUserCode=#{padusercode,jdbcType=NVARCHAR}
+    and IsSurvey='0' and IsEnable='1'
+  </select>
+
+</mapper>

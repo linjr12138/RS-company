@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.BaseProductMapper">
+  <resultMap id="BaseResultMap" type="com.linjr.entity.db2.BaseProduct">
+    <id column="ProdCode" jdbcType="NVARCHAR" property="prodcode" />
+    <id column="ColorCode" jdbcType="NVARCHAR" property="colorcode" />
+    <id column="Pattern" jdbcType="NVARCHAR" property="pattern" />
+    <result column="ProdGUID" jdbcType="INTEGER" property="prodguid" />
+    <result column="ProdID" jdbcType="INTEGER" property="prodid" />
+    <result column="Color" jdbcType="NVARCHAR" property="color" />
+    <result column="Barcode" jdbcType="NVARCHAR" property="barcode" />
+    <result column="ProdName" jdbcType="NVARCHAR" property="prodname" />
+    <result column="Brand" jdbcType="NVARCHAR" property="brand" />
+    <result column="Category" jdbcType="NVARCHAR" property="category" />
+    <result column="Series" jdbcType="NVARCHAR" property="series" />
+    <result column="Sex" jdbcType="NVARCHAR" property="sex" />
+    <result column="Class" jdbcType="NVARCHAR" property="clazz" />
+    <result column="SizeClass" jdbcType="NVARCHAR" property="sizeclass" />
+    <result column="Part" jdbcType="NVARCHAR" property="part" />
+    <result column="Position" jdbcType="NVARCHAR" property="position" />
+    <result column="ColorSeries" jdbcType="NVARCHAR" property="colorseries" />
+    <result column="Material" jdbcType="NVARCHAR" property="material" />
+    <result column="UnitPrice" jdbcType="NUMERIC" property="unitprice" />
+    <result column="MustOrder" jdbcType="BIT" property="mustorder" />
+    <result column="RecommendType" jdbcType="NVARCHAR" property="recommendtype" />
+    <result column="MarketBand" jdbcType="NVARCHAR" property="marketband" />
+    <result column="PriceBand" jdbcType="NVARCHAR" property="priceband" />
+    <result column="AgeBand" jdbcType="NVARCHAR" property="ageband" />
+    <result column="Designer" jdbcType="NVARCHAR" property="designer" />
+    <result column="MinimumOrder" jdbcType="INTEGER" property="minimumorder" />
+    <result column="PDAInterface1" jdbcType="NVARCHAR" property="pdainterface1" />
+    <result column="PDAInterface2" jdbcType="NVARCHAR" property="pdainterface2" />
+    <result column="ProdYear" jdbcType="NVARCHAR" property="prodyear" />
+    <result column="Season" jdbcType="NVARCHAR" property="season" />
+    <result column="BasicUnit" jdbcType="NVARCHAR" property="basicunit" />
+    <result column="BusinessUnit" jdbcType="NVARCHAR" property="businessunit" />
+    <result column="PackingSpec" jdbcType="NVARCHAR" property="packingspec" />
+    <result column="IsActive" jdbcType="BIT" property="isactive" />
+    <result column="IsDeleted" jdbcType="BIT" property="isdeleted" />
+    <result column="ProdRemark" jdbcType="NVARCHAR" property="prodremark" />
+    <result column="Reserve1" jdbcType="NVARCHAR" property="reserve1" />
+    <result column="Reserve2" jdbcType="NVARCHAR" property="reserve2" />
+    <result column="Reserve3" jdbcType="NVARCHAR" property="reserve3" />
+    <result column="EditUser" jdbcType="NVARCHAR" property="edituser" />
+    <result column="WNo" jdbcType="TIMESTAMP" property="wno" />
+    <result column="Version" jdbcType="INTEGER" property="version" />
+    <result column="UnitPrice2" jdbcType="NUMERIC" property="unitprice2" />
+    <result column="UnitPrice3" jdbcType="NUMERIC" property="unitprice3" />
+    <result column="UnitPrice4" jdbcType="NUMERIC" property="unitprice4" />
+    <result column="TargetSort" jdbcType="NVARCHAR" property="targetsort" />
+    <result column="DiscountSort" jdbcType="NVARCHAR" property="discountsort" />
+    <result column="UnionProdCode" jdbcType="NVARCHAR" property="unionprodcode" />
+    <result column="GroupCode" jdbcType="NVARCHAR" property="groupcode" />
+    <result column="IsOldProduct" jdbcType="BIT" property="isoldproduct" />
+    <result column="IsMainOrder" jdbcType="BIT" property="ismainorder" />
+    <result column="Reserve4" jdbcType="NVARCHAR" property="reserve4" />
+    <result column="Reserve5" jdbcType="NVARCHAR" property="reserve5" />
+    <result column="Reserve6" jdbcType="NVARCHAR" property="reserve6" />
+    <result column="Reserve7" jdbcType="NVARCHAR" property="reserve7" />
+    <result column="Reserve8" jdbcType="NVARCHAR" property="reserve8" />
+    <result column="Reserve9" jdbcType="NVARCHAR" property="reserve9" />
+    <result column="Reserve10" jdbcType="NVARCHAR" property="reserve10" />
+    <result column="IsFixedProd" jdbcType="BIT" property="isfixedprod" />
+    <result column="PictureCode" jdbcType="NVARCHAR" property="picturecode" />
+    <result column="AssortPictureCode" jdbcType="NVARCHAR" property="assortpicturecode" />
+    <result column="OrderLCM" jdbcType="NVARCHAR" property="orderlcm" />
+    <result column="EditDesc" jdbcType="NVARCHAR" property="editdesc" />
+    <result column="DisableSize" jdbcType="NVARCHAR" property="disablesize" />
+    <result column="SHPictureCode" jdbcType="NVARCHAR" property="shpicturecode" />
+    <result column="IsSurvey" jdbcType="BIT" property="issurvey" />
+    <result column="IsAdvertisement" jdbcType="BIT" property="isadvertisement" />
+    <result column="IsDisplayWindow" jdbcType="BIT" property="isdisplaywindow" />
+    <result column="IsBasic" jdbcType="BIT" property="isbasic" />
+    <result column="UnOrderSize" jdbcType="NVARCHAR" property="unordersize" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.linjr.entity.db2.BaseProduct">
+    <result column="Timestamp" jdbcType="BINARY" property="timestamp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    [ProdCode], [ColorCode], [Pattern], [ProdGUID], [ProdID], [Color], [Barcode], [ProdName], [Brand],
+    [Category], [Series], [Sex], [Class], [SizeClass], [Part], [Position], [ColorSeries], [Material],
+    [UnitPrice], [MustOrder], [RecommendType], [MarketBand], [PriceBand], [AgeBand], [Designer], [MinimumOrder],
+    [PDAInterface1], [PDAInterface2], [ProdYear], [Season], [BasicUnit], [BusinessUnit], [PackingSpec],
+    [IsActive], [IsDeleted], [ProdRemark], [Reserve1], [Reserve2], [Reserve3], [EditUser], [WNo], [Version],
+    [UnitPrice2], [UnitPrice3], [UnitPrice4], [TargetSort], [DiscountSort], [UnionProdCode], [GroupCode],
+    [IsOldProduct], [IsMainOrder], [Reserve4], [Reserve5], [Reserve6], [Reserve7], [Reserve8], [Reserve9],
+    [Reserve10], [IsFixedProd], [PictureCode], [AssortPictureCode], [OrderLCM], [EditDesc], [DisableSize],
+    [SHPictureCode], [IsSurvey], [IsAdvertisement], [IsDisplayWindow], [IsBasic], [UnOrderSize]
+  </sql>
+  <sql id="Blob_Column_List">
+    [Timestamp]
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from BaseProduct
+    where [ProdCode] = #{prodcode,jdbcType=NVARCHAR}
+      and [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+      and [Pattern] = #{pattern,jdbcType=NVARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from BaseProduct
+    where [ProdCode] = #{prodcode,jdbcType=NVARCHAR}
+      and [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+      and [Pattern] = #{pattern,jdbcType=NVARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.linjr.entity.db2.BaseProduct">
+    insert into BaseProduct ([ProdCode], [ColorCode], [Pattern],
+      [ProdGUID], [ProdID], [Color],
+      [Barcode], [ProdName], [Brand],
+      [Category], [Series], [Sex],
+      [Class], [SizeClass], [Part],
+      [Position], [ColorSeries], [Material],
+      [UnitPrice], [MustOrder], [RecommendType],
+      [MarketBand], [PriceBand], [AgeBand],
+      [Designer], [MinimumOrder], [PDAInterface1],
+      [PDAInterface2], [ProdYear], [Season],
+      [BasicUnit], [BusinessUnit], [PackingSpec],
+      [IsActive], [IsDeleted], [ProdRemark],
+      [Reserve1], [Reserve2], [Reserve3],
+      [EditUser], [WNo], [Version],
+      [UnitPrice2], [UnitPrice3], [UnitPrice4],
+      [TargetSort], [DiscountSort], [UnionProdCode],
+      [GroupCode], [IsOldProduct], [IsMainOrder],
+      [Reserve4], [Reserve5], [Reserve6],
+      [Reserve7], [Reserve8], [Reserve9],
+      [Reserve10], [IsFixedProd], [PictureCode],
+      [AssortPictureCode], [OrderLCM], [EditDesc],
+      [DisableSize], [SHPictureCode], [IsSurvey],
+      [IsAdvertisement], [IsDisplayWindow], [IsBasic],
+      [UnOrderSize], [Timestamp])
+    values (#{prodcode,jdbcType=NVARCHAR}, #{colorcode,jdbcType=NVARCHAR}, #{pattern,jdbcType=NVARCHAR}, 
+      #{prodguid,jdbcType=INTEGER}, #{prodid,jdbcType=INTEGER}, #{color,jdbcType=NVARCHAR}, 
+      #{barcode,jdbcType=NVARCHAR}, #{prodname,jdbcType=NVARCHAR}, #{brand,jdbcType=NVARCHAR}, 
+      #{category,jdbcType=NVARCHAR}, #{series,jdbcType=NVARCHAR}, #{sex,jdbcType=NVARCHAR}, 
+      #{clazz,jdbcType=NVARCHAR}, #{sizeclass,jdbcType=NVARCHAR}, #{part,jdbcType=NVARCHAR},
+      #{position,jdbcType=NVARCHAR}, #{colorseries,jdbcType=NVARCHAR}, #{material,jdbcType=NVARCHAR}, 
+      #{unitprice,jdbcType=NUMERIC}, #{mustorder,jdbcType=BIT}, #{recommendtype,jdbcType=NVARCHAR}, 
+      #{marketband,jdbcType=NVARCHAR}, #{priceband,jdbcType=NVARCHAR}, #{ageband,jdbcType=NVARCHAR}, 
+      #{designer,jdbcType=NVARCHAR}, #{minimumorder,jdbcType=INTEGER}, #{pdainterface1,jdbcType=NVARCHAR}, 
+      #{pdainterface2,jdbcType=NVARCHAR}, #{prodyear,jdbcType=NVARCHAR}, #{season,jdbcType=NVARCHAR}, 
+      #{basicunit,jdbcType=NVARCHAR}, #{businessunit,jdbcType=NVARCHAR}, #{packingspec,jdbcType=NVARCHAR}, 
+      #{isactive,jdbcType=BIT}, #{isdeleted,jdbcType=BIT}, #{prodremark,jdbcType=NVARCHAR}, 
+      #{reserve1,jdbcType=NVARCHAR}, #{reserve2,jdbcType=NVARCHAR}, #{reserve3,jdbcType=NVARCHAR}, 
+      #{edituser,jdbcType=NVARCHAR}, #{wno,jdbcType=TIMESTAMP}, #{version,jdbcType=INTEGER}, 
+      #{unitprice2,jdbcType=NUMERIC}, #{unitprice3,jdbcType=NUMERIC}, #{unitprice4,jdbcType=NUMERIC}, 
+      #{targetsort,jdbcType=NVARCHAR}, #{discountsort,jdbcType=NVARCHAR}, #{unionprodcode,jdbcType=NVARCHAR}, 
+      #{groupcode,jdbcType=NVARCHAR}, #{isoldproduct,jdbcType=BIT}, #{ismainorder,jdbcType=BIT}, 
+      #{reserve4,jdbcType=NVARCHAR}, #{reserve5,jdbcType=NVARCHAR}, #{reserve6,jdbcType=NVARCHAR}, 
+      #{reserve7,jdbcType=NVARCHAR}, #{reserve8,jdbcType=NVARCHAR}, #{reserve9,jdbcType=NVARCHAR}, 
+      #{reserve10,jdbcType=NVARCHAR}, #{isfixedprod,jdbcType=BIT}, #{picturecode,jdbcType=NVARCHAR}, 
+      #{assortpicturecode,jdbcType=NVARCHAR}, #{orderlcm,jdbcType=NVARCHAR}, #{editdesc,jdbcType=NVARCHAR}, 
+      #{disablesize,jdbcType=NVARCHAR}, #{shpicturecode,jdbcType=NVARCHAR}, #{issurvey,jdbcType=BIT}, 
+      #{isadvertisement,jdbcType=BIT}, #{isdisplaywindow,jdbcType=BIT}, #{isbasic,jdbcType=BIT}, 
+      #{unordersize,jdbcType=NVARCHAR}, #{timestamp,jdbcType=BINARY})
+  </insert>
+  <insert id="insertSelective" parameterType="com.linjr.entity.db2.BaseProduct">
+    insert into BaseProduct
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="prodcode != null">
+        [ProdCode],
+      </if>
+      <if test="colorcode != null">
+        [ColorCode],
+      </if>
+      <if test="pattern != null">
+        [Pattern],
+      </if>
+      <if test="prodguid != null">
+        [ProdGUID],
+      </if>
+      <if test="prodid != null">
+        [ProdID],
+      </if>
+      <if test="color != null">
+        [Color],
+      </if>
+      <if test="barcode != null">
+        [Barcode],
+      </if>
+      <if test="prodname != null">
+        [ProdName],
+      </if>
+      <if test="brand != null">
+        [Brand],
+      </if>
+      <if test="category != null">
+        [Category],
+      </if>
+      <if test="series != null">
+        [Series],
+      </if>
+      <if test="sex != null">
+        [Sex],
+      </if>
+      <if test="clazz != null">
+        [Class],
+      </if>
+      <if test="sizeclass != null">
+        [SizeClass],
+      </if>
+      <if test="part != null">
+        [Part],
+      </if>
+      <if test="position != null">
+        [Position],
+      </if>
+      <if test="colorseries != null">
+        [ColorSeries],
+      </if>
+      <if test="material != null">
+        [Material],
+      </if>
+      <if test="unitprice != null">
+        [UnitPrice],
+      </if>
+      <if test="mustorder != null">
+        [MustOrder],
+      </if>
+      <if test="recommendtype != null">
+        [RecommendType],
+      </if>
+      <if test="marketband != null">
+        [MarketBand],
+      </if>
+      <if test="priceband != null">
+        [PriceBand],
+      </if>
+      <if test="ageband != null">
+        [AgeBand],
+      </if>
+      <if test="designer != null">
+        [Designer],
+      </if>
+      <if test="minimumorder != null">
+        [MinimumOrder],
+      </if>
+      <if test="pdainterface1 != null">
+        [PDAInterface1],
+      </if>
+      <if test="pdainterface2 != null">
+        [PDAInterface2],
+      </if>
+      <if test="prodyear != null">
+        [ProdYear],
+      </if>
+      <if test="season != null">
+        [Season],
+      </if>
+      <if test="basicunit != null">
+        [BasicUnit],
+      </if>
+      <if test="businessunit != null">
+        [BusinessUnit],
+      </if>
+      <if test="packingspec != null">
+        [PackingSpec],
+      </if>
+      <if test="isactive != null">
+        [IsActive],
+      </if>
+      <if test="isdeleted != null">
+        [IsDeleted],
+      </if>
+      <if test="prodremark != null">
+        [ProdRemark],
+      </if>
+      <if test="reserve1 != null">
+        [Reserve1],
+      </if>
+      <if test="reserve2 != null">
+        [Reserve2],
+      </if>
+      <if test="reserve3 != null">
+        [Reserve3],
+      </if>
+      <if test="edituser != null">
+        [EditUser],
+      </if>
+      <if test="wno != null">
+        [WNo],
+      </if>
+      <if test="version != null">
+        [Version],
+      </if>
+      <if test="unitprice2 != null">
+        [UnitPrice2],
+      </if>
+      <if test="unitprice3 != null">
+        [UnitPrice3],
+      </if>
+      <if test="unitprice4 != null">
+        [UnitPrice4],
+      </if>
+      <if test="targetsort != null">
+        [TargetSort],
+      </if>
+      <if test="discountsort != null">
+        [DiscountSort],
+      </if>
+      <if test="unionprodcode != null">
+        [UnionProdCode],
+      </if>
+      <if test="groupcode != null">
+        [GroupCode],
+      </if>
+      <if test="isoldproduct != null">
+        [IsOldProduct],
+      </if>
+      <if test="ismainorder != null">
+        [IsMainOrder],
+      </if>
+      <if test="reserve4 != null">
+        [Reserve4],
+      </if>
+      <if test="reserve5 != null">
+        [Reserve5],
+      </if>
+      <if test="reserve6 != null">
+        [Reserve6],
+      </if>
+      <if test="reserve7 != null">
+        [Reserve7],
+      </if>
+      <if test="reserve8 != null">
+        [Reserve8],
+      </if>
+      <if test="reserve9 != null">
+        [Reserve9],
+      </if>
+      <if test="reserve10 != null">
+        [Reserve10],
+      </if>
+      <if test="isfixedprod != null">
+        [IsFixedProd],
+      </if>
+      <if test="picturecode != null">
+        [PictureCode],
+      </if>
+      <if test="assortpicturecode != null">
+        [AssortPictureCode],
+      </if>
+      <if test="orderlcm != null">
+        [OrderLCM],
+      </if>
+      <if test="editdesc != null">
+        [EditDesc],
+      </if>
+      <if test="disablesize != null">
+        [DisableSize],
+      </if>
+      <if test="shpicturecode != null">
+        [SHPictureCode],
+      </if>
+      <if test="issurvey != null">
+        [IsSurvey],
+      </if>
+      <if test="isadvertisement != null">
+        [IsAdvertisement],
+      </if>
+      <if test="isdisplaywindow != null">
+        [IsDisplayWindow],
+      </if>
+      <if test="isbasic != null">
+        [IsBasic],
+      </if>
+      <if test="unordersize != null">
+        [UnOrderSize],
+      </if>
+      <if test="timestamp != null">
+        [Timestamp],
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="prodcode != null">
+        #{prodcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="colorcode != null">
+        #{colorcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="pattern != null">
+        #{pattern,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodguid != null">
+        #{prodguid,jdbcType=INTEGER},
+      </if>
+      <if test="prodid != null">
+        #{prodid,jdbcType=INTEGER},
+      </if>
+      <if test="color != null">
+        #{color,jdbcType=NVARCHAR},
+      </if>
+      <if test="barcode != null">
+        #{barcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodname != null">
+        #{prodname,jdbcType=NVARCHAR},
+      </if>
+      <if test="brand != null">
+        #{brand,jdbcType=NVARCHAR},
+      </if>
+      <if test="category != null">
+        #{category,jdbcType=NVARCHAR},
+      </if>
+      <if test="series != null">
+        #{series,jdbcType=NVARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=NVARCHAR},
+      </if>
+      <if test="clazz != null">
+        #{clazz,jdbcType=NVARCHAR},
+      </if>
+      <if test="sizeclass != null">
+        #{sizeclass,jdbcType=NVARCHAR},
+      </if>
+      <if test="part != null">
+        #{part,jdbcType=NVARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=NVARCHAR},
+      </if>
+      <if test="colorseries != null">
+        #{colorseries,jdbcType=NVARCHAR},
+      </if>
+      <if test="material != null">
+        #{material,jdbcType=NVARCHAR},
+      </if>
+      <if test="unitprice != null">
+        #{unitprice,jdbcType=NUMERIC},
+      </if>
+      <if test="mustorder != null">
+        #{mustorder,jdbcType=BIT},
+      </if>
+      <if test="recommendtype != null">
+        #{recommendtype,jdbcType=NVARCHAR},
+      </if>
+      <if test="marketband != null">
+        #{marketband,jdbcType=NVARCHAR},
+      </if>
+      <if test="priceband != null">
+        #{priceband,jdbcType=NVARCHAR},
+      </if>
+      <if test="ageband != null">
+        #{ageband,jdbcType=NVARCHAR},
+      </if>
+      <if test="designer != null">
+        #{designer,jdbcType=NVARCHAR},
+      </if>
+      <if test="minimumorder != null">
+        #{minimumorder,jdbcType=INTEGER},
+      </if>
+      <if test="pdainterface1 != null">
+        #{pdainterface1,jdbcType=NVARCHAR},
+      </if>
+      <if test="pdainterface2 != null">
+        #{pdainterface2,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodyear != null">
+        #{prodyear,jdbcType=NVARCHAR},
+      </if>
+      <if test="season != null">
+        #{season,jdbcType=NVARCHAR},
+      </if>
+      <if test="basicunit != null">
+        #{basicunit,jdbcType=NVARCHAR},
+      </if>
+      <if test="businessunit != null">
+        #{businessunit,jdbcType=NVARCHAR},
+      </if>
+      <if test="packingspec != null">
+        #{packingspec,jdbcType=NVARCHAR},
+      </if>
+      <if test="isactive != null">
+        #{isactive,jdbcType=BIT},
+      </if>
+      <if test="isdeleted != null">
+        #{isdeleted,jdbcType=BIT},
+      </if>
+      <if test="prodremark != null">
+        #{prodremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve1 != null">
+        #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        #{reserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="edituser != null">
+        #{edituser,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=INTEGER},
+      </if>
+      <if test="unitprice2 != null">
+        #{unitprice2,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice3 != null">
+        #{unitprice3,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice4 != null">
+        #{unitprice4,jdbcType=NUMERIC},
+      </if>
+      <if test="targetsort != null">
+        #{targetsort,jdbcType=NVARCHAR},
+      </if>
+      <if test="discountsort != null">
+        #{discountsort,jdbcType=NVARCHAR},
+      </if>
+      <if test="unionprodcode != null">
+        #{unionprodcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="groupcode != null">
+        #{groupcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="isoldproduct != null">
+        #{isoldproduct,jdbcType=BIT},
+      </if>
+      <if test="ismainorder != null">
+        #{ismainorder,jdbcType=BIT},
+      </if>
+      <if test="reserve4 != null">
+        #{reserve4,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve5 != null">
+        #{reserve5,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve6 != null">
+        #{reserve6,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve7 != null">
+        #{reserve7,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve8 != null">
+        #{reserve8,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve9 != null">
+        #{reserve9,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve10 != null">
+        #{reserve10,jdbcType=NVARCHAR},
+      </if>
+      <if test="isfixedprod != null">
+        #{isfixedprod,jdbcType=BIT},
+      </if>
+      <if test="picturecode != null">
+        #{picturecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="assortpicturecode != null">
+        #{assortpicturecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="orderlcm != null">
+        #{orderlcm,jdbcType=NVARCHAR},
+      </if>
+      <if test="editdesc != null">
+        #{editdesc,jdbcType=NVARCHAR},
+      </if>
+      <if test="disablesize != null">
+        #{disablesize,jdbcType=NVARCHAR},
+      </if>
+      <if test="shpicturecode != null">
+        #{shpicturecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="issurvey != null">
+        #{issurvey,jdbcType=BIT},
+      </if>
+      <if test="isadvertisement != null">
+        #{isadvertisement,jdbcType=BIT},
+      </if>
+      <if test="isdisplaywindow != null">
+        #{isdisplaywindow,jdbcType=BIT},
+      </if>
+      <if test="isbasic != null">
+        #{isbasic,jdbcType=BIT},
+      </if>
+      <if test="unordersize != null">
+        #{unordersize,jdbcType=NVARCHAR},
+      </if>
+      <if test="timestamp != null">
+        #{timestamp,jdbcType=BINARY},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.linjr.entity.db2.BaseProduct">
+    update BaseProduct
+    <set>
+      <if test="prodguid != null">
+        [ProdGUID] = #{prodguid,jdbcType=INTEGER},
+      </if>
+      <if test="prodid != null">
+        [ProdID] = #{prodid,jdbcType=INTEGER},
+      </if>
+      <if test="color != null">
+        [Color] = #{color,jdbcType=NVARCHAR},
+      </if>
+      <if test="barcode != null">
+        [Barcode] = #{barcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodname != null">
+        [ProdName] = #{prodname,jdbcType=NVARCHAR},
+      </if>
+      <if test="brand != null">
+        [Brand] = #{brand,jdbcType=NVARCHAR},
+      </if>
+      <if test="category != null">
+        [Category] = #{category,jdbcType=NVARCHAR},
+      </if>
+      <if test="series != null">
+        [Series] = #{series,jdbcType=NVARCHAR},
+      </if>
+      <if test="sex != null">
+        [Sex] = #{sex,jdbcType=NVARCHAR},
+      </if>
+      <if test="clazz != null">
+        [Class] = #{clazz,jdbcType=NVARCHAR},
+      </if>
+      <if test="sizeclass != null">
+        [SizeClass] = #{sizeclass,jdbcType=NVARCHAR},
+      </if>
+      <if test="part != null">
+        [Part] = #{part,jdbcType=NVARCHAR},
+      </if>
+      <if test="position != null">
+        [Position] = #{position,jdbcType=NVARCHAR},
+      </if>
+      <if test="colorseries != null">
+        [ColorSeries] = #{colorseries,jdbcType=NVARCHAR},
+      </if>
+      <if test="material != null">
+        [Material] = #{material,jdbcType=NVARCHAR},
+      </if>
+      <if test="unitprice != null">
+        [UnitPrice] = #{unitprice,jdbcType=NUMERIC},
+      </if>
+      <if test="mustorder != null">
+        [MustOrder] = #{mustorder,jdbcType=BIT},
+      </if>
+      <if test="recommendtype != null">
+        [RecommendType] = #{recommendtype,jdbcType=NVARCHAR},
+      </if>
+      <if test="marketband != null">
+        [MarketBand] = #{marketband,jdbcType=NVARCHAR},
+      </if>
+      <if test="priceband != null">
+        [PriceBand] = #{priceband,jdbcType=NVARCHAR},
+      </if>
+      <if test="ageband != null">
+        [AgeBand] = #{ageband,jdbcType=NVARCHAR},
+      </if>
+      <if test="designer != null">
+        [Designer] = #{designer,jdbcType=NVARCHAR},
+      </if>
+      <if test="minimumorder != null">
+        [MinimumOrder] = #{minimumorder,jdbcType=INTEGER},
+      </if>
+      <if test="pdainterface1 != null">
+        [PDAInterface1] = #{pdainterface1,jdbcType=NVARCHAR},
+      </if>
+      <if test="pdainterface2 != null">
+        [PDAInterface2] = #{pdainterface2,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodyear != null">
+        [ProdYear] = #{prodyear,jdbcType=NVARCHAR},
+      </if>
+      <if test="season != null">
+        [Season] = #{season,jdbcType=NVARCHAR},
+      </if>
+      <if test="basicunit != null">
+        [BasicUnit] = #{basicunit,jdbcType=NVARCHAR},
+      </if>
+      <if test="businessunit != null">
+        [BusinessUnit] = #{businessunit,jdbcType=NVARCHAR},
+      </if>
+      <if test="packingspec != null">
+        [PackingSpec] = #{packingspec,jdbcType=NVARCHAR},
+      </if>
+      <if test="isactive != null">
+        [IsActive] = #{isactive,jdbcType=BIT},
+      </if>
+      <if test="isdeleted != null">
+        [IsDeleted] = #{isdeleted,jdbcType=BIT},
+      </if>
+      <if test="prodremark != null">
+        [ProdRemark] = #{prodremark,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve1 != null">
+        [Reserve1] = #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        [Reserve2] = #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        [Reserve3] = #{reserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="edituser != null">
+        [EditUser] = #{edituser,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        [WNo] = #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="version != null">
+        [Version] = #{version,jdbcType=INTEGER},
+      </if>
+      <if test="unitprice2 != null">
+        [UnitPrice2] = #{unitprice2,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice3 != null">
+        [UnitPrice3] = #{unitprice3,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice4 != null">
+        [UnitPrice4] = #{unitprice4,jdbcType=NUMERIC},
+      </if>
+      <if test="targetsort != null">
+        [TargetSort] = #{targetsort,jdbcType=NVARCHAR},
+      </if>
+      <if test="discountsort != null">
+        [DiscountSort] = #{discountsort,jdbcType=NVARCHAR},
+      </if>
+      <if test="unionprodcode != null">
+        [UnionProdCode] = #{unionprodcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="groupcode != null">
+        [GroupCode] = #{groupcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="isoldproduct != null">
+        [IsOldProduct] = #{isoldproduct,jdbcType=BIT},
+      </if>
+      <if test="ismainorder != null">
+        [IsMainOrder] = #{ismainorder,jdbcType=BIT},
+      </if>
+      <if test="reserve4 != null">
+        [Reserve4] = #{reserve4,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve5 != null">
+        [Reserve5] = #{reserve5,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve6 != null">
+        [Reserve6] = #{reserve6,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve7 != null">
+        [Reserve7] = #{reserve7,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve8 != null">
+        [Reserve8] = #{reserve8,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve9 != null">
+        [Reserve9] = #{reserve9,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve10 != null">
+        [Reserve10] = #{reserve10,jdbcType=NVARCHAR},
+      </if>
+      <if test="isfixedprod != null">
+        [IsFixedProd] = #{isfixedprod,jdbcType=BIT},
+      </if>
+      <if test="picturecode != null">
+        [PictureCode] = #{picturecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="assortpicturecode != null">
+        [AssortPictureCode] = #{assortpicturecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="orderlcm != null">
+        [OrderLCM] = #{orderlcm,jdbcType=NVARCHAR},
+      </if>
+      <if test="editdesc != null">
+        [EditDesc] = #{editdesc,jdbcType=NVARCHAR},
+      </if>
+      <if test="disablesize != null">
+        [DisableSize] = #{disablesize,jdbcType=NVARCHAR},
+      </if>
+      <if test="shpicturecode != null">
+        [SHPictureCode] = #{shpicturecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="issurvey != null">
+        [IsSurvey] = #{issurvey,jdbcType=BIT},
+      </if>
+      <if test="isadvertisement != null">
+        [IsAdvertisement] = #{isadvertisement,jdbcType=BIT},
+      </if>
+      <if test="isdisplaywindow != null">
+        [IsDisplayWindow] = #{isdisplaywindow,jdbcType=BIT},
+      </if>
+      <if test="isbasic != null">
+        [IsBasic] = #{isbasic,jdbcType=BIT},
+      </if>
+      <if test="unordersize != null">
+        [UnOrderSize] = #{unordersize,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where [ProdCode] = #{prodcode,jdbcType=NVARCHAR}
+      and [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+      and [Pattern] = #{pattern,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.linjr.entity.db2.BaseProduct">
+    update BaseProduct
+    set ProdGUID = #{prodguid,jdbcType=INTEGER},
+      ProdID = #{prodid,jdbcType=INTEGER},
+      Color = #{color,jdbcType=NVARCHAR},
+      Barcode = #{barcode,jdbcType=NVARCHAR},
+      ProdName = #{prodname,jdbcType=NVARCHAR},
+      Brand = #{brand,jdbcType=NVARCHAR},
+      Category = #{category,jdbcType=NVARCHAR},
+      Series = #{series,jdbcType=NVARCHAR},
+      Sex = #{sex,jdbcType=NVARCHAR},
+      `Class` = #{clazz,jdbcType=NVARCHAR},
+      SizeClass = #{sizeclass,jdbcType=NVARCHAR},
+      `Part` = #{part,jdbcType=NVARCHAR},
+      `Position` = #{position,jdbcType=NVARCHAR},
+      ColorSeries = #{colorseries,jdbcType=NVARCHAR},
+      Material = #{material,jdbcType=NVARCHAR},
+      UnitPrice = #{unitprice,jdbcType=NUMERIC},
+      MustOrder = #{mustorder,jdbcType=BIT},
+      RecommendType = #{recommendtype,jdbcType=NVARCHAR},
+      MarketBand = #{marketband,jdbcType=NVARCHAR},
+      PriceBand = #{priceband,jdbcType=NVARCHAR},
+      AgeBand = #{ageband,jdbcType=NVARCHAR},
+      Designer = #{designer,jdbcType=NVARCHAR},
+      MinimumOrder = #{minimumorder,jdbcType=INTEGER},
+      PDAInterface1 = #{pdainterface1,jdbcType=NVARCHAR},
+      PDAInterface2 = #{pdainterface2,jdbcType=NVARCHAR},
+      ProdYear = #{prodyear,jdbcType=NVARCHAR},
+      Season = #{season,jdbcType=NVARCHAR},
+      BasicUnit = #{basicunit,jdbcType=NVARCHAR},
+      BusinessUnit = #{businessunit,jdbcType=NVARCHAR},
+      PackingSpec = #{packingspec,jdbcType=NVARCHAR},
+      IsActive = #{isactive,jdbcType=BIT},
+      IsDeleted = #{isdeleted,jdbcType=BIT},
+      ProdRemark = #{prodremark,jdbcType=NVARCHAR},
+      Reserve1 = #{reserve1,jdbcType=NVARCHAR},
+      Reserve2 = #{reserve2,jdbcType=NVARCHAR},
+      Reserve3 = #{reserve3,jdbcType=NVARCHAR},
+      EditUser = #{edituser,jdbcType=NVARCHAR},
+      WNo = #{wno,jdbcType=TIMESTAMP},
+      Version = #{version,jdbcType=INTEGER},
+      UnitPrice2 = #{unitprice2,jdbcType=NUMERIC},
+      UnitPrice3 = #{unitprice3,jdbcType=NUMERIC},
+      UnitPrice4 = #{unitprice4,jdbcType=NUMERIC},
+      TargetSort = #{targetsort,jdbcType=NVARCHAR},
+      DiscountSort = #{discountsort,jdbcType=NVARCHAR},
+      UnionProdCode = #{unionprodcode,jdbcType=NVARCHAR},
+      GroupCode = #{groupcode,jdbcType=NVARCHAR},
+      IsOldProduct = #{isoldproduct,jdbcType=BIT},
+      IsMainOrder = #{ismainorder,jdbcType=BIT},
+      Reserve4 = #{reserve4,jdbcType=NVARCHAR},
+      Reserve5 = #{reserve5,jdbcType=NVARCHAR},
+      Reserve6 = #{reserve6,jdbcType=NVARCHAR},
+      Reserve7 = #{reserve7,jdbcType=NVARCHAR},
+      Reserve8 = #{reserve8,jdbcType=NVARCHAR},
+      Reserve9 = #{reserve9,jdbcType=NVARCHAR},
+      Reserve10 = #{reserve10,jdbcType=NVARCHAR},
+      IsFixedProd = #{isfixedprod,jdbcType=BIT},
+      PictureCode = #{picturecode,jdbcType=NVARCHAR},
+      AssortPictureCode = #{assortpicturecode,jdbcType=NVARCHAR},
+      OrderLCM = #{orderlcm,jdbcType=NVARCHAR},
+      EditDesc = #{editdesc,jdbcType=NVARCHAR},
+      DisableSize = #{disablesize,jdbcType=NVARCHAR},
+      SHPictureCode = #{shpicturecode,jdbcType=NVARCHAR},
+      IsSurvey = #{issurvey,jdbcType=BIT},
+      IsAdvertisement = #{isadvertisement,jdbcType=BIT},
+      IsDisplayWindow = #{isdisplaywindow,jdbcType=BIT},
+      IsBasic = #{isbasic,jdbcType=BIT},
+      UnOrderSize = #{unordersize,jdbcType=NVARCHAR},
+      `Timestamp` = #{timestamp,jdbcType=BINARY}
+    where ProdCode = #{prodcode,jdbcType=NVARCHAR}
+      and ColorCode = #{colorcode,jdbcType=NVARCHAR}
+      and Pattern = #{pattern,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.linjr.entity.db2.BaseProduct">
+    update BaseProduct
+    set [ProdGUID] = #{prodguid,jdbcType=INTEGER},
+      [ProdID] = #{prodid,jdbcType=INTEGER},
+      [Color] = #{color,jdbcType=NVARCHAR},
+      [Barcode] = #{barcode,jdbcType=NVARCHAR},
+      [ProdName] = #{prodname,jdbcType=NVARCHAR},
+      [Brand] = #{brand,jdbcType=NVARCHAR},
+      [Category] = #{category,jdbcType=NVARCHAR},
+      [Series] = #{series,jdbcType=NVARCHAR},
+      [Sex] = #{sex,jdbcType=NVARCHAR},
+      [Class] = #{clazz,jdbcType=NVARCHAR},
+      [SizeClass] = #{sizeclass,jdbcType=NVARCHAR},
+      [Part] = #{part,jdbcType=NVARCHAR},
+      [Position] = #{position,jdbcType=NVARCHAR},
+      [ColorSeries] = #{colorseries,jdbcType=NVARCHAR},
+      [Material] = #{material,jdbcType=NVARCHAR},
+      [UnitPrice] = #{unitprice,jdbcType=NUMERIC},
+      [MustOrder] = #{mustorder,jdbcType=BIT},
+      [RecommendType] = #{recommendtype,jdbcType=NVARCHAR},
+      [MarketBand] = #{marketband,jdbcType=NVARCHAR},
+      [PriceBand] = #{priceband,jdbcType=NVARCHAR},
+      [AgeBand] = #{ageband,jdbcType=NVARCHAR},
+      [Designer] = #{designer,jdbcType=NVARCHAR},
+      [MinimumOrder] = #{minimumorder,jdbcType=INTEGER},
+      [PDAInterface1] = #{pdainterface1,jdbcType=NVARCHAR},
+      [PDAInterface2] = #{pdainterface2,jdbcType=NVARCHAR},
+      [ProdYear] = #{prodyear,jdbcType=NVARCHAR},
+      [Season] = #{season,jdbcType=NVARCHAR},
+      [BasicUnit] = #{basicunit,jdbcType=NVARCHAR},
+      [BusinessUnit] = #{businessunit,jdbcType=NVARCHAR},
+      [PackingSpec] = #{packingspec,jdbcType=NVARCHAR},
+      [IsActive] = #{isactive,jdbcType=BIT},
+      [IsDeleted] = #{isdeleted,jdbcType=BIT},
+      [ProdRemark] = #{prodremark,jdbcType=NVARCHAR},
+      [Reserve1] = #{reserve1,jdbcType=NVARCHAR},
+      [Reserve2] = #{reserve2,jdbcType=NVARCHAR},
+      [Reserve3] = #{reserve3,jdbcType=NVARCHAR},
+      [EditUser] = #{edituser,jdbcType=NVARCHAR},
+      [WNo] = #{wno,jdbcType=TIMESTAMP},
+      [Version] = #{version,jdbcType=INTEGER},
+      [UnitPrice2] = #{unitprice2,jdbcType=NUMERIC},
+      [UnitPrice3] = #{unitprice3,jdbcType=NUMERIC},
+      [UnitPrice4] = #{unitprice4,jdbcType=NUMERIC},
+      [TargetSort] = #{targetsort,jdbcType=NVARCHAR},
+      [DiscountSort] = #{discountsort,jdbcType=NVARCHAR},
+      [UnionProdCode] = #{unionprodcode,jdbcType=NVARCHAR},
+      [GroupCode] = #{groupcode,jdbcType=NVARCHAR},
+      [IsOldProduct] = #{isoldproduct,jdbcType=BIT},
+      [IsMainOrder] = #{ismainorder,jdbcType=BIT},
+      [Reserve4] = #{reserve4,jdbcType=NVARCHAR},
+      [Reserve5] = #{reserve5,jdbcType=NVARCHAR},
+      [Reserve6] = #{reserve6,jdbcType=NVARCHAR},
+      [Reserve7] = #{reserve7,jdbcType=NVARCHAR},
+      [Reserve8] = #{reserve8,jdbcType=NVARCHAR},
+      [Reserve9] = #{reserve9,jdbcType=NVARCHAR},
+      [Reserve10] = #{reserve10,jdbcType=NVARCHAR},
+      [IsFixedProd] = #{isfixedprod,jdbcType=BIT},
+      [PictureCode] = #{picturecode,jdbcType=NVARCHAR},
+      [AssortPictureCode] = #{assortpicturecode,jdbcType=NVARCHAR},
+      [OrderLCM] = #{orderlcm,jdbcType=NVARCHAR},
+      [EditDesc] = #{editdesc,jdbcType=NVARCHAR},
+      [DisableSize] = #{disablesize,jdbcType=NVARCHAR},
+      [SHPictureCode] = #{shpicturecode,jdbcType=NVARCHAR},
+      [IsSurvey] = #{issurvey,jdbcType=BIT},
+      [IsAdvertisement] = #{isadvertisement,jdbcType=BIT},
+      [IsDisplayWindow] = #{isdisplaywindow,jdbcType=BIT},
+      [IsBasic] = #{isbasic,jdbcType=BIT},
+      [UnOrderSize] = #{unordersize,jdbcType=NVARCHAR}
+    where [ProdCode] = #{prodcode,jdbcType=NVARCHAR}
+      and [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+      and [Pattern] = #{pattern,jdbcType=NVARCHAR}
+  </update>
+
+<!-- 查询所有货品 -->
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="com.linjr.vo.req.BaseProductPageReqVO">
+    select
+    <include refid="Base_Column_List"></include>
+    from BaseProduct
+    <where>
+      <if test="prodid !=null and prodid != ''">
+        and ProdId=#{prodid}
+      </if>
+      <if test="prodcode !=null and prodcode != ''">
+        and ProdCode=#{prodcode}
+      </if>
+      <if test="colorcode !=null and colorcode.size()>0">
+        and  ColorCode in
+        <foreach collection="colorcode" item="item" open="(" separator="," close=")">
+          #{item}
+        </foreach>
+      </if>
+
+    </where>
+  </select>
+
+  <select id="selectAll2" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"></include>
+    from BaseProduct
+  </select>
+
+  <select id="selectOneList" resultType="java.lang.String">
+    select distinct(ColorCode),Color from BaseProduct(nolock)
+  </select>
+
+
+  <!--查询所有货品，有订了多少-->
+  <select id="selectAllByClientCode" resultMap="BaseResultMap">
+    select
+bp.*,
+o.QtySum
+from BaseProduct(NOLOCK) bp
+left join
+(select
+om.OrderNO,
+om.ClientCode,
+od.ProdCode,
+od.ColorCode,
+od.Pattern,
+od.QtySum,
+od.UnitPrice,
+od.AmountSum,
+od.Size1,
+od.Size2,
+od.Size3,
+od.Size4,
+od.Size5,
+od.Size6,
+od.Size7,
+od.Size8,
+od.Size9,
+od.Size10,
+od.Size11,
+od.Size12,
+od.Size13,
+od.Size14,
+od.Size15,
+od.Size16,
+od.Size17,
+od.Size18,
+od.Size19,
+od.Size20,
+od.Size21,
+od.Size22,
+od.Size23,
+od.Size24,
+od.Size25,
+od.Size26,
+od.Size27,
+od.Size28,
+od.Size29,
+od.Size30
+from OrderMain(NOLOCK) om left join OrderDetail(NOLOCK) od on om.OrderNO=od.OrderNO where om.ClientCode=#{clientcode}) o on bp.ProdCode=o.ProdCode and bp.ColorCode=o.ColorCode and bp.Pattern=o.Pattern
+  </select>
+</mapper>

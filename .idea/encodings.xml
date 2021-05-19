@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/rs-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-dao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-gateway-v2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-vo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rs-webapi/src/main/java" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.PsoDelTestMapper">
+    <resultMap id="BaseResultMap" type="com.linjr.entity.db2.PsoDelTest">
+        <result column="PSO_NUM" jdbcType="VARCHAR" property="psoNum"/>
+        <result column="PROD_ID" jdbcType="INTEGER" property="prodId"/>
+    </resultMap>
+    <insert id="insert" parameterType="com.linjr.entity.db2.PsoDelTest">
+        insert into PSO_DEL_TEST (PSO_NUM, PROD_ID)
+        values (#{psoNum,jdbcType=VARCHAR}, #{prodId,jdbcType=INTEGER})
+    </insert>
+    <insert id="insertSelective" parameterType="com.linjr.entity.db2.PsoDelTest">
+        insert into DB_1
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="psoNum != null">
+                PSO_NUM,
+            </if>
+            <if test="prodId != null">
+                PROD_ID,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="psoNum != null">
+                #{psoNum,jdbcType=VARCHAR},
+            </if>
+            <if test="prodId != null">
+                #{prodId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="select1000W" resultMap="BaseResultMap">
+        select *
+        from PSO_DEL_TEST
+        limit 0,60
+    </select>
+
+    <insert id="batchInsertList">
+        insert into DB_1(PSO_NUM,PROD_ID)
+        values
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.psoNum},#{item.prodId})
+        </foreach>
+    </insert>
+
+    <insert id="batchInsertList2">
+        insert into DB_2(PSO_NUM,PROD_ID)
+        values
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.psoNum},#{item.prodId})
+        </foreach>
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linjr.mapper.db2.OrderDetailMapper">
+  <resultMap id="BaseResultMap" type="com.linjr.entity.db2.OrderDetail">
+    <id column="DetailUID" jdbcType="CHAR" property="detailuid" />
+    <result column="ProdGUID" jdbcType="INTEGER" property="prodguid" />
+    <result column="OrderNO" jdbcType="NVARCHAR" property="orderno" />
+    <result column="ProdCode" jdbcType="NVARCHAR" property="prodcode" />
+    <result column="ColorCode" jdbcType="NVARCHAR" property="colorcode" />
+    <result column="Pattern" jdbcType="NVARCHAR" property="pattern" />
+    <result column="PDAInterface" jdbcType="NVARCHAR" property="pdainterface" />
+    <result column="MatchContent" jdbcType="NVARCHAR" property="matchcontent" />
+    <result column="QtyCase" jdbcType="NUMERIC" property="qtycase" />
+    <result column="QtySum" jdbcType="NUMERIC" property="qtysum" />
+    <result column="UnitPrice" jdbcType="NUMERIC" property="unitprice" />
+    <result column="AmountSum" jdbcType="NUMERIC" property="amountsum" />
+    <result column="UploadTime" jdbcType="TIMESTAMP" property="uploadtime" />
+    <result column="Source" jdbcType="TINYINT" property="source" />
+    <result column="IsDeleted" jdbcType="BIT" property="isdeleted" />
+    <result column="Size1" jdbcType="NUMERIC" property="size1" />
+    <result column="Size2" jdbcType="NUMERIC" property="size2" />
+    <result column="Size3" jdbcType="NUMERIC" property="size3" />
+    <result column="Size4" jdbcType="NUMERIC" property="size4" />
+    <result column="Size5" jdbcType="NUMERIC" property="size5" />
+    <result column="Size6" jdbcType="NUMERIC" property="size6" />
+    <result column="Size7" jdbcType="NUMERIC" property="size7" />
+    <result column="Size8" jdbcType="NUMERIC" property="size8" />
+    <result column="Size9" jdbcType="NUMERIC" property="size9" />
+    <result column="Size10" jdbcType="NUMERIC" property="size10" />
+    <result column="Size11" jdbcType="NUMERIC" property="size11" />
+    <result column="Size12" jdbcType="NUMERIC" property="size12" />
+    <result column="Size13" jdbcType="NUMERIC" property="size13" />
+    <result column="Size14" jdbcType="NUMERIC" property="size14" />
+    <result column="Size15" jdbcType="NUMERIC" property="size15" />
+    <result column="Size16" jdbcType="NUMERIC" property="size16" />
+    <result column="Size17" jdbcType="NUMERIC" property="size17" />
+    <result column="Size18" jdbcType="NUMERIC" property="size18" />
+    <result column="Size19" jdbcType="NUMERIC" property="size19" />
+    <result column="Size20" jdbcType="NUMERIC" property="size20" />
+    <result column="Size21" jdbcType="NUMERIC" property="size21" />
+    <result column="Size22" jdbcType="NUMERIC" property="size22" />
+    <result column="Size23" jdbcType="NUMERIC" property="size23" />
+    <result column="Size24" jdbcType="NUMERIC" property="size24" />
+    <result column="Size25" jdbcType="NUMERIC" property="size25" />
+    <result column="Size26" jdbcType="NUMERIC" property="size26" />
+    <result column="Size27" jdbcType="NUMERIC" property="size27" />
+    <result column="Size28" jdbcType="NUMERIC" property="size28" />
+    <result column="Size29" jdbcType="NUMERIC" property="size29" />
+    <result column="Size30" jdbcType="NUMERIC" property="size30" />
+    <result column="Reserve1" jdbcType="NVARCHAR" property="reserve1" />
+    <result column="Reserve2" jdbcType="NVARCHAR" property="reserve2" />
+    <result column="Reserve3" jdbcType="NVARCHAR" property="reserve3" />
+    <result column="WNo" jdbcType="TIMESTAMP" property="wno" />
+    <result column="Remark" jdbcType="NVARCHAR" property="remark" />
+    <result column="SourceCode" jdbcType="NVARCHAR" property="sourcecode" />
+    <result column="EditUser" jdbcType="NVARCHAR" property="edituser" />
+    <result column="UpLoadVersion" jdbcType="INTEGER" property="uploadversion" />
+    <result column="CancelProdCode" jdbcType="NVARCHAR" property="cancelprodcode" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.linjr.entity.db2.OrderDetail">
+    <result column="Timestamp" jdbcType="BINARY" property="timestamp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    [DetailUID], [ProdGUID], [OrderNO], [ProdCode], [ColorCode], [Pattern], [PDAInterface], [MatchContent],
+    [QtyCase], [QtySum], [UnitPrice], [AmountSum], [UploadTime], [Source], [IsDeleted], [Size1], [Size2],
+    [Size3], [Size4], [Size5], [Size6], [Size7], [Size8], [Size9], [Size10], [Size11], [Size12], [Size13],
+    [Size14], [Size15], [Size16], [Size17], [Size18], [Size19], [Size20], [Size21], [Size22], [Size23], [Size24],
+    [Size25], [Size26], [Size27], [Size28], [Size29], [Size30], [Reserve1], [Reserve2], [Reserve3], [WNo],
+    [Remark], [SourceCode], [EditUser], [UpLoadVersion], [CancelProdCode]
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from OrderDetail
+    where DetailUID = #{detailuid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from OrderDetail
+    where DetailUID = #{detailuid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.linjr.entity.db2.OrderDetail">
+    insert into OrderDetail ([DetailUID], [ProdGUID], [OrderNO],
+      [ProdCode], [ColorCode], [Pattern],
+      [PDAInterface], [MatchContent], [QtyCase],
+      [QtySum], [UnitPrice], [AmountSum],
+      [UploadTime], [Source], [IsDeleted],
+      [Size1], [Size2], [Size3],
+      [Size4], [Size5], [Size6],
+      [Size7], [Size8], [Size9],
+      [Size10], [Size11], [Size12],
+      [Size13], [Size14], [Size15],
+      [Size16], [Size17], [Size18],
+      [Size19], [Size20], [Size21],
+      [Size22], [Size23], [Size24],
+      [Size25], [Size26], [Size27],
+      [Size28], [Size29], [Size30],
+      [Reserve1], [Reserve2], [Reserve3],
+      [WNo], [Remark], [SourceCode],
+      [EditUser], [UpLoadVersion], [CancelProdCode]
+      )
+    values (#{detailuid,jdbcType=CHAR}, #{prodguid,jdbcType=INTEGER}, #{orderno,jdbcType=NVARCHAR}, 
+      #{prodcode,jdbcType=NVARCHAR}, #{colorcode,jdbcType=NVARCHAR}, #{pattern,jdbcType=NVARCHAR}, 
+      #{pdainterface,jdbcType=NVARCHAR}, #{matchcontent,jdbcType=NVARCHAR}, #{qtycase,jdbcType=NUMERIC}, 
+      #{qtysum,jdbcType=NUMERIC}, #{unitprice,jdbcType=NUMERIC}, #{amountsum,jdbcType=NUMERIC}, 
+      #{uploadtime,jdbcType=TIMESTAMP}, #{source,jdbcType=TINYINT}, #{isdeleted,jdbcType=BIT}, 
+      #{size1,jdbcType=NUMERIC}, #{size2,jdbcType=NUMERIC}, #{size3,jdbcType=NUMERIC}, 
+      #{size4,jdbcType=NUMERIC}, #{size5,jdbcType=NUMERIC}, #{size6,jdbcType=NUMERIC}, 
+      #{size7,jdbcType=NUMERIC}, #{size8,jdbcType=NUMERIC}, #{size9,jdbcType=NUMERIC}, 
+      #{size10,jdbcType=NUMERIC}, #{size11,jdbcType=NUMERIC}, #{size12,jdbcType=NUMERIC}, 
+      #{size13,jdbcType=NUMERIC}, #{size14,jdbcType=NUMERIC}, #{size15,jdbcType=NUMERIC}, 
+      #{size16,jdbcType=NUMERIC}, #{size17,jdbcType=NUMERIC}, #{size18,jdbcType=NUMERIC}, 
+      #{size19,jdbcType=NUMERIC}, #{size20,jdbcType=NUMERIC}, #{size21,jdbcType=NUMERIC}, 
+      #{size22,jdbcType=NUMERIC}, #{size23,jdbcType=NUMERIC}, #{size24,jdbcType=NUMERIC}, 
+      #{size25,jdbcType=NUMERIC}, #{size26,jdbcType=NUMERIC}, #{size27,jdbcType=NUMERIC}, 
+      #{size28,jdbcType=NUMERIC}, #{size29,jdbcType=NUMERIC}, #{size30,jdbcType=NUMERIC}, 
+      #{reserve1,jdbcType=NVARCHAR}, #{reserve2,jdbcType=NVARCHAR}, #{reserve3,jdbcType=NVARCHAR}, 
+      #{wno,jdbcType=TIMESTAMP}, #{remark,jdbcType=NVARCHAR}, #{sourcecode,jdbcType=NVARCHAR}, 
+      #{edituser,jdbcType=NVARCHAR}, #{uploadversion,jdbcType=INTEGER}, #{cancelprodcode,jdbcType=NVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.linjr.entity.db2.OrderDetail">
+    insert into OrderDetail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="detailuid != null">
+        [DetailUID],
+      </if>
+      <if test="prodguid != null">
+        [ProdGUID],
+      </if>
+      <if test="orderno != null">
+        [OrderNO],
+      </if>
+      <if test="prodcode != null">
+        [ProdCode],
+      </if>
+      <if test="colorcode != null">
+        [ColorCode],
+      </if>
+      <if test="pattern != null">
+        [Pattern],
+      </if>
+      <if test="pdainterface != null">
+        [PDAInterface],
+      </if>
+      <if test="matchcontent != null">
+        [MatchContent],
+      </if>
+      <if test="qtycase != null">
+        [QtyCase],
+      </if>
+      <if test="qtysum != null">
+        [QtySum],
+      </if>
+      <if test="unitprice != null">
+        [UnitPrice],
+      </if>
+      <if test="amountsum != null">
+        [AmountSum],
+      </if>
+      <if test="uploadtime != null">
+        [UploadTime],
+      </if>
+      <if test="source != null">
+        [Source],
+      </if>
+      <if test="isdeleted != null">
+        [IsDeleted],
+      </if>
+      <if test="size1 != null">
+        [Size1],
+      </if>
+      <if test="size2 != null">
+        [Size2],
+      </if>
+      <if test="size3 != null">
+        [Size3],
+      </if>
+      <if test="size4 != null">
+        [Size4],
+      </if>
+      <if test="size5 != null">
+        [Size5],
+      </if>
+      <if test="size6 != null">
+        [Size6],
+      </if>
+      <if test="size7 != null">
+        [Size7],
+      </if>
+      <if test="size8 != null">
+        [Size8],
+      </if>
+      <if test="size9 != null">
+        [Size9],
+      </if>
+      <if test="size10 != null">
+        [Size10],
+      </if>
+      <if test="size11 != null">
+        [Size11],
+      </if>
+      <if test="size12 != null">
+        [Size12],
+      </if>
+      <if test="size13 != null">
+        [Size13],
+      </if>
+      <if test="size14 != null">
+        [Size14],
+      </if>
+      <if test="size15 != null">
+        [Size15],
+      </if>
+      <if test="size16 != null">
+        [Size16],
+      </if>
+      <if test="size17 != null">
+        [Size17],
+      </if>
+      <if test="size18 != null">
+        [Size18],
+      </if>
+      <if test="size19 != null">
+        [Size19],
+      </if>
+      <if test="size20 != null">
+        [Size20],
+      </if>
+      <if test="size21 != null">
+        [Size21],
+      </if>
+      <if test="size22 != null">
+        [Size22],
+      </if>
+      <if test="size23 != null">
+        [Size23],
+      </if>
+      <if test="size24 != null">
+        [Size24],
+      </if>
+      <if test="size25 != null">
+        [Size25],
+      </if>
+      <if test="size26 != null">
+        [Size26],
+      </if>
+      <if test="size27 != null">
+        [Size27],
+      </if>
+      <if test="size28 != null">
+        [Size28],
+      </if>
+      <if test="size29 != null">
+        [Size29],
+      </if>
+      <if test="size30 != null">
+        [Size30],
+      </if>
+      <if test="reserve1 != null">
+        [Reserve1],
+      </if>
+      <if test="reserve2 != null">
+        [Reserve2],
+      </if>
+      <if test="reserve3 != null">
+        [Reserve3],
+      </if>
+      <if test="wno != null">
+        [WNo],
+      </if>
+      <if test="remark != null">
+        [Remark],
+      </if>
+      <if test="sourcecode != null">
+        [SourceCode],
+      </if>
+      <if test="edituser != null">
+        [EditUser],
+      </if>
+      <if test="uploadversion != null">
+        [UpLoadVersion],
+      </if>
+      <if test="cancelprodcode != null">
+        [CancelProdCode],
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="detailuid != null">
+        #{detailuid,jdbcType=CHAR},
+      </if>
+      <if test="prodguid != null">
+        #{prodguid,jdbcType=INTEGER},
+      </if>
+      <if test="orderno != null">
+        #{orderno,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodcode != null">
+        #{prodcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="colorcode != null">
+        #{colorcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="pattern != null">
+        #{pattern,jdbcType=NVARCHAR},
+      </if>
+      <if test="pdainterface != null">
+        #{pdainterface,jdbcType=NVARCHAR},
+      </if>
+      <if test="matchcontent != null">
+        #{matchcontent,jdbcType=NVARCHAR},
+      </if>
+      <if test="qtycase != null">
+        #{qtycase,jdbcType=NUMERIC},
+      </if>
+      <if test="qtysum != null">
+        #{qtysum,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice != null">
+        #{unitprice,jdbcType=NUMERIC},
+      </if>
+      <if test="amountsum != null">
+        #{amountsum,jdbcType=NUMERIC},
+      </if>
+      <if test="uploadtime != null">
+        #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="source != null">
+        #{source,jdbcType=TINYINT},
+      </if>
+      <if test="isdeleted != null">
+        #{isdeleted,jdbcType=BIT},
+      </if>
+      <if test="size1 != null">
+        #{size1,jdbcType=NUMERIC},
+      </if>
+      <if test="size2 != null">
+        #{size2,jdbcType=NUMERIC},
+      </if>
+      <if test="size3 != null">
+        #{size3,jdbcType=NUMERIC},
+      </if>
+      <if test="size4 != null">
+        #{size4,jdbcType=NUMERIC},
+      </if>
+      <if test="size5 != null">
+        #{size5,jdbcType=NUMERIC},
+      </if>
+      <if test="size6 != null">
+        #{size6,jdbcType=NUMERIC},
+      </if>
+      <if test="size7 != null">
+        #{size7,jdbcType=NUMERIC},
+      </if>
+      <if test="size8 != null">
+        #{size8,jdbcType=NUMERIC},
+      </if>
+      <if test="size9 != null">
+        #{size9,jdbcType=NUMERIC},
+      </if>
+      <if test="size10 != null">
+        #{size10,jdbcType=NUMERIC},
+      </if>
+      <if test="size11 != null">
+        #{size11,jdbcType=NUMERIC},
+      </if>
+      <if test="size12 != null">
+        #{size12,jdbcType=NUMERIC},
+      </if>
+      <if test="size13 != null">
+        #{size13,jdbcType=NUMERIC},
+      </if>
+      <if test="size14 != null">
+        #{size14,jdbcType=NUMERIC},
+      </if>
+      <if test="size15 != null">
+        #{size15,jdbcType=NUMERIC},
+      </if>
+      <if test="size16 != null">
+        #{size16,jdbcType=NUMERIC},
+      </if>
+      <if test="size17 != null">
+        #{size17,jdbcType=NUMERIC},
+      </if>
+      <if test="size18 != null">
+        #{size18,jdbcType=NUMERIC},
+      </if>
+      <if test="size19 != null">
+        #{size19,jdbcType=NUMERIC},
+      </if>
+      <if test="size20 != null">
+        #{size20,jdbcType=NUMERIC},
+      </if>
+      <if test="size21 != null">
+        #{size21,jdbcType=NUMERIC},
+      </if>
+      <if test="size22 != null">
+        #{size22,jdbcType=NUMERIC},
+      </if>
+      <if test="size23 != null">
+        #{size23,jdbcType=NUMERIC},
+      </if>
+      <if test="size24 != null">
+        #{size24,jdbcType=NUMERIC},
+      </if>
+      <if test="size25 != null">
+        #{size25,jdbcType=NUMERIC},
+      </if>
+      <if test="size26 != null">
+        #{size26,jdbcType=NUMERIC},
+      </if>
+      <if test="size27 != null">
+        #{size27,jdbcType=NUMERIC},
+      </if>
+      <if test="size28 != null">
+        #{size28,jdbcType=NUMERIC},
+      </if>
+      <if test="size29 != null">
+        #{size29,jdbcType=NUMERIC},
+      </if>
+      <if test="size30 != null">
+        #{size30,jdbcType=NUMERIC},
+      </if>
+      <if test="reserve1 != null">
+        #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        #{reserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=NVARCHAR},
+      </if>
+      <if test="sourcecode != null">
+        #{sourcecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="edituser != null">
+        #{edituser,jdbcType=NVARCHAR},
+      </if>
+      <if test="uploadversion != null">
+        #{uploadversion,jdbcType=INTEGER},
+      </if>
+      <if test="cancelprodcode != null">
+        #{cancelprodcode,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.linjr.entity.db2.OrderDetail">
+    update OrderDetail
+    <set>
+      <if test="prodguid != null">
+        [ProdGUID] = #{prodguid,jdbcType=INTEGER},
+      </if>
+      <if test="orderno != null">
+        [OrderNO] = #{orderno,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodcode != null">
+        [ProdCode] = #{prodcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="colorcode != null">
+        [ColorCode] = #{colorcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="pattern != null">
+        [Pattern] = #{pattern,jdbcType=NVARCHAR},
+      </if>
+      <if test="pdainterface != null">
+        [PDAInterface] = #{pdainterface,jdbcType=NVARCHAR},
+      </if>
+      <if test="matchcontent != null">
+        [MatchContent] = #{matchcontent,jdbcType=NVARCHAR},
+      </if>
+      <if test="qtycase != null">
+        [QtyCase] = #{qtycase,jdbcType=NUMERIC},
+      </if>
+      <if test="qtysum != null">
+        [QtySum] = #{qtysum,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice != null">
+        [UnitPrice] = #{unitprice,jdbcType=NUMERIC},
+      </if>
+      <if test="amountsum != null">
+        [AmountSum] = #{amountsum,jdbcType=NUMERIC},
+      </if>
+      <if test="uploadtime != null">
+        [UploadTime] = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="source != null">
+        [Source] = #{source,jdbcType=TINYINT},
+      </if>
+      <if test="isdeleted != null">
+        [IsDeleted] = #{isdeleted,jdbcType=BIT},
+      </if>
+      <if test="size1 != null">
+        [Size1] = #{size1,jdbcType=NUMERIC},
+      </if>
+      <if test="size2 != null">
+        [Size2] = #{size2,jdbcType=NUMERIC},
+      </if>
+      <if test="size3 != null">
+        [Size3] = #{size3,jdbcType=NUMERIC},
+      </if>
+      <if test="size4 != null">
+        [Size4] = #{size4,jdbcType=NUMERIC},
+      </if>
+      <if test="size5 != null">
+        [Size5] = #{size5,jdbcType=NUMERIC},
+      </if>
+      <if test="size6 != null">
+        [Size6] = #{size6,jdbcType=NUMERIC},
+      </if>
+      <if test="size7 != null">
+        [Size7] = #{size7,jdbcType=NUMERIC},
+      </if>
+      <if test="size8 != null">
+        [Size8] = #{size8,jdbcType=NUMERIC},
+      </if>
+      <if test="size9 != null">
+        [Size9] = #{size9,jdbcType=NUMERIC},
+      </if>
+      <if test="size10 != null">
+        [Size10] = #{size10,jdbcType=NUMERIC},
+      </if>
+      <if test="size11 != null">
+        [Size11] = #{size11,jdbcType=NUMERIC},
+      </if>
+      <if test="size12 != null">
+        [Size12] = #{size12,jdbcType=NUMERIC},
+      </if>
+      <if test="size13 != null">
+        [Size13] = #{size13,jdbcType=NUMERIC},
+      </if>
+      <if test="size14 != null">
+        [Size14] = #{size14,jdbcType=NUMERIC},
+      </if>
+      <if test="size15 != null">
+        [Size15] = #{size15,jdbcType=NUMERIC},
+      </if>
+      <if test="size16 != null">
+        [Size16] = #{size16,jdbcType=NUMERIC},
+      </if>
+      <if test="size17 != null">
+        [Size17] = #{size17,jdbcType=NUMERIC},
+      </if>
+      <if test="size18 != null">
+        [Size18] = #{size18,jdbcType=NUMERIC},
+      </if>
+      <if test="size19 != null">
+        [Size19] = #{size19,jdbcType=NUMERIC},
+      </if>
+      <if test="size20 != null">
+        [Size20] = #{size20,jdbcType=NUMERIC},
+      </if>
+      <if test="size21 != null">
+        [Size21] = #{size21,jdbcType=NUMERIC},
+      </if>
+      <if test="size22 != null">
+        [Size22] = #{size22,jdbcType=NUMERIC},
+      </if>
+      <if test="size23 != null">
+        [Size23] = #{size23,jdbcType=NUMERIC},
+      </if>
+      <if test="size24 != null">
+        [Size24] = #{size24,jdbcType=NUMERIC},
+      </if>
+      <if test="size25 != null">
+        [Size25] = #{size25,jdbcType=NUMERIC},
+      </if>
+      <if test="size26 != null">
+        [Size26] = #{size26,jdbcType=NUMERIC},
+      </if>
+      <if test="size27 != null">
+        [Size27] = #{size27,jdbcType=NUMERIC},
+      </if>
+      <if test="size28 != null">
+        [Size28] = #{size28,jdbcType=NUMERIC},
+      </if>
+      <if test="size29 != null">
+        [Size29] = #{size29,jdbcType=NUMERIC},
+      </if>
+      <if test="size30 != null">
+        [Size30] = #{size30,jdbcType=NUMERIC},
+      </if>
+      <if test="reserve1 != null">
+        [Reserve1] = #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        [Reserve2] = #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        [Reserve3] = #{reserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        [WNo] = #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        [Remark] = #{remark,jdbcType=NVARCHAR},
+      </if>
+      <if test="sourcecode != null">
+        [SourceCode] = #{sourcecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="edituser != null">
+        [EditUser] = #{edituser,jdbcType=NVARCHAR},
+      </if>
+      <if test="uploadversion != null">
+        [UpLoadVersion] = #{uploadversion,jdbcType=INTEGER},
+      </if>
+      <if test="cancelprodcode != null">
+        [CancelProdCode] = #{cancelprodcode,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where  [OrderNO] = #{orderno,jdbcType=NVARCHAR} and
+    [ProdCode] = #{prodcode,jdbcType=NVARCHAR} and
+    [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.linjr.entity.db2.OrderDetail">
+    update OrderDetail
+    set ProdGUID = #{prodguid,jdbcType=INTEGER},
+      OrderNO = #{orderno,jdbcType=NVARCHAR},
+      ProdCode = #{prodcode,jdbcType=NVARCHAR},
+      ColorCode = #{colorcode,jdbcType=NVARCHAR},
+      Pattern = #{pattern,jdbcType=NVARCHAR},
+      PDAInterface = #{pdainterface,jdbcType=NVARCHAR},
+      MatchContent = #{matchcontent,jdbcType=NVARCHAR},
+      QtyCase = #{qtycase,jdbcType=NUMERIC},
+      QtySum = #{qtysum,jdbcType=NUMERIC},
+      UnitPrice = #{unitprice,jdbcType=NUMERIC},
+      AmountSum = #{amountsum,jdbcType=NUMERIC},
+      UploadTime = #{uploadtime,jdbcType=TIMESTAMP},
+      `Source` = #{source,jdbcType=TINYINT},
+      IsDeleted = #{isdeleted,jdbcType=BIT},
+      Size1 = #{size1,jdbcType=NUMERIC},
+      Size2 = #{size2,jdbcType=NUMERIC},
+      Size3 = #{size3,jdbcType=NUMERIC},
+      Size4 = #{size4,jdbcType=NUMERIC},
+      Size5 = #{size5,jdbcType=NUMERIC},
+      Size6 = #{size6,jdbcType=NUMERIC},
+      Size7 = #{size7,jdbcType=NUMERIC},
+      Size8 = #{size8,jdbcType=NUMERIC},
+      Size9 = #{size9,jdbcType=NUMERIC},
+      Size10 = #{size10,jdbcType=NUMERIC},
+      Size11 = #{size11,jdbcType=NUMERIC},
+      Size12 = #{size12,jdbcType=NUMERIC},
+      Size13 = #{size13,jdbcType=NUMERIC},
+      Size14 = #{size14,jdbcType=NUMERIC},
+      Size15 = #{size15,jdbcType=NUMERIC},
+      Size16 = #{size16,jdbcType=NUMERIC},
+      Size17 = #{size17,jdbcType=NUMERIC},
+      Size18 = #{size18,jdbcType=NUMERIC},
+      Size19 = #{size19,jdbcType=NUMERIC},
+      Size20 = #{size20,jdbcType=NUMERIC},
+      Size21 = #{size21,jdbcType=NUMERIC},
+      Size22 = #{size22,jdbcType=NUMERIC},
+      Size23 = #{size23,jdbcType=NUMERIC},
+      Size24 = #{size24,jdbcType=NUMERIC},
+      Size25 = #{size25,jdbcType=NUMERIC},
+      Size26 = #{size26,jdbcType=NUMERIC},
+      Size27 = #{size27,jdbcType=NUMERIC},
+      Size28 = #{size28,jdbcType=NUMERIC},
+      Size29 = #{size29,jdbcType=NUMERIC},
+      Size30 = #{size30,jdbcType=NUMERIC},
+      Reserve1 = #{reserve1,jdbcType=NVARCHAR},
+      Reserve2 = #{reserve2,jdbcType=NVARCHAR},
+      Reserve3 = #{reserve3,jdbcType=NVARCHAR},
+      WNo = #{wno,jdbcType=TIMESTAMP},
+      Remark = #{remark,jdbcType=NVARCHAR},
+      SourceCode = #{sourcecode,jdbcType=NVARCHAR},
+      EditUser = #{edituser,jdbcType=NVARCHAR},
+      UpLoadVersion = #{uploadversion,jdbcType=INTEGER},
+      CancelProdCode = #{cancelprodcode,jdbcType=NVARCHAR}
+    where DetailUID = #{detailuid,jdbcType=CHAR}
+  </update>
+  <select id="selectByOrderNoProdCodeColorCode" parameterType="map" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    from OrderDetail
+    where [OrderNo] = #{orderno,jdbcType=NVARCHAR}
+    and [ProdCode] = #{prodcode,jdbcType=NVARCHAR}
+    and [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+    and [Pattern] = #{pattern,jdbcType=NVARCHAR}
+  </select>
+
+<!-- 批量插入 -->
+  <insert id="batchInsertOrder" parameterType="com.linjr.entity.db2.OrderDetail">
+  insert into OrderDetail
+  (
+  [DetailUID],
+  [ProdGUID],
+  [OrderNO],
+  [ProdCode],
+  [ColorCode],
+  [Pattern],
+  [PDAInterface],
+  [MatchContent],
+  [QtyCase],
+  [QtySum],
+  [UnitPrice],
+  [AmountSum],
+  [UploadTime],
+  [Source],
+  [IsDeleted],
+  [Size1],
+  [Size2],
+  [Size3],
+  [Size4],
+  [Size5],
+  [Size6],
+  [Size7],
+  [Size8],
+  [Size9],
+  [Size10],
+  [Size11],
+  [Size12],
+  [Size13],
+  [Size14],
+  [Size15],
+  [Size16],
+  [Size17],
+  [Size18],
+  [Size19],
+  [Size20],
+  [Size21],
+  [Size22],
+  [Size23],
+  [Size24],
+  [Size25],
+  [Size26],
+  [Size27],
+  [Size28],
+  [Size29],
+  [Size30],
+  [Reserve1],
+  [Reserve2],
+  [Reserve3],
+  [WNo],
+  [Remark],
+  [SourceCode],
+  [EditUser],
+  [UpLoadVersion],
+  [CancelProdCode])
+  values
+  <foreach index="index" collection="list" item="item" separator=",">
+    (
+    #{item.detailuid},
+    #{item.prodguid},
+    #{item.orderno},
+    #{item.prodcode},
+    #{item.colorcode},
+    #{item.pattern},
+    #{item.pdainterface},
+    #{item.matchcontent},
+    #{item.qtycase},
+    #{item.qtysum},
+    #{item.unitprice},
+    #{item.amountsum},
+    #{item.uploadtime},
+    #{item.source},
+    #{item.isdeleted},
+    #{item.size1},
+    #{item.size2},
+    #{item.size3},
+    #{item.size4},
+    #{item.size5},
+    #{item.size6},
+    #{item.size7},
+    #{item.size8},
+    #{item.size9},
+    #{item.size10},
+    #{item.size11},
+    #{item.size12},
+    #{item.size13},
+    #{item.size14},
+    #{item.size15},
+    #{item.size16},
+    #{item.size17},
+    #{item.size18},
+    #{item.size19},
+    #{item.size20},
+    #{item.size21},
+    #{item.size22},
+    #{item.size23},
+    #{item.size24},
+    #{item.size25},
+    #{item.size26},
+    #{item.size27},
+    #{item.size28},
+    #{item.size29},
+    #{item.size30},
+    #{item.reserve1},
+    #{item.reserve2},
+    #{item.reserve3},
+    #{item.wno},
+    #{item.remark},
+    #{item.sourcecode},
+    #{item.edituser},
+    #{item.uploadversion},
+    #{item.cancelprodcode})
+  </foreach>
+  </insert>
+  
+<!-- 批量更新 -->
+  <update id="batchUpdateOrder" parameterType="java.util.List">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      update OrderDetail
+      <set>
+        QtySum = #{item.qtysum},
+        AmountSum = #{item.amountsum},
+        SIZE1 = #{item.size1},
+        SIZE2 = #{item.size2},
+        SIZE3 = #{item.size3},
+        SIZE4 = #{item.size4},
+        SIZE5 = #{item.size5},
+        SIZE6 = #{item.size6},
+        SIZE7 = #{item.size7},
+        SIZE8 = #{item.size8},
+        SIZE9 = #{item.size9},
+        SIZE10 = #{item.size10},
+        SIZE11 = #{item.size11},
+        SIZE12 = #{item.size12},
+        SIZE13 = #{item.size13},
+        SIZE14 = #{item.size14},
+        SIZE15 = #{item.size15},
+        SIZE16 = #{item.size16},
+        SIZE17 = #{item.size17},
+        SIZE18 = #{item.size18},
+        SIZE19 = #{item.size19},
+        SIZE20 = #{item.size20},
+        SIZE21 = #{item.size21},
+        SIZE22 = #{item.size22},
+        SIZE23 = #{item.size23},
+        SIZE24 = #{item.size24},
+        SIZE25 = #{item.size25},
+        SIZE26 = #{item.size26},
+        SIZE27 = #{item.size27},
+        SIZE28 = #{item.size28},
+        SIZE29 = #{item.size29},
+        SIZE30 = #{item.size30}
+      </set>
+      where OrderNO= #{item.orderno}
+      and ProdCode= #{item.prodcode}
+      and ColorCode= #{item.colorcode}
+      and Pattern= #{item.pattern}
+    </foreach>
+
+  </update>
+
+
+  <update id="deleteByOrderNo" parameterType="java.lang.String">
+    update OrderDetail set
+    IsDeleted = 1
+    where
+      OrderNO = #{orderno,jdbcType=NVARCHAR}
+  </update>
+
+<!--size为null也可以update-->
+  <update id="updateBySizeIsNull" parameterType="com.linjr.entity.db2.OrderDetail">
+    update OrderDetail
+    <set>
+      <if test="prodguid != null">
+        [ProdGUID] = #{prodguid,jdbcType=INTEGER},
+      </if>
+      <if test="orderno != null">
+        [OrderNO] = #{orderno,jdbcType=NVARCHAR},
+      </if>
+      <if test="prodcode != null">
+        [ProdCode] = #{prodcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="colorcode != null">
+        [ColorCode] = #{colorcode,jdbcType=NVARCHAR},
+      </if>
+      <if test="pattern != null">
+        [Pattern] = #{pattern,jdbcType=NVARCHAR},
+      </if>
+      <if test="pdainterface != null">
+        [PDAInterface] = #{pdainterface,jdbcType=NVARCHAR},
+      </if>
+      <if test="matchcontent != null">
+        [MatchContent] = #{matchcontent,jdbcType=NVARCHAR},
+      </if>
+      <if test="qtycase != null">
+        [QtyCase] = #{qtycase,jdbcType=NUMERIC},
+      </if>
+      <if test="qtysum != null">
+        [QtySum] = #{qtysum,jdbcType=NUMERIC},
+      </if>
+      <if test="unitprice != null">
+        [UnitPrice] = #{unitprice,jdbcType=NUMERIC},
+      </if>
+      <if test="amountsum != null">
+        [AmountSum] = #{amountsum,jdbcType=NUMERIC},
+      </if>
+      <if test="uploadtime != null">
+        [UploadTime] = #{uploadtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="source != null">
+        [Source] = #{source,jdbcType=TINYINT},
+      </if>
+      <if test="isdeleted != null">
+        [IsDeleted] = #{isdeleted,jdbcType=BIT},
+      </if>
+        [Size1] = #{size1,jdbcType=NUMERIC},
+        [Size2] = #{size2,jdbcType=NUMERIC},
+        [Size3] = #{size3,jdbcType=NUMERIC},
+        [Size4] = #{size4,jdbcType=NUMERIC},
+        [Size5] = #{size5,jdbcType=NUMERIC},
+        [Size6] = #{size6,jdbcType=NUMERIC},
+        [Size7] = #{size7,jdbcType=NUMERIC},
+        [Size8] = #{size8,jdbcType=NUMERIC},
+        [Size9] = #{size9,jdbcType=NUMERIC},
+        [Size10] = #{size10,jdbcType=NUMERIC},
+        [Size11] = #{size11,jdbcType=NUMERIC},
+        [Size12] = #{size12,jdbcType=NUMERIC},
+        [Size13] = #{size13,jdbcType=NUMERIC},
+        [Size14] = #{size14,jdbcType=NUMERIC},
+        [Size15] = #{size15,jdbcType=NUMERIC},
+        [Size16] = #{size16,jdbcType=NUMERIC},
+        [Size17] = #{size17,jdbcType=NUMERIC},
+        [Size18] = #{size18,jdbcType=NUMERIC},
+        [Size19] = #{size19,jdbcType=NUMERIC},
+        [Size20] = #{size20,jdbcType=NUMERIC},
+        [Size21] = #{size21,jdbcType=NUMERIC},
+        [Size22] = #{size22,jdbcType=NUMERIC},
+        [Size23] = #{size23,jdbcType=NUMERIC},
+        [Size24] = #{size24,jdbcType=NUMERIC},
+        [Size25] = #{size25,jdbcType=NUMERIC},
+        [Size26] = #{size26,jdbcType=NUMERIC},
+        [Size27] = #{size27,jdbcType=NUMERIC},
+        [Size28] = #{size28,jdbcType=NUMERIC},
+        [Size29] = #{size29,jdbcType=NUMERIC},
+        [Size30] = #{size30,jdbcType=NUMERIC},
+      <if test="reserve1 != null">
+        [Reserve1] = #{reserve1,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve2 != null">
+        [Reserve2] = #{reserve2,jdbcType=NVARCHAR},
+      </if>
+      <if test="reserve3 != null">
+        [Reserve3] = #{reserve3,jdbcType=NVARCHAR},
+      </if>
+      <if test="wno != null">
+        [WNo] = #{wno,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        [Remark] = #{remark,jdbcType=NVARCHAR},
+      </if>
+      <if test="sourcecode != null">
+        [SourceCode] = #{sourcecode,jdbcType=NVARCHAR},
+      </if>
+      <if test="edituser != null">
+        [EditUser] = #{edituser,jdbcType=NVARCHAR},
+      </if>
+      <if test="uploadversion != null">
+        [UpLoadVersion] = #{uploadversion,jdbcType=INTEGER},
+      </if>
+      <if test="cancelprodcode != null">
+        [CancelProdCode] = #{cancelprodcode,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where  [OrderNO] = #{orderno,jdbcType=NVARCHAR} and
+    [ProdCode] = #{prodcode,jdbcType=NVARCHAR} and
+    [ColorCode] = #{colorcode,jdbcType=NVARCHAR}
+  </update>
+
+</mapper>

@@ -1,0 +1,62 @@
+
+server:
+  port: 9000
+spring:
+  application:
+    name: rs-gateway-v2
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8841,localhost:8842,localhost:8843
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: path_route_2service
+          predicates:
+            - Path=/webapi/**
+          #        uri: http://localhost:9002
+          uri: lb://rs-webapi
+          filters:
+#            - StripPrefix=1
+        - id: path_thymeleaf
+          predicates:
+            - Path=/page/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+          filters:
+            - StripPrefix=1
+        - id: path_thymeleaf_css
+          predicates:
+            - Path=/css/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+        - id: path_thymeleaf_ext
+          predicates:
+            - Path=/ext/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+        - id: path_thymeleaf_images
+          predicates:
+            - Path=/images/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+        - id: path_thymeleaf_js
+          predicates:
+            - Path=/js/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+        - id: path_thymeleaf_layui
+          predicates:
+            - Path=/layui/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+        - id: path_thymeleaf_treetable_lay
+          predicates:
+            - Path=/treetable-lay/**
+          #        uri: http://localhost:9100
+          uri: lb://rs-thymeleaf
+#logging:
+#  level:
+#    root: debug
