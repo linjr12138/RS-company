@@ -1,556 +1,450 @@
-2021-04-08 09:32:48.560  INFO 3845 --- [restartedMain] com.linjr.RsWebApplication               : No active profile set, falling back to default profiles: default
-2021-04-08 09:32:49.514  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'ipadManagerMapper' and 'com.linjr.mapper.db1.IpadManagerMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.514  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'regionMapper' and 'com.linjr.mapper.db1.RegionMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.514  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.linjr.mapper.db1.SysDeptMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.514  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysLogMapper' and 'com.linjr.mapper.db1.SysLogMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.514  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysPermissionMapper' and 'com.linjr.mapper.db1.SysPermissionMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.linjr.mapper.db1.SysRoleMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRolePermissionMapper' and 'com.linjr.mapper.db1.SysRolePermissionMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.linjr.mapper.db1.SysUserMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.linjr.mapper.db1.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'testJpaMapper' and 'com.linjr.mapper.db1.TestJpaMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientMapper' and 'com.linjr.mapper.db2.BaseClientMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientShopMapper' and 'com.linjr.mapper.db2.BaseClientShopMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.515  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductMapper' and 'com.linjr.mapper.db2.BaseProductMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductSizeMapper' and 'com.linjr.mapper.db2.BaseProductSizeMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderDetailMapper' and 'com.linjr.mapper.db2.OrderDetailMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderMainMapper' and 'com.linjr.mapper.db2.OrderMainMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'psoDelTestMapper' and 'com.linjr.mapper.db2.PsoDelTestMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sqlJpaTestMapper' and 'com.linjr.mapper.db2.SqlJpaTestMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'vAllOrderDiscountMapper' and 'com.linjr.mapper.db2.vAllOrderDiscountMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:32:49.516  WARN 3845 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper]' package. Please check your configuration.
-2021-04-08 09:32:49.903  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-08 09:32:49.904  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-08 09:32:49.960  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 JPA repository interfaces.
-2021-04-08 09:32:49.981  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-08 09:32:49.983  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-04-08 09:32:50.007  INFO 3845 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
-2021-04-08 09:32:50.335  INFO 3845 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=75a597a6-6349-3aec-a424-53dd4d1b4bfb
-2021-04-08 09:32:50.519  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:50.698  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.linjr.config.ShiroConfig$$EnhancerBySpringCGLIB$$317bde3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:50.948  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.linjr.config.RedisConfig$$EnhancerBySpringCGLIB$$7c4a6589] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:50.960  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:50.966  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.085  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.197  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.293  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.312  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.linjr.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.315  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.linjr.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.320  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [com.linjr.shiro.ShiroCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.336  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource1Config' of type [com.linjr.datasources.DataSource1Config$$EnhancerBySpringCGLIB$$77e387a2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.381  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1DataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.412  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.420  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.787  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.792  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.794  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.797  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [com.sun.proxy.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.802  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.803  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [com.sun.proxy.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.804  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.linjr.service.Impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.808  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.808  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [com.sun.proxy.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.812  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.813  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [com.sun.proxy.$Proxy112] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.814  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userRoleServiceImpl' of type [com.linjr.service.Impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.837  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tokenSetting' of type [com.linjr.utils.TokenSetting$$EnhancerBySpringCGLIB$$e5d98b6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.838  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.linjr.service.Impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.843  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.linjr.service.Impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.848  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.linjr.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.856  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.871  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:51.892  INFO 3845 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:32:52.388  INFO 3845 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
-2021-04-08 09:32:52.403  INFO 3845 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-08 09:32:52.403  INFO 3845 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2021-04-08 09:32:52.569  INFO 3845 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-08 09:32:52.570  INFO 3845 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3983 ms
-2021-04-08 09:32:52.819  INFO 3845 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-08 09:32:52.931  INFO 3845 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2021-04-08 09:32:53.111  INFO 3845 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-04-08 09:32:53.320  INFO 3845 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-04-08 09:32:53.587  INFO 3845 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2021-04-08 09:32:54.049  INFO 3845 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-08 09:32:54.065  INFO 3845 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-08 09:32:54.144  INFO 3845 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-08 09:32:54.997  WARN 3845 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-08 09:32:55.268  INFO 3845 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 09:32:55.334  WARN 3845 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-04-08 09:32:55.334  INFO 3845 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 09:32:55.340  WARN 3845 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-04-08 09:32:55.340  INFO 3845 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 09:32:55.541  INFO 3845 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 09:32:55.724  WARN 3845 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-04-08 09:32:56.323  INFO 3845 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2021-04-08 09:32:56.678  INFO 3845 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-08 09:32:56.706  INFO 3845 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-08 09:32:56.783  INFO 3845 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-08 09:32:57.060  INFO 3845 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateDeptUsingPUT_1
-2021-04-08 09:32:57.101  INFO 3845 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
-2021-04-08 09:32:57.158  INFO 3845 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
-2021-04-08 09:32:57.162  WARN 3845 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<com.linjr.entity.db2.BaseProduct>
-2021-04-08 09:32:57.198  INFO 3845 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getDeptTreeUsingGET_1
-2021-04-08 09:32:57.217  INFO 3845 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
-2021-04-08 09:32:57.250  INFO 3845 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
-2021-04-08 09:32:57.337  INFO 3845 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
-2021-04-08 09:32:57.463  INFO 3845 --- [restartedMain] o.s.c.a.n.registry.NacosServiceRegistry  : nacos registry, rs-web 10.0.1.179:9001 register finished
-2021-04-08 09:32:57.469  INFO 3845 --- [restartedMain] com.linjr.RsWebApplication               : Started RsWebApplication in 9.764 seconds (JVM running for 11.778)
-2021-04-08 09:36:15.916  INFO 3845 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 09:36:15.917  INFO 3845 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-08 09:36:15.960  INFO 3845 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 42 ms
-2021-04-08 09:36:16.238  INFO 3845 --- [http-nio-9001-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-08 09:36:46.294 ERROR 3845 --- [http-nio-9001-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+2021-05-21 11:06:53.383  INFO 23711 --- [restartedMain] com.linjr.RsWebApplication               : No active profile set, falling back to default profiles: default
+2021-05-21 11:06:54.175  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'ipadManagerMapper' and 'com.linjr.mapper.db1.IpadManagerMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.175  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'regionMapper' and 'com.linjr.mapper.db1.RegionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.175  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.linjr.mapper.db1.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.175  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysLogMapper' and 'com.linjr.mapper.db1.SysLogMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.175  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysPermissionMapper' and 'com.linjr.mapper.db1.SysPermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.linjr.mapper.db1.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRolePermissionMapper' and 'com.linjr.mapper.db1.SysRolePermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.linjr.mapper.db1.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.linjr.mapper.db1.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'testJpaMapper' and 'com.linjr.mapper.db1.TestJpaMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientMapper' and 'com.linjr.mapper.db2.BaseClientMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientShopMapper' and 'com.linjr.mapper.db2.BaseClientShopMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductMapper' and 'com.linjr.mapper.db2.BaseProductMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductSizeMapper' and 'com.linjr.mapper.db2.BaseProductSizeMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderDetailMapper' and 'com.linjr.mapper.db2.OrderDetailMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.176  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderMainMapper' and 'com.linjr.mapper.db2.OrderMainMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.177  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'psoDelTestMapper' and 'com.linjr.mapper.db2.PsoDelTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.177  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sqlJpaTestMapper' and 'com.linjr.mapper.db2.SqlJpaTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.177  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'vAllOrderDiscountMapper' and 'com.linjr.mapper.db2.vAllOrderDiscountMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:06:54.177  WARN 23711 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper]' package. Please check your configuration.
+2021-05-21 11:06:54.423  INFO 23711 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:06:54.423  INFO 23711 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 11:06:54.460  INFO 23711 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 JPA repository interfaces.
+2021-05-21 11:06:54.478  INFO 23711 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:06:54.479  INFO 23711 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-21 11:06:54.498  INFO 23711 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+2021-05-21 11:06:54.783  INFO 23711 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=75a597a6-6349-3aec-a424-53dd4d1b4bfb
+2021-05-21 11:06:54.946  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.085  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.linjr.config.ShiroConfig$$EnhancerBySpringCGLIB$$4550886a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.324  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.linjr.config.RedisConfig$$EnhancerBySpringCGLIB$$901f0fb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.335  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.341  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.423  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.501  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.574  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.592  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.linjr.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.594  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.linjr.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.599  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [com.linjr.shiro.ShiroCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.618  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource1Config' of type [com.linjr.datasources.DataSource1Config$$EnhancerBySpringCGLIB$$8bb831cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.653  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1DataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.681  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.688  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:55.997  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.003  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.005  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.008  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [com.sun.proxy.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.012  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.012  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [com.sun.proxy.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.013  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.linjr.service.Impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.017  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.018  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [com.sun.proxy.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.022  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.023  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [com.sun.proxy.$Proxy112] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.024  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userRoleServiceImpl' of type [com.linjr.service.Impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.044  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tokenSetting' of type [com.linjr.utils.TokenSetting$$EnhancerBySpringCGLIB$$f9ae3597] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.045  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.linjr.service.Impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.051  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.linjr.service.Impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.055  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.linjr.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.063  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.076  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.094  INFO 23711 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:06:56.524  INFO 23711 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2021-05-21 11:06:56.536  INFO 23711 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-21 11:06:56.536  INFO 23711 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-05-21 11:06:56.664  INFO 23711 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-21 11:06:56.664  INFO 23711 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3254 ms
+2021-05-21 11:06:56.911  INFO 23711 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 11:06:57.036  INFO 23711 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-05-21 11:06:57.161  INFO 23711 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-21 11:06:57.328  INFO 23711 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-05-21 11:06:57.627  INFO 23711 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-05-21 11:06:58.100  INFO 23711 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 11:06:58.110  INFO 23711 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:06:58.189  INFO 23711 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-21 11:06:59.029  WARN 23711 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 11:06:59.295  INFO 23711 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-21 11:06:59.358  WARN 23711 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:06:59.358  INFO 23711 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:06:59.362  WARN 23711 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:06:59.362  INFO 23711 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:06:59.543  INFO 23711 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:06:59.710  WARN 23711 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 11:07:00.266  INFO 23711 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-21 11:07:00.594  INFO 23711 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-21 11:07:00.616  INFO 23711 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-21 11:07:00.619 ERROR 23711 --- [ThreadPoolTaskScheduler-1] o.s.c.a.nacos.discovery.NacosWatch       : Error watching Nacos Service change
 
-com.microsoft.sqlserver.jdbc.SQLServerException: 通过端口 1433 连接到主机 10.211.55.5 的 TCP/IP 连接失败。错误:“connect timed out。请验证连接属性。确保 SQL Server 的实例正在主机上运行，且在此端口接受 TCP/IP 连接，还要确保防火墙没有阻止到此端口的 TCP 连接。”。
-	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:234) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2431) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:656) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2472) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2142) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1993) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1164) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:760) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) [HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) [HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.1.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:263) [spring-jdbc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:376) [spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:572) [spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:360) [spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) [spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.service.Impl.BaseClientShopServiceImpl$$EnhancerBySpringCGLIB$$1db087ab.selectByUsername(<generated>) [classes/:na]
-	at com.linjr.service.Impl.UserServiceImpl.login(UserServiceImpl.java:98) [classes/:na]
-	at com.linjr.controller.UserController.login(UserController.java:40) [classes/:na]
-	at com.linjr.controller.UserController$$FastClassBySpringCGLIB$$37cab7f7.invoke(<generated>) [classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) [spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.aop.aspect.SysLogAspect.around(SysLogAspect.java:60) [classes/:na]
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/service/list after all servers([localhost:8841, localhost:8842, localhost:8843]) tried: failed to req API:http://localhost:8842/nacos/v1/ns/service/list. code:500 msg: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:380) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:346) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:294) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.getServiceList(NamingProxy.java:276) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.getServiceList(NamingProxy.java:252) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServicesOfServer(NacosNamingService.java:525) ~[nacos-client-1.0.0.jar:na]
+	at org.springframework.cloud.alibaba.nacos.discovery.NacosWatch.nacosServicesWatch(NacosWatch.java:127) ~[spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_181]
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308) ~[na:1.8.0_181]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_181]
+
+2021-05-21 11:07:00.673  INFO 23711 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-21 11:07:00.975  INFO 23711 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateDeptUsingPUT_1
+2021-05-21 11:07:01.015  INFO 23711 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2021-05-21 11:07:01.063  INFO 23711 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2021-05-21 11:07:01.066  WARN 23711 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<com.linjr.entity.db2.BaseProduct>
+2021-05-21 11:07:01.098  INFO 23711 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getDeptTreeUsingGET_1
+2021-05-21 11:07:01.114  INFO 23711 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2021-05-21 11:07:01.144  INFO 23711 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2021-05-21 11:07:01.226  INFO 23711 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2021-05-21 11:07:01.339 ERROR 23711 --- [restartedMain] o.s.c.a.n.registry.NacosServiceRegistry  : nacos registry, rs-web register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8841,localhost:8842,localhost:8843', endpoint='', namespace='', watchDelay=30000, logName='', service='rs-web', weight=1.0, clusterName='DEFAULT', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='10.0.1.4', networkInterface='', port=9001, secure=false, accessKey='', secretKey=''}},
+
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([localhost:8841, localhost:8842, localhost:8843]) tried: failed to req API:http://localhost:8841/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:380) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:304) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:186) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:298) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:279) ~[nacos-client-1.0.0.jar:na]
+	at org.springframework.cloud.alibaba.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:63) ~[spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.alibaba.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:74) [spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at com.linjr.RsWebApplication.main(RsWebApplication.java:19) [classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.controller.UserController$$EnhancerBySpringCGLIB$$31593537.login(<generated>) [classes/:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+
+2021-05-21 11:07:01.345  INFO 23711 --- [restartedMain] com.linjr.RsWebApplication               : Started RsWebApplication in 8.848 seconds (JVM running for 10.394)
+2021-05-21 11:07:15.875  INFO 23711 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registering from Nacos Server now...
+2021-05-21 11:07:15.881 ERROR 23711 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8841,localhost:8842,localhost:8843', endpoint='', namespace='', watchDelay=30000, logName='', service='rs-web', weight=1.0, clusterName='DEFAULT', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='10.0.1.4', networkInterface='', port=9001, secure=false, accessKey='', secretKey=''}},
+
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([localhost:8841, localhost:8842, localhost:8843]) tried: failed to req API:http://localhost:8841/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:380) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:304) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:203) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:329) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:323) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:313) ~[nacos-client-1.0.0.jar:na]
+	at org.springframework.cloud.alibaba.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:87) ~[spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
 
-2021-04-08 09:36:46.317 ERROR 3845 --- [http-nio-9001-exec-1] c.l.e.handler.RestExceptionHandler       : Exception,Could not open JDBC Connection for transaction; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 通过端口 1433 连接到主机 10.211.55.5 的 TCP/IP 连接失败。错误:“connect timed out。请验证连接属性。确保 SQL Server 的实例正在主机上运行，且在此端口接受 TCP/IP 连接，还要确保防火墙没有阻止到此端口的 TCP 连接。”。,{}
+2021-05-21 11:07:15.882  INFO 23711 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registration finished.
+2021-05-21 11:07:15.884  INFO 23711 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:07:15.899  WARN 23711 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:07:15.899  INFO 23711 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:07:15.905  INFO 23711 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:07:15.913  INFO 23711 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-05-21 11:09:02.086  INFO 24173 --- [restartedMain] com.linjr.RsWebApplication               : No active profile set, falling back to default profiles: default
+2021-05-21 11:09:04.882  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'ipadManagerMapper' and 'com.linjr.mapper.db1.IpadManagerMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.883  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'regionMapper' and 'com.linjr.mapper.db1.RegionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.884  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.linjr.mapper.db1.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.884  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysLogMapper' and 'com.linjr.mapper.db1.SysLogMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.884  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysPermissionMapper' and 'com.linjr.mapper.db1.SysPermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.884  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.linjr.mapper.db1.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.884  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRolePermissionMapper' and 'com.linjr.mapper.db1.SysRolePermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.884  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.linjr.mapper.db1.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.885  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.linjr.mapper.db1.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.885  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'testJpaMapper' and 'com.linjr.mapper.db1.TestJpaMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.886  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientMapper' and 'com.linjr.mapper.db2.BaseClientMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.887  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientShopMapper' and 'com.linjr.mapper.db2.BaseClientShopMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.888  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductMapper' and 'com.linjr.mapper.db2.BaseProductMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.889  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductSizeMapper' and 'com.linjr.mapper.db2.BaseProductSizeMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.890  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderDetailMapper' and 'com.linjr.mapper.db2.OrderDetailMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.891  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderMainMapper' and 'com.linjr.mapper.db2.OrderMainMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.892  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'psoDelTestMapper' and 'com.linjr.mapper.db2.PsoDelTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.892  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sqlJpaTestMapper' and 'com.linjr.mapper.db2.SqlJpaTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.893  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'vAllOrderDiscountMapper' and 'com.linjr.mapper.db2.vAllOrderDiscountMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:09:04.894  WARN 24173 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper]' package. Please check your configuration.
+2021-05-21 11:09:05.575  INFO 24173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:09:05.576  INFO 24173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 11:09:05.652  INFO 24173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 0 JPA repository interfaces.
+2021-05-21 11:09:05.684  INFO 24173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:09:05.687  INFO 24173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-21 11:09:05.735  INFO 24173 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2021-05-21 11:09:06.589  INFO 24173 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=75a597a6-6349-3aec-a424-53dd4d1b4bfb
+2021-05-21 11:09:07.183  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:07.621  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.linjr.config.ShiroConfig$$EnhancerBySpringCGLIB$$1c7882ac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.185  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.linjr.config.RedisConfig$$EnhancerBySpringCGLIB$$674709f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.216  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.230  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.450  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.713  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.929  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.962  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.linjr.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.966  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.linjr.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:08.973  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [com.linjr.shiro.ShiroCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:09.039  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource1Config' of type [com.linjr.datasources.DataSource1Config$$EnhancerBySpringCGLIB$$62e02c0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:09.227  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1DataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:09.354  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:09.378  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.719  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.748  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.758  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.766  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [com.sun.proxy.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.812  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.814  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [com.sun.proxy.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.816  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.linjr.service.Impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.831  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.833  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [com.sun.proxy.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.849  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.852  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [com.sun.proxy.$Proxy112] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:10.857  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userRoleServiceImpl' of type [com.linjr.service.Impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.022  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tokenSetting' of type [com.linjr.utils.TokenSetting$$EnhancerBySpringCGLIB$$d0d62fd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.033  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.linjr.service.Impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.055  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.linjr.service.Impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.070  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.linjr.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.098  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.172  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:11.253  INFO 24173 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:09:12.714  INFO 24173 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2021-05-21 11:09:12.743  INFO 24173 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-21 11:09:12.743  INFO 24173 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-05-21 11:09:13.078  INFO 24173 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-21 11:09:13.079  INFO 24173 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10931 ms
+2021-05-21 11:09:13.898  INFO 24173 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 11:09:14.089  INFO 24173 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-05-21 11:09:14.405  INFO 24173 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-21 11:09:14.766  INFO 24173 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-05-21 11:09:15.152  INFO 24173 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-05-21 11:09:16.041  INFO 24173 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 11:09:16.062  INFO 24173 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:09:16.322  INFO 24173 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-21 11:09:19.195  WARN 24173 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 11:09:19.854  INFO 24173 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-21 11:09:20.006  WARN 24173 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:09:20.006  INFO 24173 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:09:20.019  WARN 24173 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:09:20.019  INFO 24173 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:09:20.771  INFO 24173 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:09:21.436  WARN 24173 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 11:09:23.084  INFO 24173 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-21 11:09:24.150  INFO 24173 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-21 11:09:24.205 ERROR 24173 --- [ThreadPoolTaskScheduler-1] o.s.c.a.nacos.discovery.NacosWatch       : Error watching Nacos Service change
 
-org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 通过端口 1433 连接到主机 10.211.55.5 的 TCP/IP 连接失败。错误:“connect timed out。请验证连接属性。确保 SQL Server 的实例正在主机上运行，且在此端口接受 TCP/IP 连接，还要确保防火墙没有阻止到此端口的 TCP 连接。”。
-	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:307) ~[spring-jdbc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:376) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:572) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:360) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99) ~[spring-tx-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.service.Impl.BaseClientShopServiceImpl$$EnhancerBySpringCGLIB$$1db087ab.selectByUsername(<generated>) ~[classes/:na]
-	at com.linjr.service.Impl.UserServiceImpl.login(UserServiceImpl.java:98) ~[classes/:na]
-	at com.linjr.controller.UserController.login(UserController.java:40) ~[classes/:na]
-	at com.linjr.controller.UserController$$FastClassBySpringCGLIB$$37cab7f7.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.aop.aspect.SysLogAspect.around(SysLogAspect.java:60) ~[classes/:na]
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/service/list after all servers([localhost:8841, localhost:8842, localhost:8843]) tried: failed to req API:http://localhost:8841/nacos/v1/ns/service/list. code:500 msg: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:380) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:346) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:294) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.getServiceList(NamingProxy.java:276) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.getServiceList(NamingProxy.java:252) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServicesOfServer(NacosNamingService.java:525) ~[nacos-client-1.0.0.jar:na]
+	at org.springframework.cloud.alibaba.nacos.discovery.NacosWatch.nacosServicesWatch(NacosWatch.java:127) ~[spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_181]
+	at java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:308) ~[na:1.8.0_181]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_181]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_181]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_181]
+
+2021-05-21 11:09:24.220  INFO 24173 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-21 11:09:24.399  INFO 24173 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-21 11:09:25.108  INFO 24173 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateDeptUsingPUT_1
+2021-05-21 11:09:25.193  INFO 24173 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2021-05-21 11:09:25.352  INFO 24173 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2021-05-21 11:09:25.357  WARN 24173 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<com.linjr.entity.db2.BaseProduct>
+2021-05-21 11:09:25.409  INFO 24173 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getDeptTreeUsingGET_1
+2021-05-21 11:09:25.438  INFO 24173 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2021-05-21 11:09:25.505  INFO 24173 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2021-05-21 11:09:25.685  INFO 24173 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2021-05-21 11:09:25.912 ERROR 24173 --- [restartedMain] o.s.c.a.n.registry.NacosServiceRegistry  : nacos registry, rs-web register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8841,localhost:8842,localhost:8843', endpoint='', namespace='', watchDelay=30000, logName='', service='rs-web', weight=1.0, clusterName='DEFAULT', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='10.0.1.4', networkInterface='', port=9001, secure=false, accessKey='', secretKey=''}},
+
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([localhost:8841, localhost:8842, localhost:8843]) tried: failed to req API:http://localhost:8841/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:380) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:304) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:186) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:298) ~[nacos-client-1.0.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:279) ~[nacos-client-1.0.0.jar:na]
+	at org.springframework.cloud.alibaba.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:63) ~[spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.alibaba.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:74) [spring-cloud-alibaba-nacos-discovery-0.2.2.RELEASE.jar:0.2.2.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47) [spring-cloud-commons-2.2.0.RELEASE.jar:2.2.0.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:165) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.2.RELEASE.jar:2.2.2.RELEASE]
+	at com.linjr.RsWebApplication.main(RsWebApplication.java:19) [classes/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
 	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.controller.UserController$$EnhancerBySpringCGLIB$$31593537.login(<generated>) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
-Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: 通过端口 1433 连接到主机 10.211.55.5 的 TCP/IP 连接失败。错误:“connect timed out。请验证连接属性。确保 SQL Server 的实例正在主机上运行，且在此端口接受 TCP/IP 连接，还要确保防火墙没有阻止到此端口的 TCP 连接。”。
-	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDriverError(SQLServerException.java:234) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerException.ConvertConnectExceptionToSQLServerException(SQLServerException.java:285) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SocketFinder.findSocket(IOBuffer.java:2431) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.TDSChannel.open(IOBuffer.java:656) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2472) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2142) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1993) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1164) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:760) ~[mssql-jdbc-7.4.1.jre8.jar:na]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.1.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.1.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:263) ~[spring-jdbc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	... 98 common frames omitted
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.2.RELEASE.jar:2.2.2.RELEASE]
 
-2021-04-08 09:36:46.377  WARN 3845 --- [http-nio-9001-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 通过端口 1433 连接到主机 10.211.55.5 的 TCP/IP 连接失败。错误:“connect timed out。请验证连接属性。确保 SQL Server 的实例正在主机上运行，且在此端口接受 TCP/IP 连接，还要确保防火墙没有阻止到此端口的 TCP 连接。”。]
-2021-04-08 09:37:33.816  INFO 3845 --- [http-nio-9001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-04-08 09:37:34.637  INFO 3845 --- [http-nio-9001-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-04-08 09:37:34.779 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.B.selectByUsername               : ==>  Preparing: select * from BaseClientShop where PADUserCode=? and IsSurvey='0' and IsEnable='1' 
-2021-04-08 09:37:34.863 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.B.selectByUsername               : ==> Parameters: 1000(String)
-2021-04-08 09:37:35.228 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.B.selectByUsername               : <==      Total: 1
-2021-04-08 09:37:35.360 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getRoleIdsByUserId             : ==>  Preparing: select role_id from sys_user_role where user_id=? 
-2021-04-08 09:37:35.390 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getRoleIdsByUserId             : ==> Parameters: a452d281-5173-4f87-98d6-613d9e81b1f1(String)
-2021-04-08 09:37:35.413 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getRoleIdsByUserId             : <==      Total: 1
-2021-04-08 09:37:35.467 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.SysRoleMapper.selectNamesByIds   : ==>  Preparing: select name from sys_role where id in ( ? ) and deleted=1 
-2021-04-08 09:37:35.468 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.SysRoleMapper.selectNamesByIds   : ==> Parameters: 9ddf23d5-5520-4047-b7ef-aec112919173(String)
-2021-04-08 09:37:35.479 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.SysRoleMapper.selectNamesByIds   : <==      Total: 1
-2021-04-08 09:37:35.487 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getRoleIdsByUserId             : ==>  Preparing: select role_id from sys_user_role where user_id=? 
-2021-04-08 09:37:35.487 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getRoleIdsByUserId             : ==> Parameters: a452d281-5173-4f87-98d6-613d9e81b1f1(String)
-2021-04-08 09:37:35.497 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getRoleIdsByUserId             : <==      Total: 1
-2021-04-08 09:37:35.499 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getPermissionIdByRoleIds       : ==>  Preparing: select permission_id from sys_role_permission where role_id in ( ? ) 
-2021-04-08 09:37:35.499 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getPermissionIdByRoleIds       : ==> Parameters: 9ddf23d5-5520-4047-b7ef-aec112919173(String)
-2021-04-08 09:37:35.510 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.S.getPermissionIdByRoleIds       : <==      Total: 5
-2021-04-08 09:37:35.511 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.SysPermissionMapper.selectByIds  : ==>  Preparing: select id, code, `name`, perms, url, `method`, pid, order_num, `type`, `status`, create_time, update_time, deleted from sys_permission where id in ( ? , ? , ? , ? , ? ) and deleted=1 and `status`=1 order by order_num desc 
-2021-04-08 09:37:35.512 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.SysPermissionMapper.selectByIds  : ==> Parameters: f879eae9-6701-41ef-a064-7b88ef928712(String), 8ef19776-68e3-418a-8fca-7661d681ea75(String), bcc0f6b6-0e7b-4cf6-97fe-08176eb8d984(String), 4ddc170e-177d-4a46-9fb3-4981e3d80124(String), ca6b3cb2-3a6e-468a-bfc2-5a9ad04bc922(String)
-2021-04-08 09:37:35.531 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.d.SysPermissionMapper.selectByIds  : <==      Total: 5
-2021-04-08 09:37:35.943  INFO 3845 --- [http-nio-9001-exec-2] com.linjr.service.Impl.UserServiceImpl   : accessTokeneyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDAwIiwicm9sZXMtaW5mb3Mta2V5IjpbIue7iOerr-iuoui0pyJdLCJwZXJtaXNzaW9ucy1pbmZvcy1rZXkiOltdLCJpc3MiOiJsaW5qci5vcmcuY24iLCJqd3QtdXNlci1uYW1lLWtleSI6IjEwMDAiLCJleHAiOjE2MTc4NTMwNTUsImlhdCI6MTYxNzg0NTg1NX0.VqaEXpq1d6kVw1j2mlT8WA1wL-oN4Ifzk7vAhFTRhmM
-2021-04-08 09:37:35.944  INFO 3845 --- [http-nio-9001-exec-2] com.linjr.service.Impl.UserServiceImpl   : refreshTokeneyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDAwIiwiaXNzIjoibGluanIub3JnLmNuIiwiZXhwIjoxNjE3ODc0NjU1LCJpYXQiOjE2MTc4NDU4NTUsImp3dC1yZWZyZXNoLWtleV8iOiIxMDAwIn0.4EyYFqmHsQOo6-ekMZsOSCpl-m8rRPeAtO5Xzb8JLBA
-2021-04-08 09:37:35.954  INFO 3845 --- [http-nio-9001-exec-2] com.linjr.aop.aspect.SysLogAspect        : 请求com.linjr.controller.UserController.login耗时2131毫秒
-2021-04-08 09:37:35.973  INFO 3845 --- [http-nio-9001-exec-2] com.linjr.aop.aspect.SysLogAspect        : Ip0:0:0:0:0:0:0:1，接口地址http://10.0.1.179:9002/api/user/login，请求方式POST，入参：[{"password":"666666","type":"1","userType":"1","username":"1000"}]
-2021-04-08 09:37:35.990 ERROR 3845 --- [http-nio-9001-exec-2] com.linjr.utils.JwtTokenUtil             : eror={}
-
-java.lang.NullPointerException: null
-	at com.linjr.utils.JwtTokenUtil.getUserId(JwtTokenUtil.java:147) ~[classes/:na]
-	at com.linjr.aop.aspect.SysLogAspect.saveSysLog(SysLogAspect.java:121) [classes/:na]
-	at com.linjr.aop.aspect.SysLogAspect.around(SysLogAspect.java:66) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.controller.UserController$$EnhancerBySpringCGLIB$$31593537.login(<generated>) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
-
-2021-04-08 09:37:35.994 ERROR 3845 --- [http-nio-9001-exec-2] com.linjr.utils.JwtTokenUtil             : eror={}
-
-java.lang.NullPointerException: null
-	at com.linjr.utils.JwtTokenUtil.getUserName(JwtTokenUtil.java:169) ~[classes/:na]
-	at com.linjr.aop.aspect.SysLogAspect.saveSysLog(SysLogAspect.java:122) [classes/:na]
-	at com.linjr.aop.aspect.SysLogAspect.around(SysLogAspect.java:66) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) [spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.controller.UserController$$EnhancerBySpringCGLIB$$31593537.login(<generated>) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
-
-2021-04-08 09:37:35.996  INFO 3845 --- [http-nio-9001-exec-2] com.linjr.aop.aspect.SysLogAspect        : SysLog [Hash = 806293389, id=e0bfb416-452d-43d0-993c-f48bbd4805c8, userId=null, username=null, operation=组织管理-用户模块相关接口-用户登陆接口, time=2131, method=com.linjr.controller.UserController.login(), params=[{"password":"666666","type":"1","userType":"1","username":"1000"}], ip=0:0:0:0:0:0:0:1, createTime=Thu Apr 08 09:37:35 CST 2021, serialVersionUID=1]
-2021-04-08 09:37:36.012 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.db1.SysLogMapper.insertSelective   : ==>  Preparing: insert into sys_log ( id, `operation`, `time`, `method`, params, ip, create_time ) values ( ?, ?, ?, ?, ?, ?, ? ) 
-2021-04-08 09:37:36.015 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.db1.SysLogMapper.insertSelective   : ==> Parameters: e0bfb416-452d-43d0-993c-f48bbd4805c8(String), 组织管理-用户模块相关接口-用户登陆接口(String), 2131(Integer), com.linjr.controller.UserController.login()(String), [{"password":"666666","type":"1","userType":"1","username":"1000"}](String), 0:0:0:0:0:0:0:1(String), 2021-04-08 09:37:35.996(Timestamp)
-2021-04-08 09:37:36.037 DEBUG 3845 --- [http-nio-9001-exec-2] c.l.m.db1.SysLogMapper.insertSelective   : <==    Updates: 1
-2021-04-08 09:38:00.060  INFO 3845 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registering from Nacos Server now...
-2021-04-08 09:38:00.076  INFO 3845 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registration finished.
-2021-04-08 09:38:00.083  INFO 3845 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 09:38:00.139  WARN 3845 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-04-08 09:38:00.139  INFO 3845 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 09:38:00.161  INFO 3845 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-04-08 09:38:00.173  INFO 3845 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-04-08 09:38:00.173  INFO 3845 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-08 09:38:00.224  INFO 3845 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-05-21 11:09:25.921  INFO 24173 --- [restartedMain] com.linjr.RsWebApplication               : Started RsWebApplication in 26.034 seconds (JVM running for 27.844)
+2021-05-21 11:15:22.231  INFO 24173 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registering from Nacos Server now...
+2021-05-21 11:15:22.247  INFO 24173 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registration finished.
+2021-05-21 11:15:22.268  INFO 24173 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:15:22.346  WARN 24173 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:15:22.346  INFO 24173 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:15:22.368  INFO 24173 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:15:22.493  INFO 24173 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-05-21 11:15:27.742  INFO 25432 --- [restartedMain] com.linjr.RsWebApplication               : No active profile set, falling back to default profiles: default
+2021-05-21 11:15:28.902  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'ipadManagerMapper' and 'com.linjr.mapper.db1.IpadManagerMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'regionMapper' and 'com.linjr.mapper.db1.RegionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.linjr.mapper.db1.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysLogMapper' and 'com.linjr.mapper.db1.SysLogMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysPermissionMapper' and 'com.linjr.mapper.db1.SysPermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.linjr.mapper.db1.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRolePermissionMapper' and 'com.linjr.mapper.db1.SysRolePermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.linjr.mapper.db1.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.linjr.mapper.db1.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'testJpaMapper' and 'com.linjr.mapper.db1.TestJpaMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientMapper' and 'com.linjr.mapper.db2.BaseClientMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.903  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientShopMapper' and 'com.linjr.mapper.db2.BaseClientShopMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductMapper' and 'com.linjr.mapper.db2.BaseProductMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductSizeMapper' and 'com.linjr.mapper.db2.BaseProductSizeMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderDetailMapper' and 'com.linjr.mapper.db2.OrderDetailMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderMainMapper' and 'com.linjr.mapper.db2.OrderMainMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'psoDelTestMapper' and 'com.linjr.mapper.db2.PsoDelTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sqlJpaTestMapper' and 'com.linjr.mapper.db2.SqlJpaTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'vAllOrderDiscountMapper' and 'com.linjr.mapper.db2.vAllOrderDiscountMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:15:28.904  WARN 25432 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper]' package. Please check your configuration.
+2021-05-21 11:15:29.169  INFO 25432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:15:29.169  INFO 25432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 11:15:29.213  INFO 25432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 JPA repository interfaces.
+2021-05-21 11:15:29.234  INFO 25432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:15:29.236  INFO 25432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-21 11:15:29.255  INFO 25432 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2021-05-21 11:15:29.633  INFO 25432 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=75a597a6-6349-3aec-a424-53dd4d1b4bfb
+2021-05-21 11:15:29.808  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:29.960  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.linjr.config.ShiroConfig$$EnhancerBySpringCGLIB$$6a7d282f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.221  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.linjr.config.RedisConfig$$EnhancerBySpringCGLIB$$b54baf79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.234  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.240  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.341  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.427  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.505  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.529  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.linjr.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.532  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.linjr.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.537  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [com.linjr.shiro.ShiroCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.556  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource1Config' of type [com.linjr.datasources.DataSource1Config$$EnhancerBySpringCGLIB$$b0e4d192] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.595  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1DataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.625  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.633  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.959  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.965  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.967  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.970  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [com.sun.proxy.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.974  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.975  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [com.sun.proxy.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.976  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.linjr.service.Impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.980  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.981  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [com.sun.proxy.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.984  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.985  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [com.sun.proxy.$Proxy112] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:30.986  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userRoleServiceImpl' of type [com.linjr.service.Impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.007  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tokenSetting' of type [com.linjr.utils.TokenSetting$$EnhancerBySpringCGLIB$$1edad55c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.008  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.linjr.service.Impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.014  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.linjr.service.Impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.018  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.linjr.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.026  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.039  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.059  INFO 25432 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:15:31.523  INFO 25432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9001 (http)
+2021-05-21 11:15:31.537  INFO 25432 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-21 11:15:31.537  INFO 25432 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-05-21 11:15:31.694  INFO 25432 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-21 11:15:31.695  INFO 25432 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3921 ms
+2021-05-21 11:15:31.983  INFO 25432 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 11:15:32.067  INFO 25432 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-05-21 11:15:32.216  INFO 25432 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-21 11:15:32.392  INFO 25432 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-05-21 11:15:32.694  INFO 25432 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-05-21 11:15:33.068  INFO 25432 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 11:15:33.076  INFO 25432 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:15:33.155  INFO 25432 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-21 11:15:34.003  WARN 25432 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 11:15:34.275  INFO 25432 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-21 11:15:34.339  WARN 25432 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:15:34.339  INFO 25432 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:15:34.343  WARN 25432 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:15:34.343  INFO 25432 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:15:34.532  INFO 25432 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:15:34.709  WARN 25432 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 11:15:35.247  INFO 25432 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-21 11:15:35.576  INFO 25432 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-21 11:15:35.601  INFO 25432 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-21 11:15:35.666  INFO 25432 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-21 11:15:35.955  INFO 25432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateDeptUsingPUT_1
+2021-05-21 11:15:35.998  INFO 25432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2021-05-21 11:15:36.047  INFO 25432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2021-05-21 11:15:36.051  WARN 25432 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<com.linjr.entity.db2.BaseProduct>
+2021-05-21 11:15:36.094  INFO 25432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getDeptTreeUsingGET_1
+2021-05-21 11:15:36.114  INFO 25432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2021-05-21 11:15:36.145  INFO 25432 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2021-05-21 11:15:36.223  INFO 25432 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9001 (http) with context path ''
+2021-05-21 11:15:36.268  INFO 25432 --- [restartedMain] o.s.c.a.n.registry.NacosServiceRegistry  : nacos registry, rs-web 10.0.1.4:9001 register finished
+2021-05-21 11:15:36.277  INFO 25432 --- [restartedMain] com.linjr.RsWebApplication               : Started RsWebApplication in 9.628 seconds (JVM running for 10.702)
+2021-05-21 11:16:58.932  INFO 25432 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registering from Nacos Server now...
+2021-05-21 11:16:58.938  INFO 25432 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registration finished.
+2021-05-21 11:16:58.943  INFO 25432 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:16:58.978  WARN 25432 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:16:58.978  INFO 25432 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:16:58.990  INFO 25432 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:16:59.035  INFO 25432 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

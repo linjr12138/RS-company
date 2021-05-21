@@ -1,266 +1,105 @@
-2021-04-08 09:33:47.499  INFO 4066 --- [restartedMain] com.linjr.RsWebapiApplication            : No active profile set, falling back to default profiles: default
-2021-04-08 09:33:48.832  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'ipadManagerMapper' and 'com.linjr.mapper.db1.IpadManagerMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.833  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'regionMapper' and 'com.linjr.mapper.db1.RegionMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.833  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.linjr.mapper.db1.SysDeptMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.833  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysLogMapper' and 'com.linjr.mapper.db1.SysLogMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.833  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysPermissionMapper' and 'com.linjr.mapper.db1.SysPermissionMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.833  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.linjr.mapper.db1.SysRoleMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.834  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRolePermissionMapper' and 'com.linjr.mapper.db1.SysRolePermissionMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.834  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.linjr.mapper.db1.SysUserMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.834  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.linjr.mapper.db1.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.834  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'testJpaMapper' and 'com.linjr.mapper.db1.TestJpaMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.834  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper.db1]' package. Please check your configuration.
-2021-04-08 09:33:48.838  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientMapper' and 'com.linjr.mapper.db2.BaseClientMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.838  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientShopMapper' and 'com.linjr.mapper.db2.BaseClientShopMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.838  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductMapper' and 'com.linjr.mapper.db2.BaseProductMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.838  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductSizeMapper' and 'com.linjr.mapper.db2.BaseProductSizeMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.839  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderDetailMapper' and 'com.linjr.mapper.db2.OrderDetailMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.840  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderMainMapper' and 'com.linjr.mapper.db2.OrderMainMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.840  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'psoDelTestMapper' and 'com.linjr.mapper.db2.PsoDelTestMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.840  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sqlJpaTestMapper' and 'com.linjr.mapper.db2.SqlJpaTestMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.841  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'vAllOrderDiscountMapper' and 'com.linjr.mapper.db2.vAllOrderDiscountMapper' mapperInterface. Bean already defined with the same name!
-2021-04-08 09:33:48.841  WARN 4066 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper.db2]' package. Please check your configuration.
-2021-04-08 09:33:49.200  INFO 4066 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-08 09:33:49.203  INFO 4066 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-08 09:33:49.251  INFO 4066 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 JPA repository interfaces.
-2021-04-08 09:33:49.270  INFO 4066 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-04-08 09:33:49.272  INFO 4066 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-04-08 09:33:49.291  INFO 4066 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
-2021-04-08 09:33:49.705  INFO 4066 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88c5ef3f-16a6-36d4-9ca2-607bdac81404
-2021-04-08 09:33:50.132  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:50.505  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.linjr.config.ShiroConfig$$EnhancerBySpringCGLIB$$453dc494] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:50.726  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.linjr.config.RedisConfig$$EnhancerBySpringCGLIB$$900c4bde] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:50.747  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:50.756  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:50.906  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.054  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.135  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.155  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.linjr.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.158  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.linjr.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.163  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [com.linjr.shiro.ShiroCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.180  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource1Config' of type [com.linjr.datasources.DataSource1Config$$EnhancerBySpringCGLIB$$8ba56df7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.231  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1DataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.275  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.288  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.789  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.825  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.829  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.832  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [com.sun.proxy.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.837  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.838  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [com.sun.proxy.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.839  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.linjr.service.Impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.844  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.846  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [com.sun.proxy.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.851  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.853  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [com.sun.proxy.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.855  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userRoleServiceImpl' of type [com.linjr.service.Impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.877  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tokenSetting' of type [com.linjr.utils.TokenSetting$$EnhancerBySpringCGLIB$$f99b71c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.878  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.linjr.service.Impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.884  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.linjr.service.Impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.889  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.linjr.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.895  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.910  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:51.932  INFO 4066 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-04-08 09:33:52.463  INFO 4066 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2021-04-08 09:33:52.477  INFO 4066 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-08 09:33:52.478  INFO 4066 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2021-04-08 09:33:52.593  INFO 4066 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-08 09:33:52.593  INFO 4066 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5065 ms
-2021-04-08 09:33:52.977  INFO 4066 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-04-08 09:33:53.483  INFO 4066 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-08 09:33:53.577  INFO 4066 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2021-04-08 09:33:53.767  INFO 4066 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-04-08 09:33:53.963  INFO 4066 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
-2021-04-08 09:33:54.246  INFO 4066 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-08 09:33:54.256  INFO 4066 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-08 09:33:54.403  WARN 4066 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-08 09:33:54.465  WARN 4066 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-04-08 09:33:55.618  INFO 4066 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-04-08 09:33:55.936  WARN 4066 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-04-08 09:33:55.936  INFO 4066 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 09:33:55.945  WARN 4066 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-04-08 09:33:55.945  INFO 4066 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 09:33:56.112  INFO 4066 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-08 09:33:56.317  WARN 4066 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021-04-08 09:33:56.862  INFO 4066 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2021-04-08 09:33:56.947  INFO 4066 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-04-08 09:33:56.972  INFO 4066 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-04-08 09:33:57.048  INFO 4066 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-04-08 09:33:57.413  INFO 4066 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateDeptUsingPUT_1
-2021-04-08 09:33:57.459  INFO 4066 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
-2021-04-08 09:33:57.520  INFO 4066 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
-2021-04-08 09:33:57.525  WARN 4066 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<com.linjr.entity.db2.BaseProduct>
-2021-04-08 09:33:57.561  INFO 4066 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getDeptTreeUsingGET_1
-2021-04-08 09:33:57.579  INFO 4066 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
-2021-04-08 09:33:57.613  INFO 4066 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
-2021-04-08 09:33:57.721  INFO 4066 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2021-04-08 09:33:57.740  INFO 4066 --- [restartedMain] o.s.c.a.n.registry.NacosServiceRegistry  : nacos registry, rs-webapi 10.0.1.179:9002 register finished
-2021-04-08 09:33:57.748  INFO 4066 --- [restartedMain] com.linjr.RsWebapiApplication            : Started RsWebapiApplication in 11.612 seconds (JVM running for 12.729)
-2021-04-08 09:36:15.022  INFO 4066 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-08 09:36:15.023  INFO 4066 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-08 09:36:15.045  INFO 4066 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
-2021-04-08 09:36:15.579  INFO 4066 --- [http-nio-9002-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: rs-web.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 09:36:15.608  INFO 4066 --- [http-nio-9002-exec-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client: rs-web instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=rs-web,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2021-04-08 09:36:15.618  INFO 4066 --- [http-nio-9002-exec-1] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2021-04-08 09:36:15.635  INFO 4066 --- [http-nio-9002-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: rs-web.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 09:36:15.639  INFO 4066 --- [http-nio-9002-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client rs-web initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=rs-web,current list of Servers=[10.0.1.179:9001],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:10.0.1.179:9001;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.alibaba.nacos.ribbon.NacosServerList@5f24667
-2021-04-08 09:36:16.622  INFO 4066 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: rs-web.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2021-04-08 09:36:35.845 ERROR 4066 --- [http-nio-9002-exec-1] c.l.e.handler.RestExceptionHandler       : Exception,Read timed out executing POST http://rs-web/api/user/login,{}
-
-feign.RetryableException: Read timed out executing POST http://rs-web/api/user/login
-	at feign.FeignException.errorExecuting(FeignException.java:213) ~[feign-core-10.4.0.jar:na]
-	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:115) ~[feign-core-10.4.0.jar:na]
-	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:80) ~[feign-core-10.4.0.jar:na]
-	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:103) ~[feign-core-10.4.0.jar:na]
-	at com.sun.proxy.$Proxy153.login(Unknown Source) ~[na:na]
-	at com.linjr.filter.UserApiService.login(UserApiService.java:30) ~[classes/:na]
-	at com.linjr.filter.UserApiService$$FastClassBySpringCGLIB$$a4e25b3a.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at com.linjr.filter.UserApiService$$EnhancerBySpringCGLIB$$b4ebdc20.login(<generated>) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) [shiro-core-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) [shiro-web-1.4.1.jar:1.4.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.2.RELEASE.jar:5.2.2.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar:9.0.29]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_181]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_181]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_181]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_181]
-	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar:4.4.12]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) ~[httpclient-4.5.10.jar:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.10.jar:4.5.10]
-	at feign.httpclient.ApacheHttpClient.execute(ApacheHttpClient.java:85) ~[feign-httpclient-10.4.0.jar:na]
-	at org.springframework.cloud.openfeign.ribbon.RetryableFeignLoadBalancer$1.doWithRetry(RetryableFeignLoadBalancer.java:114) ~[spring-cloud-openfeign-core-2.2.0.RELEASE.jar:2.2.0.RELEASE]
-	at org.springframework.cloud.openfeign.ribbon.RetryableFeignLoadBalancer$1.doWithRetry(RetryableFeignLoadBalancer.java:94) ~[spring-cloud-openfeign-core-2.2.0.RELEASE.jar:2.2.0.RELEASE]
-	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:287) ~[spring-retry-1.2.4.RELEASE.jar:na]
-	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:180) ~[spring-retry-1.2.4.RELEASE.jar:na]
-	at org.springframework.cloud.openfeign.ribbon.RetryableFeignLoadBalancer.execute(RetryableFeignLoadBalancer.java:94) ~[spring-cloud-openfeign-core-2.2.0.RELEASE.jar:2.2.0.RELEASE]
-	at org.springframework.cloud.openfeign.ribbon.RetryableFeignLoadBalancer.execute(RetryableFeignLoadBalancer.java:54) ~[spring-cloud-openfeign-core-2.2.0.RELEASE.jar:2.2.0.RELEASE]
-	at com.netflix.client.AbstractLoadBalancerAwareClient$1.call(AbstractLoadBalancerAwareClient.java:104) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
-	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$3$1.call(LoadBalancerCommand.java:303) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
-	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$3$1.call(LoadBalancerCommand.java:287) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
-	at rx.internal.util.ScalarSynchronousObservable$3.call(ScalarSynchronousObservable.java:231) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.util.ScalarSynchronousObservable$3.call(ScalarSynchronousObservable.java:228) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeConcatMap$ConcatMapSubscriber.drain(OnSubscribeConcatMap.java:286) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeConcatMap$ConcatMapSubscriber.onNext(OnSubscribeConcatMap.java:144) ~[rxjava-1.3.8.jar:1.3.8]
-	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:185) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
-	at com.netflix.loadbalancer.reactive.LoadBalancerCommand$1.call(LoadBalancerCommand.java:180) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
-	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:94) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeConcatMap.call(OnSubscribeConcatMap.java:42) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.Observable.unsafeSubscribe(Observable.java:10327) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber$1.call(OperatorRetryWithPredicate.java:127) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:79) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OperatorRetryWithPredicate$SourceSubscriber.onNext(OperatorRetryWithPredicate.java:45) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.util.ScalarSynchronousObservable$WeakSingleProducer.request(ScalarSynchronousObservable.java:276) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.Subscriber.setProducer(Subscriber.java:209) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:138) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.util.ScalarSynchronousObservable$JustOnSubscribe.call(ScalarSynchronousObservable.java:129) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.Observable.subscribe(Observable.java:10423) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.Observable.subscribe(Observable.java:10390) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.observables.BlockingObservable.blockForSingle(BlockingObservable.java:443) ~[rxjava-1.3.8.jar:1.3.8]
-	at rx.observables.BlockingObservable.single(BlockingObservable.java:340) ~[rxjava-1.3.8.jar:1.3.8]
-	at com.netflix.client.AbstractLoadBalancerAwareClient.executeWithLoadBalancer(AbstractLoadBalancerAwareClient.java:112) ~[ribbon-loadbalancer-2.3.0.jar:2.3.0]
-	at org.springframework.cloud.openfeign.ribbon.LoadBalancerFeignClient.execute(LoadBalancerFeignClient.java:83) ~[spring-cloud-openfeign-core-2.2.0.RELEASE.jar:2.2.0.RELEASE]
-	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:110) ~[feign-core-10.4.0.jar:na]
-	... 75 common frames omitted
-
-2021-04-08 09:36:35.871  WARN 4066 --- [http-nio-9002-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.RetryableException: Read timed out executing POST http://rs-web/api/user/login]
-2021-04-08 09:38:00.080  INFO 4066 --- [Thread-24] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
-2021-04-08 09:38:00.138  INFO 4066 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registering from Nacos Server now...
-2021-04-08 09:38:00.147  INFO 4066 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registration finished.
-2021-04-08 09:38:00.158  INFO 4066 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-08 09:38:00.222  WARN 4066 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-04-08 09:38:00.223  INFO 4066 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-04-08 09:38:00.428  INFO 4066 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-08 09:38:00.637  INFO 4066 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-05-21 11:16:03.921  INFO 25578 --- [restartedMain] com.linjr.RsWebapiApplication            : No active profile set, falling back to default profiles: default
+2021-05-21 11:16:05.234  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'ipadManagerMapper' and 'com.linjr.mapper.db1.IpadManagerMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.235  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'regionMapper' and 'com.linjr.mapper.db1.RegionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.235  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysDeptMapper' and 'com.linjr.mapper.db1.SysDeptMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.235  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysLogMapper' and 'com.linjr.mapper.db1.SysLogMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.235  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysPermissionMapper' and 'com.linjr.mapper.db1.SysPermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.236  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRoleMapper' and 'com.linjr.mapper.db1.SysRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.236  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysRolePermissionMapper' and 'com.linjr.mapper.db1.SysRolePermissionMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.236  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.linjr.mapper.db1.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.236  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sysUserRoleMapper' and 'com.linjr.mapper.db1.SysUserRoleMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.236  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'testJpaMapper' and 'com.linjr.mapper.db1.TestJpaMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.236  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper.db1]' package. Please check your configuration.
+2021-05-21 11:16:05.239  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientMapper' and 'com.linjr.mapper.db2.BaseClientMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.240  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseClientShopMapper' and 'com.linjr.mapper.db2.BaseClientShopMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.240  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductMapper' and 'com.linjr.mapper.db2.BaseProductMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.240  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'baseProductSizeMapper' and 'com.linjr.mapper.db2.BaseProductSizeMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.240  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderDetailMapper' and 'com.linjr.mapper.db2.OrderDetailMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.240  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'orderMainMapper' and 'com.linjr.mapper.db2.OrderMainMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.240  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'psoDelTestMapper' and 'com.linjr.mapper.db2.PsoDelTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.241  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'sqlJpaTestMapper' and 'com.linjr.mapper.db2.SqlJpaTestMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.241  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'vAllOrderDiscountMapper' and 'com.linjr.mapper.db2.vAllOrderDiscountMapper' mapperInterface. Bean already defined with the same name!
+2021-05-21 11:16:05.241  WARN 25578 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.linjr.mapper.db2]' package. Please check your configuration.
+2021-05-21 11:16:05.692  INFO 25578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:16:05.698  INFO 25578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-21 11:16:05.750  INFO 25578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 JPA repository interfaces.
+2021-05-21 11:16:05.775  INFO 25578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-05-21 11:16:05.777  INFO 25578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-05-21 11:16:05.801  INFO 25578 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2021-05-21 11:16:06.288  INFO 25578 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=88c5ef3f-16a6-36d4-9ca2-607bdac81404
+2021-05-21 11:16:06.823  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:07.223  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.linjr.config.ShiroConfig$$EnhancerBySpringCGLIB$$564291c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:07.525  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [com.linjr.config.RedisConfig$$EnhancerBySpringCGLIB$$a111190b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:07.548  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:07.557  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:07.757  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:07.954  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.076  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.113  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisService' of type [com.linjr.service.RedisService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.118  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customHashedCredentialsMatcher' of type [com.linjr.shiro.CustomHashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.127  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [com.linjr.shiro.ShiroCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.153  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource1Config' of type [com.linjr.datasources.DataSource1Config$$EnhancerBySpringCGLIB$$9caa3b24] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.226  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1DataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.272  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.284  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:08.991  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.009  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'db1SqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.016  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.024  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRoleMapper' of type [com.sun.proxy.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.033  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.035  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysRolePermissionMapper' of type [com.sun.proxy.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.036  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.linjr.service.Impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.044  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.046  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysPermissionMapper' of type [com.sun.proxy.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.056  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.057  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysUserRoleMapper' of type [com.sun.proxy.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.061  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userRoleServiceImpl' of type [com.linjr.service.Impl.UserRoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.099  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'tokenSetting' of type [com.linjr.utils.TokenSetting$$EnhancerBySpringCGLIB$$aa03eee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.101  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.linjr.service.Impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.111  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.linjr.service.Impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.119  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customRealm' of type [com.linjr.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.131  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.161  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.198  INFO 25578 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-21 11:16:09.971  INFO 25578 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2021-05-21 11:16:09.987  INFO 25578 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-21 11:16:09.987  INFO 25578 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-05-21 11:16:10.116  INFO 25578 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-21 11:16:10.116  INFO 25578 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6158 ms
+2021-05-21 11:16:10.570  INFO 25578 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-05-21 11:16:11.174  INFO 25578 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-21 11:16:11.268  INFO 25578 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-05-21 11:16:11.466  INFO 25578 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-21 11:16:11.687  INFO 25578 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2021-05-21 11:16:12.004  INFO 25578 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-21 11:16:12.023  INFO 25578 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:16:12.243  WARN 25578 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-21 11:16:12.381  WARN 25578 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-05-21 11:16:13.999  INFO 25578 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-21 11:16:14.344  WARN 25578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:16:14.345  INFO 25578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:16:14.358  WARN 25578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:16:14.358  INFO 25578 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:16:14.652  INFO 25578 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:16:15.045  WARN 25578 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-05-21 11:16:15.766  INFO 25578 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-21 11:16:15.900  INFO 25578 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-21 11:16:15.934  INFO 25578 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-21 11:16:16.041  INFO 25578 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-21 11:16:16.512  INFO 25578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateDeptUsingPUT_1
+2021-05-21 11:16:16.579  INFO 25578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_1
+2021-05-21 11:16:16.657  INFO 25578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_2
+2021-05-21 11:16:16.663  WARN 25578 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<com.linjr.entity.db2.BaseProduct>
+2021-05-21 11:16:16.714  INFO 25578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getDeptTreeUsingGET_1
+2021-05-21 11:16:16.745  INFO 25578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_3
+2021-05-21 11:16:16.795  INFO 25578 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: pageInfoUsingPOST_4
+2021-05-21 11:16:16.896  INFO 25578 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2021-05-21 11:16:16.916  INFO 25578 --- [restartedMain] o.s.c.a.n.registry.NacosServiceRegistry  : nacos registry, rs-webapi 10.0.1.4:9002 register finished
+2021-05-21 11:16:16.922  INFO 25578 --- [restartedMain] com.linjr.RsWebapiApplication            : Started RsWebapiApplication in 15.451 seconds (JVM running for 17.484)
+2021-05-21 11:16:59.002  INFO 25578 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registering from Nacos Server now...
+2021-05-21 11:16:59.011  INFO 25578 --- [SpringContextShutdownHook] o.s.c.a.n.registry.NacosServiceRegistry  : De-registration finished.
+2021-05-21 11:16:59.021  INFO 25578 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-21 11:16:59.111  WARN 25578 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-05-21 11:16:59.112  INFO 25578 --- [SpringContextShutdownHook] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-21 11:16:59.132  INFO 25578 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-21 11:16:59.387  INFO 25578 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

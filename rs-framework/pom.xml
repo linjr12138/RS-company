@@ -6,7 +6,7 @@
         <groupId>com.linjr</groupId>
         <artifactId>RS-company</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath />
     </parent>
     <groupId>com.linjr</groupId>
     <artifactId>rs-framework</artifactId>
